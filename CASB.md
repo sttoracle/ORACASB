@@ -88,21 +88,14 @@ There are 5 Health indicator tabs into which the variouse services being monitor
 
 The Access Map shows points of origin for both normal (green dot) and suspicious (red dot) events. Click links in the summary information to see more details.
 
-> *The other summary cards on the Dashboard Summary tab, such as Suspicious and normal IP addresses, display statistics for specific types of activity that may or may not be suspicious. For each summary card, you can:*
-
-> -*View the summary statistics displayed.*
-
-> -*Hover over parts of the card to see additional information in pop-ups, and to identify links.*
-
-> -*Click any link in the card to see more detailed information.*
-
-> -*Click the Help icon Image of Help icon in the upper-right corner to see online help about the type of information displayed in the card.*
+> The other summary cards on the Dashboard Summary tab, such as Suspicious and normal IP addresses, display statistics for specific types of activity that may or may not be suspicious. For each summary card, you can:
+View the summary statistics displayed, Hover over parts of the card to see additional information in pop-ups, and to identify links, click any link in the card to see more detailed information, click the Help icon Image of Help icon in the upper-right corner to see online help about the type of information displayed in the card.
 
 ___
 
-## Sactioned Application Onboarding
+## Sanctioned Application Onboarding
 ___
-> NOTE: *This section requires that you've completed the [pre-requisite](#step-1-create-salesforce-developer-account) step of signing up for an SaleForce free developer account*
+In this session you will be using the Oracle CASB Cloud Service UI to onboard your Salesforce Developer Account into your Oracle CASB tenant.
 
 ### **STEP 1**: Click on the "Add an App" menu item. 
 
@@ -120,39 +113,42 @@ Press the "Next" button to proceed to the next step of the "Register an app inst
 
 ![](images/CASB/01-add-salesforce-app.png)
 
-> *Note :  If your SalesForce account is federated with a supported Cloud Identity Provider ( IdP ) you can select the "The users of this app instance log in using single sign-on through an identity provider" checkbox and select the Identity Provider being used from a list of pre-configured providers*
+> Note :  If your SalesForce account is federated with a supported Cloud Identity Provider ( IdP ) you can select the "The users of this app instance log in using single sign-on through an identity provider" checkbox and select the Identity Provider being used from a list of pre-configured providers
 
 ### **STEP 4**: Select Monitoring Type
 
 ![](images/CASB/01-monitor-only.png)
 Choose "Push controls and monitor"
 
-### **STEP 5**:  Select Security Controls
+### **STEP 5**:  Select Security Controls Policy
 
 ![](images/CASB/146AFAD3-AC1E-47E6-87C8-95E03D7B2BF9.png)
 
+>NOTE : You can review the Controls begin monitored and enforced under the *Standard* and *Stringent* Security Controls profiles . You can also define your own security control profile by clicking on the *Custom* radio button and configuring the security controls you would like to enforce for a given sactioned app
+
 ### **STEP 6**: Authenticate to SalesForce and allow CASB to access you Salesforce Account 
-You will next be sent to SFDC to login, and you will see the following screen in the process:
+You will be redirected to SFDC to login, and you will see the following screen in the process:
 ![](images/CASB/01-please-wait-screen.png)
-You will then be redirected to Salesforce, where you will login using your username/password.
-> NOTE: *Once logged in, Salesforce may  ask you to verify your identity by sending a code to the email address used to sign-up. If so, retrieve the one time verification code from your email.*
 
-Upon logging in, you will be asked to confirm that you want to grant access to the Oracle CASB:
+> NOTE: Once logged in, Salesforce may  ask you to verify your identity by sending a code to the email address used to sign-up. If so, retrieve the one time verification code from your email.
+
+Upon log in, you will be asked to confirm that you want to grant access to the Oracle CASB Cloud Service:
 ![](images/CASB/01-grant-access.png)
-> NOTE : This is part of  the Salesforce Authorzation code OAuth Flow that CASB utilize to gain permissions to access the relevant SalesForce APIs it will use.
+> NOTE : This is part of  the Salesforce Authorzation code OAuth Flow that CASB utilize to gain authorization to access the relevant SalesForce APIs it will use to integrate with SalesForce.
 
-Click the Allow button to allow the access.
-You will next be redirected back to the Oracle CASB application. Here, you receive confirmation that the application is on-boarded and the initial data load will complete within 30 to 120 minutes. In our testing, the initial data load usually takes about 30 minutes to complete.
+Click the *Allow* button to allow the access.
+You will next be redirected back to the Oracle CASB Cloud Service. Here, you receive confirmation that the application is on-boarded and the initial data load will complete within 30 to 120 minutes. 
+
+>Note: In our testing, the initial data load usually takes about 30 minutes to complete.
 
 While the load is taking place, the application will have a “NEW” banner in the application list.
 ![](images/CASB/01-new-banner.png)
 
-After the data load has taken place, the application will shed the “NEW” banner, like so.
-![](images/CASB/01-completed-load-banner.png)
+>Note: After the data load has taken place, the application will shed the “NEW” banner
 
 ### **STEP7**: View Risk Events from Initial Scan
 
-Now that the load is complete, we can click on the new application. Note it will have an exclamation point in its Application List icon, indicating there are some new Risk Events we can evaluate. Click the newly on-boarded application, and then choose to “View Details”.
+Now that the load is complete, we can click on the new application. Note it will have an exclamation point in its Application List icon, indicating there are some new Risk Events we can evaluate. Click the newly on-boarded application, and then choose to “View Details” button.
 
 ![](images/CASB/01-choose-view-details.png)
 
@@ -178,16 +174,16 @@ ___
 
 > NOTE : The section of the workshop should be performed using the CASB tenant you recieved credentails for when you signed up for a free Oracle Cloud Trial. 
 
-### **STEP 1**: On the CASB Dashboard view select the "App Discovery" tab 
+### **STEP 1**: On the CASB Dashboard page select the "App Discovery" tab 
 
 ![](images/CASB/1400C83D-8157-483A-814D-069867A9EC4C.png)
 
-### **STEP 2**: Press the "Import from Logs” button 
+### **STEP 2.1 **: Press the "Import from Logs” button 
 
 a Dialog will appear that will prompt the user to upload a log file. 
 
-#### **STEP 2.1**: Press the "Import from Logs” button 
-Press the "Choose File" button and upload the sample log file assigned to you 
+Press the "Choose File" button and upload the sample log file assigned to you.
+  
 
  > *Note : Each workshop participant  received a sample logfile that has been uploaded to the individual Box folder 
 
@@ -200,8 +196,6 @@ CASB CS will process the log file and update the view with the progress it has m
 ![](images/CASB/upload_indicator.png)
 
 Once the file has been processed CASB will display the results of it's analysis. You can, at any time, go back to your results by making note of where on the timeline your specific sample log fits in. 
-
-> *Note : You will see the results of all the participants' sample log files since all participants share one single CASB tenant for the workshop.* 
 
 #### **STEP 3**: Explorer the results of the log file import 
 At the top of the page CASB will display the users who used the most apps as well as the most popular apps that have been discovered 
@@ -250,7 +244,7 @@ Optionally, you can identify additional filters such as people or groups who per
 You can also add instructions for the person who reads the alert. For example, if you create an alert related to deleting access control lists, you can add instructions to inform the group that is responsible for managing the access control lists.
 
 You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.
-#### **STEP 1.1**: In the Oracle CASB Cloud Service console, select Configuration, select Policy Management.
+#### **STEP 1.1**: In the Oracle CASB Cloud Service console, select Configuration, select "Policy Management"
 
 ![](images/CASB/7337D326-E3D9-4201-BA7E-F27FA6FE90C6.png)
 
@@ -258,19 +252,19 @@ and then click New Policy
 
 ![](images/CASB/E77A0F2E-FFE5-44F9-8BE4-291F3AD3744C.png)
 
-#### **STEP 1.2**: Complete the "Name" panel in the "New Policy' wizzard
+#### **STEP 2**: Complete the "Name" panel in the "New Policy' wizzard
 Choose a unique name of the format “YOURNAME_TEST_POLICY.” Create a description for the policy, set the priority to High, and check the box to “Include in user risk score.” This is an example of how a policy can effect user risk scores, thus influencing the CASB machine learning algorithms.
 ![](images/CASB/02-policy-creation.png)
 Click on Next.
-#### **STEP 1.3**: Complete the "Resource" panel 
+#### **STEP 3**: Complete the "Resource" panel 
 Select “Salesforce” for the application type, choose your Salesforce instance, select “Role” as the Resource. And choose a text expression of “CEO” for the Resource Name. For the “Action on this Resource,” leave it set to “Any” (although valid choices also include Assign Role, Create Role, Delete Role, Revoke Role, and Update Role).
 ![](images/CASB/04-policy-setup.png)
 After adding this information, click on Next.
-#### **STEP 1.4**: (Optional) Complete the "Username" panel
+#### **STEP 4**: (Optional) Complete the "Username" panel
 You can leave these settings as default (blank) and click the Next button
 > *Exception: If the resource action is Login, you identify the user who is logging in in the previous step (the Resources page) and skip this step.*   
 
-#### **STEP 1.5**: Complete the "Conditions" panel
+#### **STEP 5**: Complete the "Conditions" panel
 Specify conditions to limit when the alert is triggered. 
 Add two conditions: one condition for Device equal to Mobile, and a second condition for Device equal to API Call (use the “Add condition” link to add the second condition). After adding the two policy conditions, click Next to continue.
 ![](images/CASB/04-policy-conditions.png)
@@ -278,26 +272,26 @@ Add two conditions: one condition for Device equal to Mobile, and a second condi
 > *You can specify a condition using either of these types of conditions multiple times, and you can specify either type of condition in any order, freely mixing the two types.*
 > *When you specify multiple conditions, the conditions operate independently. Each condition causes the alert to either be triggered (Equal To operator), or not be triggered (Not Equal to operator), for that specific condition. The conditions are neither ANDed nor ORed.*
 
-#### **STEP 1.6**: Complete the "Actions" panel
+#### **STEP 6**: Complete the "Actions" panel
 
 Create custom instructions for the resultant alert by checking the box for customization and entering a message. Note that alerts can also be sent in email. Click Next.
 
 ![](images/CASB/04-custom-action.png)
 
-#### **STEP 1.7**: Click "Next" and "Review & Submit" the policy 
+#### **STEP 7**: Click "Next" and "Review & Submit" the policy 
 
 The Policy will appear in the list of policies available for activation for the tenant.
 
 ![](images/CASB/04-confirmation-screen.png)
 
-### **STEP 2**: Trigger the Policy Alert
+### **STEP 8**: Trigger the Policy Alert
 
 To test the policy log into the SalesForce account and perform an acction on the role focused on in the policy . 
 >  *Note: 
 >  There is a delay between data collection cycles for the CASB service and the action you perform in SalesForce might not cause the policy alert in CASB to fire immediately but will appear on the next data collection that CASB does to the SalesForce tenant*
 
-### **STEP 3**: View the policy Alert
-Periodically, throughout the duration of the workshop, inspect the box application's policy alerts to verify that the policy alert associated with the policy you created in STEP 1 did in fact trigger ( Refer to the note above concerning the delay in alerts appearing within CASB )  
+### **STEP 9**: View the policy Alert
+Periodically, throughout the duration of the workshop, inspect the SalesForce application's policy alerts to verify that the policy alert associated with the policy you created in STEP 1 did in fact trigger ( Refer to the note above concerning the delay in alerts appearing within CASB )  
 ___
 ## Risk Events & User Risk
 ___
@@ -312,6 +306,8 @@ Next, we will demonstrate how to blacklist an IP address. In the Oracle CASB men
 ### **STEP 2**: Log into SalesForce
 
 ### **STEP 3**: Analyze the resulting risk even starting from the dashboard
+
+> Note: The risk event will appear after the next scheduled data collection has occured from your SalesForce tenant. 
 
 #### **STEP 3.1**: View the event on the "Access Map"
 
