@@ -19,9 +19,11 @@ ___
 ## Workshop Prerequisites
 ___
 
-Upon registering for the workshop itself you would have recieved a  registration confirmation e-mail that contains a link to the workshop's shared folder as well as CASB account credentials and instructions on how to sign up for a Oracle cloud free trial. 
+Upon registering for the workshop you recieved a  registration confirmation e-mail that contains a link to the workshop's shared folder as well as CASB account credentials and instructions on how to sign-up for a Oracle cloud free trial. 
 
-### **Signup for a Sales Force Trial Account**: 
+### **Signup for a SalesForce Trial Account**: 
+
+>A SalesForce Developer Account is automatically provisioned for you when you sign-up for the workshop but in the event you did not recieve a trial account you can self-register using the following instructions :
 
 ### **STEP 1**: Create Salesforce Developer Account
 First, we must acquire a new Salesforce developer account. Sign-up for a Salesforce developer account at https://developer.salesforce.com/signup/success (this is a free account, no credit card required). You will need an email address. After completing the signup process, check your email and click the account verification link. The verification link may look similar to this:
@@ -37,11 +39,15 @@ Under “Password Policies,” choose to not enforce password history.
 At the bottom of the “Password Policies” page, click the Save button. This completes our tutorial of creating a Salesforce demo instance and setting some sample Salesforce security policies. There are many security settings within Salesforce that can be protected with CASB, but this is just a sample. Note how easy it is for administrators to modify the security settings.
 
 ___
-## CASB Cloud Service Dashboard
+## Session 1 . CASB Cloud Service Dashboard
 ___
+
+This session will familiarize  you with the Oracle CASB Cloud Service User Interface and dashboard
+
 ### **STEP 1**: Sign on to Oracle CASB Cloud Service
 
-- Using your favorite browser navigate to the Oracle CASB Service home URL at  https://trial.palerra.net/ . You'll be presented with the following login form 
+- Using your prefered browser navigate to the Oracle CASB Service home URL at  https://trial.palerra.net/ . 
+You'll be presented with the following login form 
 
 
     ![](images/CASB/66D12B19-6081-445A-9562-B496AFBBE1B3.png)  
@@ -50,13 +56,15 @@ ___
 
 ### **STEP 2**: Review select items on the CASB Dashboard
 
-The Dashboard is the first thing you see in the Oracle CASB Cloud Service after you've logged into the service.
-The purpose of the dashboard is to give the user a summary view of various important Cloud service security related information
+The Dashboard is the first interface you will see in the Oracle CASB Cloud Service after you've logged into the service.
+The purpose of the dashboard is to give the user a summary view of various important Cloud service security related information :
 
 #### Service Health Indicators
-The Health Indicator Carousel presents indicators of the overall health state of the cloud services being monitored by the particular CASB tenant.
+The Health Indicator Carousel presents indicators of the overall health state of the cloud services being monitored by a particular CASB tenant.
 
 ![](images/CASB/health_indicators.png)
+
+There are 5 Health indicator tabs into which the variouse services being monitored is shorted into  :
 
 ![](images/CASB/icon_risk_unreachable_big.png)— Status: Application instance is unreachable.
 
@@ -72,7 +80,7 @@ The Health Indicator Carousel presents indicators of the overall health state of
 
 ![](images/CASB/7B1AFFA4-DF72-401B-9975-68272079B2F2.png)
 
-The Health Summary: All Application Instances card summarizes potential threat information across all registered application instances.
+"The Health Summary: All Application Instances" card summarizes potential threat information across all registered application instances. The definitions of the diffrent health and risk indicators ( e.g. Policy Alerts) will be presented in additional sessions within this workshop .
 
 #### Access Map
 
