@@ -2,7 +2,7 @@ Update: November 13, 2017
 ___
 ## Introduction
 ___
- The purpose of this workshop is to introduce the participants to the Oracle CASB service by means of a x hr long hands-on experience. 
+ The purpose of this workshop is to introduce the participants to the Oracle CASB service by means of a x hr long hands-on test drive. 
 ___
 ## Objectives
 ___
