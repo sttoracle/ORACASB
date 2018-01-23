@@ -1,11 +1,11 @@
 Update: November 13, 2017
 
-___
+
 ## Introduction
 ___
  The purpose of this workshop is to provide participants hands-on experience using the Oracle CASB Cloud Service trail account to perform some key CASB use cases 
 
-___
+
 ## Objectives
 ___
 The workshop will cover the following CASB features and concepts:
@@ -17,7 +17,7 @@ The workshop will cover the following CASB features and concepts:
  - Security Controls
  - Event Management
 
-___
+
 ## Workshop Prerequisites
 ___
 
@@ -40,7 +40,7 @@ Under “Password Policies,” choose to not enforce password history.
 ![](images/CASB/01-password-never-remember.png)
 At the bottom of the “Password Policies” page, click the Save button. This completes our tutorial of creating a Salesforce demo instance and setting some sample Salesforce security policies. There are many security settings within Salesforce that can be protected with CASB, but this is just a sample. Note how easy it is for administrators to modify the security settings.
 
-___
+
 ## Session 1 . CASB Cloud Service Dashboard
 ___
 
@@ -93,7 +93,6 @@ The Access Map shows points of origin for both normal (green dot) and suspicious
 > The other summary cards on the Dashboard Summary tab, such as Suspicious and normal IP addresses, display statistics for specific types of activity that may or may not be suspicious. For each summary card, you can:
 View the summary statistics displayed, Hover over parts of the card to see additional information in pop-ups, and to identify links, click any link in the card to see more detailed information, click the Help icon Image of Help icon in the upper-right corner to see online help about the type of information displayed in any particular card .
 
-___
 
 ## Session 2 . Sanctioned Application Onboarding
 ___
@@ -210,7 +209,7 @@ On the resulting incident dialog ensure that the default "Auto Remediation" radi
 
 CASB Cloud Service will use the SalesForce API to change the clickjack protection setting in SalesForce to bring it into compliance with the CASB Security Control baseline that is in effect .  
 
-___
+
 ## Session 3. CASB Discovery
 ___
 
@@ -257,7 +256,7 @@ Fill out the New Incident Dialog and submit
 ![](images/CASB/BFD830FC-EE87-42D3-A25D-39659D05098C.png)
 
 You'll notice there are 3 new actions available for the app in the CASB App Discovery "Discovered App" table view. Mouse over the icons to see a description. Go ahead and explore the new actions that are available.
-___
+
 ## Session 4. Policies
 ___
 A policy is a rule or a guideline, such as, "only people in Finance can view files in the Finance folder", or "any change to network access rules must be reviewed.". You can define policies based on particular cloud services, resources in the service, actions on the resource, and optionally items such as actors, recipients, whole groups of users, domains, and IP addresses. In Oracle CASB Cloud Service, you define policies based on:
@@ -332,7 +331,7 @@ To test the policy log into the SalesForce account and perform an acction on the
 
 ### **STEP 9**: View the policy Alert
 Periodically, throughout the duration of the workshop, inspect the SalesForce application's policy alerts to verify that the policy alert associated with the policy you created in STEP 1 did in fact trigger ( Refer to the note above concerning the delay in alerts appearing within CASB )  
-___
+
 ## Session 5. Risk Events & User Risk
 ___
 Risk events encompass *anomalies* and *threats* that Oracle CASB Cloud Service detects.
@@ -400,7 +399,7 @@ Service-specific factors include sharing content with external users; creating, 
 #### **STEP 4.6**: Click the See More link at the bottom of the table, and in the risk factor details dialog box, page through all of the events related to the risk factor.
 #### **STEP 4.7**: View a report of all activity related to a user
 
-___
+
 ## Session 6. Security Controls
 ___
 The purpose of this section of the workshop is to locate and resolve security control issues in Risk Events.
@@ -446,7 +445,7 @@ By default, Oracle CASB Cloud Service automatically notifies you if a registered
 With AWS, Box, and Salesforce application instances, you can also have Oracle CASB Cloud Service set the configuration values.
 [TO DO ADD INSTRUCTIONS FOR BOX AND OR SF]
 
-___
+
 ## Session 7. Event Management
 ___
 Oracle CASB Cloud Service generates a ticket in the Incidents section of the console whenever it detects a behavioral anomaly. Administrators also can create incident tickets manually.
