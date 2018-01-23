@@ -26,7 +26,7 @@ Upon registering for the workshop you recieved a  registration confirmation e-ma
 >A SalesForce Developer Account is automatically provisioned for you when you sign-up for the workshop but in the event you did not recieve a trial account you can self-register using the following instructions :
 
 ### **STEP 1**: Create Salesforce Developer Account
-First, we must acquire a new Salesforce developer account. Sign-up for a Salesforce developer account at https://developer.salesforce.com/signup/success (this is a free account, no credit card required). You will need an email address. After completing the signup process, check your email and click the account verification link. The verification link may look similar to this:
+First, we must acquire a new Salesforce developer account. Sign-up for a Salesforce developer account at https://developer.salesforce.com/signup (this is a free account, no credit card required). You will need an email address. After completing the signup process, check your email and click the account verification link. The verification link may look similar to this:
 
 ![](images/CASB/74FCDEE4-C1D1-49FE-960A-43BD91A87BBD.png)
 ### **STEP 2** Configure Salesforce Developer Account for CASB:
@@ -122,11 +122,11 @@ Select the "Push controls and monitor" radio button and then press the "Next" bu
 
 ### **STEP 5**:  Select Security Controls Policy
 
-![](images/CASB/146AFAD3-AC1E-47E6-87C8-95E03D7B2BF9.png)
+![](images/CASB/salesforce_controls.png)
 
 Because the monitor and push option was selected an approval radio button will be displayed that will prompt you to acknowledge and consent to CASB Cloud Service making changes in the target service ( SalesForce for this session ) to bring its security configuration in line with the selected Security Control profile. 
 
->You can review the Controls begin monitored and enforced under the *Standard* and *Stringent* Security Controls profiles . You can also define your own security control profile by clicking on the *Custom* radio button and configuring the security controls you would like to enforce for a given sactioned app.. 
+>You can review the Controls begin monitored and enforced under the *Standard* and *Stringent* Security Controls profiles . You can also define your own security control profile by clicking on the *Custom* radio button and configuring the security controls you would like to enforce for a given sactioned app. 
 
 ### **STEP 6**: Authenticate to SalesForce and allow CASB to access your Salesforce Account 
 You will be redirected to SFDC to login, and you will see the following screen in the process:
@@ -152,9 +152,31 @@ While the load is taking place, the application will have a “NEW” banner in 
 
 After the data load has taken place, the application will shed the “NEW” banner
 
-### **STEP 7**: View Risk Events from Initial Scan
+### **STEP 7**: Review changes made in SalesForce to bring it inline with the Security Control Profile we selected .
 
-Now that the load is complete, we can click on the new application. Note that there will be an exclamation point in its Application List icon, indicating there are some new Risk Events we can evaluate. Click the newly on-boarded application, and then choose the “View Details” button.
+Recall that we changed the password policy in SalesForce to never expire however notice that the security control we selected with the "standard" profile requires the password to expire in 90 days. After the SalesForce service has been onboarded CASB  will access the SalesForce APIs to change the password policy in SalesForce to comply with the security control profile we selected in CASB . You can verify the changes by logging in to SalesForce and navigating to the setup menu, then use the upper-left Quick Find box to search for “Password Policies” (no quotes) and review the "User passwords expire in" field to verify that it has been changed back to expire in 90 days, also notice that the enforce password history has been changed back to "3 passwords remembered"  . 
+
+### **STEP 8**: View Risk Events from Initial Scan
+
+After the initial load is complete, we can click on the new application. Since we selected to have the CASB Cloud Service push the security control setting to SalesForce the new SalesForce instance should not have any violations and should appear in the low risk services category. 
+
+### **STEP 9**: Update Security Control Baseline
+Next, we’ll update the CASB security control baseline for our Salesforce instance. To do so, first click on Applications, then find your Salesforce instance (use the search icon in the upper-right, if necessary), click on the instance, click on Modify, and then from the selection choose Update Security Control Baseline. In the next screen, choose to use a “Stringent” security control baseline. 
+
+![](images/CASB/updatesecuritycontrols.png)
+
+>Expand the Password Policy tab to see more detail on which controls are being enforced by the "Stringent" Security control baseline .
+
+Check the box that says to “use the new threshold values” and click on the Submit button.
+![](images/CASB/02-check-and-submit.png)
+
+You will now see a message that indicates baseline has been updated. Click the Done icon.
+These baselines can be customized as needed and will take effect for future application scans.
+
+### **STEP 10**: Review security control violations 
+> There will be a delay between the time the security control baseline is updated until the next scan of the SalesForce tenant's settings will be compared to the new baseline. Any violations will therefore not appear until the next scan takes effect .
+
+There will be an exclamation point in your SalesForce tenant's Application List icon, indicating there are some new Risk Events we can evaluate. Click the your recently on-boarded application, and then choose the “View Details” button.
 
 ![](images/CASB/01-choose-view-details.png)
 
@@ -164,17 +186,28 @@ From the details page, a number of non-compliant security controls have been det
 
 ![](images/CASB/01-view-risk-event-lockout-effective.png)
 
-Note that the Risk Event was detected by the Initial Service Scan. From the Action menu, note that we could choose to Create a new incident based on this particular Risk Event. This completes the application onboarding process and a quick tour of CASB’s initial scan data.
+From the Action menu, note that we could choose to Create a new incident based on this particular Risk Event. 
 
-### **STEP 8**: Update Security Control Baseline
-Next, we’ll update the CASB security control baseline for our Salesforce instance, so that it matches Example Company’s approved baseline. To do so, first click on Applications, then find your Salesforce instance (use the search icon in the upper-right, if necessary), click on the instance, click on Modify, and then from the selection choose Update Security Control Baseline.
-![](images/CASB/02-start-update-baseline.png)
-In the next screen, choose to use a “Custom” security control baseline, and then expand the Password Policies and Session Settings sections. Within each of these two sections, choose to configure the “New alerting threshold” to match the “Current cloud settings” for each setting.
-![](images/CASB/02-update-control-settings.png)
-Check the box that says to “use the new threshold values” and click on the Submit button.
-![](images/CASB/02-check-and-submit.png)
-You will now see a message that indicates baseline has been updated. Click the Done icon.
-These baselines can be customized as needed and will take effect for future application scans.
+### **STEP 11** Auto remediate a security control risk event . 
+
+In this step we'll automatically remediate one pf the security control Risk events. 
+
+Select the "Enable clickjack protection..." incident in the list of incidents and under the Action column select the "View incident" dropdown option.
+
+![](images/CASB/securityincident.png)
+
+On the "View Incident" dialog select the "Edit Incident" button . 
+
+![](images/CASB/viewincident.png)
+
+On the "Edit Incident" dialog select the "Resolve" button.
+![](images/CASB/editincident.png)
+
+On the resulting incident dialog ensure that the default "Auto Remediation" radio button is selected and click the "Approval" radio button and then click on the "Resolve Incident" button . 
+![](images/CASB/resolve.png)
+
+CASB Cloud Service will use the SalesForce API to change the clickjack protection setting in SalesForce to bring it into compliance with the CASB Security Control baseline that is in effect .  
+
 ___
 ## Session 3. CASB Discovery
 ___
