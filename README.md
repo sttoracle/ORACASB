@@ -1,8 +1,10 @@
 Update: November 13, 2017
+
 ___
 ## Introduction
 ___
- The purpose of this workshop is to provide participants hands-on experience using the Oracle CASB Cloud Service trail account to perform some key CASB use cases. 
+ The purpose of this workshop is to provide participants hands-on experience using the Oracle CASB Cloud Service trail account to perform some key CASB use cases 
+
 ___
 ## Objectives
 ___
