@@ -125,9 +125,9 @@ Select the "Push controls and monitor" radio button and then press the "Next" bu
 
 ![](images/CASB/salesforce_controls.png)
 
-Because the monitor and push option was selected an approval radio button will be displayed that will prompt you to acknowledge and consent to CASB Cloud Service making changes in the target service ( SalesForce for this session ) to bring its security configuration in line with the selected Security Control profile. 
+Because the monitor and push option was selected an approval radio button will be displayed that will prompt you to acknowledge and consent to CASB Cloud Service making changes in the target service ( SalesForce for this session ) to bring its security configuration in line with the selected Security Control baseline. 
 
->You can review the Controls begin monitored and enforced under the *Standard* and *Stringent* Security Controls profiles . You can also define your own security control profile by clicking on the *Custom* radio button and configuring the security controls you would like to enforce for a given sactioned app. 
+>You can review the Controls begin monitored and enforced under the *Standard* and *Stringent* Security Controls baselines . You can also define your own security control baseline by clicking on the *Custom* radio button and configuring the security controls you would like to enforce for a given sactioned app. 
 
 ### **STEP 6**: Authenticate to SalesForce and allow CASB to access your Salesforce Account 
 You will be redirected to SFDC to login, and you will see the following screen in the process:
@@ -153,7 +153,7 @@ While the load is taking place, the application will have a “NEW” banner in 
 
 After the data load has taken place, the application will shed the “NEW” banner
 
-### **STEP 7**: Review changes made in SalesForce to bring it inline with the Security Control Profile we selected .
+### **STEP 7**: Review changes made in SalesForce to bring it inline with the Security Control baseline we selected .
 
 Recall that we changed the password policy in SalesForce to never expire however notice that the security control we selected with the "standard" profile requires the password to expire in 90 days. After the SalesForce service has been onboarded CASB  will access the SalesForce APIs to change the password policy in SalesForce to comply with the security control profile we selected in CASB . You can verify the changes by logging in to SalesForce and navigating to the setup menu, then use the upper-left Quick Find box to search for “Password Policies” (no quotes) and review the "User passwords expire in" field to verify that it has been changed back to expire in 90 days, also notice that the enforce password history has been changed back to "3 passwords remembered"  . 
 
@@ -191,7 +191,7 @@ From the Action menu, note that we could choose to Create a new incident based o
 
 ### **STEP 11** Auto remediate a security control risk event . 
 
-In this step we'll automatically remediate one pf the security control Risk events. 
+In this step we'll automatically remediate one of the security control Risk events. 
 
 Select the "Enable clickjack protection..." incident in the list of incidents and under the Action column select the "View incident" dropdown option.
 
@@ -207,7 +207,11 @@ On the "Edit Incident" dialog select the "Resolve" button.
 On the resulting incident dialog ensure that the default "Auto Remediation" radio button is selected and click the "Approval" radio button and then click on the "Resolve Incident" button . 
 ![](images/CASB/resolve.png)
 
-CASB Cloud Service will use the SalesForce API to change the clickjack protection setting in SalesForce to bring it into compliance with the CASB Security Control baseline that is in effect .  
+CASB Cloud Service will now invoke the SalesForce API to change the clickjack protection setting in SalesForce to bring it into compliance with the CASB Security Control baseline that is in effect .  
+
+In SalesForce navigate to  Setup | Security Controls | Session Settings and verify the Clickjack Protection has been modified in SalesForce
+
+![](images/CASB/clickjack.png)
 
 
 ## Session 3. CASB Discovery
