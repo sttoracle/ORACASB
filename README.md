@@ -3,7 +3,7 @@ Update: November 13, 2017
 
 ## **Introduction**
 ___
- The purpose of this workshop is to provide participants hands-on experience using the Oracle CASB Cloud Service trail account to perform some key CASB use cases 
+ The purpose of this self directed workshop is to provide participants hands-on experience using the Oracle CASB Cloud Service trail account to perform some key CASB use cases 
 
 
 ## **Objectives**
@@ -361,8 +361,8 @@ The Policy will appear in the list of policies available for activation for the 
 #### **STEP 8**: Trigger the Policy Alert
 
 To test the policy log into the SalesForce account and perform an action on the role focused on in the policy . 
->  *Note: 
->  There is a delay between data collection cycles for the CASB service and the action you perform in SalesForce might not cause the policy alert in CASB to fire immediately but will appear on the next data collection that CASB does to the SalesForce tenant*
+ 
+> As noted before there is a delay between data collection cycles for the CASB service and the action you perform in SalesForce might not cause the policy alert in CASB to fire immediately but will appear on the next data collection that CASB does to the SalesForce tenant. 
 
 #### **STEP 9**: View the policy Alert
 Periodically, throughout the duration of the workshop, inspect the SalesForce application's policy alerts to verify that the policy alert associated with the policy you created in STEP 1 did in fact trigger ( Refer to the note above concerning the delay in alerts appearing within CASB )  
@@ -380,6 +380,8 @@ Next, we will demonstrate how to blacklist an IP address. In the Oracle CASB men
 ![](images/CASB/03-blacklist-ip.png)
 
 #### **STEP 2**: Log into SalesForce
+
+When we log into SalesForce from the blacklisted IP we ensure that a future risk event will be generated for SalesForce that flags the access to SalesForce from the black listed IP address. 
 
 #### **STEP 3**: Analyze the resulting risk even starting from the dashboard
 
