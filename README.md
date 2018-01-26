@@ -3,12 +3,12 @@ Update: November 13, 2017
 
 ## **Introduction**
 ___
- The purpose of this self directed workshop is to provide participants hands-on experience using the Oracle CASB Cloud Service trail account to perform some key CASB use cases 
+ The purpose of these self directed exersises is to provide participants hands-on experience using the Oracle CASB Cloud Service trail account to perform some key CASB use cases 
 
 
 ## **Objectives**
 ___
-The workshop will cover the following CASB features and concepts:
+The exercises will cover the following CASB features and concepts:
  - The CASB Cloud Service Dashboard
  - Sanctioned Application On-boarding 
  - CASB Discovery (Shadow IT)
@@ -20,8 +20,6 @@ The workshop will cover the following CASB features and concepts:
 
 ##  **Prerequisites**
 ___
-
-Upon registering for the workshop you received a registration confirmation e-mail that contains a link to the workshop's shared folder as well as CASB account credentials and instructions on how to sign-up for a Oracle cloud free trial. 
 
 ### **Signup for a SalesForce Trial Account**: 
 
