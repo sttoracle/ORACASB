@@ -374,7 +374,7 @@ Oracle CASB Cloud Service monitors user and agent behavior and automatically gen
 
 ### **Exercise**:
 #### **STEP 1**: Add a blacklisted IP address .
-Next, we will demonstrate how to blacklist an IP address. In the Oracle CASB menu (on the left- hand side), click on configuration and then click on “Manage IP addresses.” At the top of the screen you will notice three options: Blacklist, Whitelist, and Exception. In the Blacklist menu, click the “Add IP Address” menu item. You can choose to add an Individual Address or an Address Range. In our case, let’s add a sample IP address for as an Individual Address, like so:
+We will demonstrate how to blacklist an IP address. In the Oracle CASB menu (on the left- hand side), click on configuration and then click on “Manage IP addresses.” At the top of the screen you will notice three options: Blacklist, Whitelist, and Exception. In the Blacklist menu, click the “Add IP Address” menu item. You can choose to add an Individual Address or an Address Range. In our case, let’s add a sample IP address for as an Individual Address, like so:
 ![](images/CASB/03-blacklist-ip.png)
 
 #### **STEP 2**: Log into SalesForce
@@ -385,15 +385,21 @@ When we log into SalesForce from the blacklisted IP we ensure that a future risk
 
 > Note: The risk event will appear after the next scheduled data collection has occurred from your SalesForce tenant. 
 
-#### **STEP 3.1**: View the event on the "Access Map"
+Risk events that can be mapped to a geographic location are flagged on the Dashboard Access Map with red markers . 
 
-#### **STEP 3.2**: Find the risk events for SalesForce starting with health cards on the dashboard
+![](images/CASB/risk_on_map.png)
+
+Practice drilling down into the risks from a specific location by clicking on the red markers to get to the list of events from that given location marker. 
+
+![](images/CASB/map_drilldown.png)
 
 #### **STEP 4**: Analyze User Risk
 
-Users pose a variety of different security risks that Oracle CASB Cloud Service can detect. The purpose of this step is to Understand how to use the User risk levels card to identify high risk users.
+Users pose a variety of different security risks that Oracle CASB Cloud Service can detect. The purpose of this step is to understand how to use the User risk levels card to identify high risk users.
 #### **STEP 4.1**: Dashboard User Risk Level Card - Click any area of the chart to view details for the users at the corresponding risk level.
 In the Dashboard, the User risk levels card provides a quick overview of whether any users of your cloud services have an elevated risk score.
+
+![](images/CASB/user_risk_level.png)
 
 Oracle CASB Cloud Service typically collects 10 days of data before creating a risk profile for a user. It then generates a risk score for the user. This score is based on the degree to which the user's actions over the past day (24 hours) has deviated from their typical usage pattern. Oracle CASB Cloud Service does not analyze every action when calculating this risk score. Instead, it looks at actions that are often implicated in malicious insider or external hacker activity.
 Typically, the longer Oracle CASB Cloud Service monitors a user's behavior, the more accurate the risk score will be.
@@ -411,12 +417,16 @@ This Dashboard card provides a summary of users and highlights which users are s
 
 > You can also click the report icon in this card (the grid) to view a detailed report of users who are at risk (also accessible from the Users page).
 
-
 #### **STEP 4.2**: The Users Page - From the admin console, select Users
+
 The Users page provides a risk profile for all users who access the cloud applications or services that Oracle CASB Cloud Service monitors.
 
+![](images/CASB/user_list.jpg)
+
 Each risk profile is based on activity that Oracle CASB Cloud Service considers atypical. These activities can be generic (for example, an unusually high number of login attempts or access IP addresses) or specific to an application type (for example, sensitive administrative operations that are specific to Amazon Web Services).
-For the first ten days that Oracle CASB Cloud Service monitors a user, it bases its risk score on internal benchmarks. After ten days of monitoring a particular user, Oracle CASB Cloud Service bases the risk score on significant changes in the user's behavior, relative to that user's previous behavior. The longer Oracle CASB Cloud Service monitors a user, the more stable Oracle CASB Cloud Service's model of the user becomes. Oracle CASB Cloud Service recalculates its risk score daily based on new input and raises or lowers the risk score relative to the new risk factors detected:
+For the first ten days that Oracle CASB Cloud Service monitors a user, it bases its risk score on internal benchmarks. After ten days of monitoring a particular user, Oracle CASB Cloud Service bases the risk score on significant changes in the user's behavior, relative to that user's previous behavior. The longer Oracle CASB Cloud Service monitors a user, the more stable Oracle CASB Cloud Service's model of the user becomes. 
+
+Oracle CASB Cloud Service recalculates its risk score daily based on new input and raises or lowers the risk score relative to the new risk factors detected:
 Generic factors include the user's locations and IP addresses, file download activity, and number of operating systems used.
 Service-specific factors include sharing content with external users; creating, updating, and deleting content; and administrative activity, such as creating, modifying, and deleting users.
 
@@ -430,11 +440,18 @@ Service-specific factors include sharing content with external users; creating, 
 
 > * Normal activity. Below 60.
 
-#### **STEP 4.3**: To view details related to an individual risk factor for a user, click the risk factor name (for example, Failed login IP addresses).
-#### **STEP 4.4**: To view all details related to a user's risk score, click the user name.
-#### **STEP 4.5**: On the user details page, click a link in the Risk Factors section to view the details related to specific risk factors for a user.
-#### **STEP 4.6**: Click the See More link at the bottom of the table, and in the risk factor details dialog box, page through all of the events related to the risk factor.
-#### **STEP 4.7**: View a report of all activity related to a user
+#### **STEP 4.3**: To view all details related to a user's risk score, click the user name.
+On the user details page , click a link in the Risk Factors section to view the details related to specific risk factors for a user ( for example *Actions from suspicious IP* )
+
+![](images/CASB/user_risk.png)
+
+
+#### **STEP 4.4**: Click on the User Activities Button 
+![](images/CASB/user_activity.png)
+
+A bar chart that presents the weights of the individual risk factors that contributed to the user's particular risk score. You can click on the activities on the chart to drill into the individual risk events associated with the user's chart. 
+
+![](images/CASB/risk_weight.png)
 
 ## Exercise 7. Event Management
 ___
