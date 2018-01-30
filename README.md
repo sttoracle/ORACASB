@@ -449,7 +449,9 @@ On the user details page , click a link in the Risk Factors section to view the 
 #### **STEP 4.4**: Click on the User Activities Button 
 ![](images/CASB/user_activity.png)
 
-A bar chart that presents the weights of the individual risk factors that contributed to the user's particular risk score. You can click on the activities on the chart to drill into the individual risk events associated with the user's chart. 
+A bar chart that presents the weights of the individual risk factors that contributed to the user's particular risk score will be displayed. 
+
+You can click on the individual sections on the bar chart to drill into the individual risk events associated with the user's chart ( presented by date ). 
 
 ![](images/CASB/risk_weight.png)
 
