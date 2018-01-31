@@ -324,45 +324,63 @@ and then click New Policy
 
 ![](images/CASB/E77A0F2E-FFE5-44F9-8BE4-291F3AD3744C.png)
 
-#### **STEP 2**: Complete the "Name" panel in the "New Policy' wizzard
+#### **STEP 1.2**: Complete the "Name" panel in the "New Policy' wizzard
 Choose a unique name of the format “YOURNAME_TEST_POLICY.” Create a description for the policy, set the priority to High, and check the box to “Include in user risk score.” This is an example of how a policy can effect user risk scores, thus influencing the CASB machine learning algorithms.
 ![](images/CASB/02-policy-creation.png)
 Click on Next.
-#### **STEP 3**: Complete the "Resource" panel 
+#### **STEP 1.3**: Complete the "Resource" panel 
 Select “Salesforce” for the application type, choose your Salesforce instance, select “Role” as the Resource. And choose a text expression of “CEO” for the Resource Name. For the “Action on this Resource,” leave it set to “Any” (although valid choices also include Assign Role, Create Role, Delete Role, Revoke Role, and Update Role).
 ![](images/CASB/04-policy-setup.png)
 After adding this information, click on Next.
-#### **STEP 4**: (Optional) Complete the "Username" panel
+#### **STEP 1.4**: (Optional) Complete the "Username" panel
 You can leave these settings as default (blank) and click the Next button
 > *Exception: If the resource action is Login, you identify the user who is logging in in the previous step (the Resources page) and skip this step.*   
 
-#### **STEP 5**: Complete the "Conditions" panel
+#### **STEP 1.5**: Complete the "Conditions" panel
 Specify conditions to limit when the alert is triggered. 
-Add two conditions: one condition for Device equal to Mobile, and a second condition for Device equal to API Call (use the “Add condition” link to add the second condition). After adding the two policy conditions, click Next to continue.
+Add two conditions: one condition for Device equal to Desktop, and a second condition for Device equal to Mobile (use the “Add condition” link to add the second condition). After adding the two policy conditions, click Next to continue.
 ![](images/CASB/04-policy-conditions.png)
 > *NOTE:*
 > *You can specify a condition using either of these types of conditions multiple times, and you can specify either type of condition in any order, freely mixing the two types.*
 > *When you specify multiple conditions, the conditions operate independently. Each condition causes the alert to either be triggered (Equal To operator), or not be triggered (Not Equal to operator), for that specific condition. The conditions are neither ANDed nor ORed.*
 
-#### **STEP 6**: Complete the "Actions" panel
+#### **STEP 1.6**: Complete the "Actions" panel
 
 Create custom instructions for the resultant alert by checking the box for customization and entering a message. Note that alerts can also be sent in email. Click Next.
 
 ![](images/CASB/04-custom-action.png)
 
-#### **STEP 7**: Click "Next" and "Review & Submit" the policy 
+#### **STEP 1.7**: Click "Next" and "Review & Submit" the policy 
 
 The Policy will appear in the list of policies available for activation for the tenant.
 
 ![](images/CASB/04-confirmation-screen.png)
 
-#### **STEP 8**: Trigger the Policy Alert
+#### **STEP 2**: Trigger the Policy Alert
 
-To test the policy log into the SalesForce account and perform an action on the role focused on in the policy . 
+To test the policy log into the SalesForce account and perform an action on the role ( CEO ) focused on in the policy . 
  
+ Log into your SalesForce Developer account and follow these steps to create a CEO role and assign a user to it ( This will result in the CASB policy alert to be generated )
+ 
+ #### **STEP 2.1**:In the SalesForce "Setup" section navigate to Users -> Roles
+ 
+ ![](images/CASB/SFRole1.png)
+ Press the "Set Up Roles" button
+ #### **STEP 2.2**: Select to create the suggested SalesForce Role Hierarchy.
+ ![](images/CASB/SFRole2.png)
+
+ #### **STEP 2.3**: Select "Assign Users to Role" ( or "New User")
+ ![](images/CASB/SFRole3.png)
+ 
+  #### **STEP 2.4**: Add a user to the policied role
+ ![](images/CASB/SFRole4.png)
+ Search for a user and add the user to the role by selecting the "Add" button to move the user from the search results to the "Selected Users for CEO" selection box. 
+
+ Click the "Save" button 
+
 > As noted before there is a delay between data collection cycles for the CASB service and the action you perform in SalesForce might not cause the policy alert in CASB to fire immediately but will appear on the next data collection that CASB does to the SalesForce tenant. 
 
-#### **STEP 9**: View the policy Alert
+#### **STEP 3**: View the policy Alert
 Periodically, throughout the duration of the workshop, inspect the SalesForce application's policy alerts to verify that the policy alert associated with the policy you created in STEP 1 did in fact trigger ( Refer to the note above concerning the delay in alerts appearing within CASB )  
 
 ## **Exercise 6. Risk Events & User Risk**
@@ -370,7 +388,7 @@ ___
 ### **Overview**:
 Risk events encompass *anomalies* and *threats* that Oracle CASB Cloud Service detects.
 
-Oracle CASB Cloud Service monitors user and agent behavior and automatically generates risk scores and alerts based on their activity patterns. To take advantage of this data, you must find and analyze users at risk, suspicious activity patterns, and activity from suspicious IP addresses.
+Oracle CASB Cloud Service monitors user and agent behavior and automatically generates risk scores and alerts based on their activity patterns. To take advantage of this data, you must find and analyze users at risk, suspicious activity patterns, and activity from suspicious IP addresses .
 
 ### **Exercise**:
 #### **STEP 1**: Add a blacklisted IP address .
