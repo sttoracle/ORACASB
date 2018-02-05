@@ -483,9 +483,19 @@ You can click on the individual sections on the bar chart to drill into the indi
 ## Exercise 7. Event Management
 ___
 Oracle CASB Cloud Service generates a ticket in the Incidents section of the console whenever it detects a behavioral anomaly. Administrators also can create incident tickets manually.
-#### **STEP 1**: Finding an Incident in the Incidents Page
-#### **STEP 1.1**: Click "Incidents" in the left navigation pane
-#### **STEP 1.2**: Expand Filters if filters are not displayed
+#### **STEP 1**: Finding an targeting an  Incident in the Incidents Page for remediation.
+Selct one of the SalesForce Security Control related incidents and click the "*remediate*" icon
+
+![](images/CASB/click_remediate.png)
+
+#### **STEP 2**: Review and remediate the incident
+Oracle CASB Cloud Service will open a dialog box with the details of the incident . For security control related indicents you'll notice an actual value and a recommended value that is prescribed by the current active security control baseline. 
+For services,such as SalesForce, that provide APIs to effect the recommended configuration changes in the traget service you'll have an option to perform an "*Auto Remediation*" you can also select to perform a "*Manual Remediation*" .  We'll do a manual remediation in this excersise since we've already demonstrated an "*Auto Remediation*" in a previose excersise . 
+![](images/CASB/manual_remediation.png)
+
+Supply a description in the "*Reason*" text area of what actions you performed to resolve the incident and click the "*Resolve Incident*" button.
+
+#### **STEP 3**: Expand Filters if filters are not displayed
 You can filter by incident ID, application instance name, dates, and additional criteria. 
 
 The category filters are:
@@ -498,28 +508,6 @@ The category filters are:
 * Monitoring stopped displays only tickets flagged as pertaining to Oracle CASB Cloud Service being unable to connect to a monitored application instance. An Oracle CASB Cloud Service administrator manually creates tickets of this type.
 
 * Other incident types are specialized versions of anomalous activities (threats).
-
-#### **STEP 1.3**: Click Search
-
-#### **STEP 1.4**: Click the Edit icon to view the details for an incident of interest.
-
-#### **STEP 2**: Resolve an Incident
-#### **STEP 2.1**: In the Oracle CASB Cloud Service console, select Incidents
-
-#### **STEP 2.2**: Click the Edit icon to view incident details 
-#### **STEP 2.3**: In the Edit Incident dialog - Click Resolve.
-
-#### **STEP 2.3.1** : In the Incident#... dialog, if Oracle CASB Cloud Service or another system can resolve the incident automatically, the Auto remediation option is available. To delegate remediation to Oracle CASB Cloud Service, select Auto remediation.
-
-If the Auto remediation option is not available, or you wish to fix the Box instance setting manually, select Manual remediation by continuing with the remaining steps
-
-#### **STEP 2.3.2** : Check the Approval box.
-
-In the Reason box, describe the remediation action you took that should prevent similar incidents from appearing in Risk Events in the future.
-
-Note: If you do not take a remediation action (manual or auto), you should dismiss the incident instead of "resolving" it. To dismiss instead of resolving this incident, click Cancel twice, then proceed with the next numbered step below.
-
-#### **STEP 2.3.3** : Click Resolve Incident.
 
 
 
