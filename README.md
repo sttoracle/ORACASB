@@ -1,10 +1,8 @@
-Update: November 13, 2017
-
+Updated: Feb 3, 2018
 
 ## **Introduction**
 ___
- The purpose of these self directed exersises is to provide participants hands-on experience using the Oracle CASB Cloud Service trail account to perform some key CASB use cases 
-
+ The purpose of these self-directed exercises is to provide participants hands-on experience using the Oracle CASB Cloud Service trail account to perform some key CASB use cases 
 
 ## **Objectives**
 ___
@@ -17,13 +15,12 @@ The exercises will cover the following CASB features and concepts:
  - Risk Events & User Risk
  - Event Management
 
-
 ##  **Prerequisites**
 ___
 
 ### **Signup for a SalesForce Trial Account**: 
 
->A SalesForce Developer Account is automatically provisioned for you when you sign-up for the workshop but in the event you did not receive a trial account you can self-register using the following instructions :
+>A SalesForce Developer Account is automatically provisioned for you when you sign-up for the workshop but in the event you did not receive a trial account you can self-register using the following instructions:
 
 #### **STEP 1**: Create Salesforce Developer Account
 First, we must acquire a new Salesforce developer account. Sign-up for a Salesforce developer account at https://developer.salesforce.com/signup (this is a free account, no credit card required). You will need an email address. After completing the signup process, check your email and click the account verification link. The verification link may look similar to this:
@@ -47,14 +44,14 @@ This completes our tutorial on creating a SalesForce demo instance and setting s
 ## **Exercise 1 . CASB Cloud Service Dashboard**
 ___
 ### **Overview**:
-This session will familiarize  you with the Oracle CASB Cloud Service User Interface and dashboard
+This session will familiarize you with the Oracle CASB Cloud Service User Interface and dashboard
 
 ### **Exercise**:
 
 #### **STEP 1**: Sign on to Oracle CASB Cloud Service
 
 Using your preferred browser navigate to the Oracle CASB Service home URL at  https://trial.palerra.net/ . 
-You'll be presented with the following login form :
+You'll be presented with the following login form:
 
 ![](images/CASB/66D12B19-6081-445A-9562-B496AFBBE1B3.png)  
 
@@ -63,14 +60,14 @@ You'll be presented with the following login form :
 #### **STEP 2**: Review select items on the CASB Dashboard
 
 The Dashboard is the first UI view you will see in the Oracle CASB Cloud Service after you've logged into the service.
-The purpose of the dashboard is to give the user a summary view of various important Cloud service security related information. Some of the more important items on the dashboard are :
+The purpose of the dashboard is to give the user a summary view of various important Cloud service security related information. Some of the more important items on the dashboard are:
 
 #### Service Health Indicators
 The Health Indicator Carousel presents indicators of the overall health state of the cloud services being monitored by a particular CASB tenant.
 
 ![](images/CASB/health_indicators.png)
 
-There are 5 Health indicator tabs into which the variouse services being monitored is shorted into  :
+There are 5 Health indicator tabs into which the various services being monitored is shorted into :
 
 ![](images/CASB/icon_risk_unreachable_big.png)— Status: Application instance is unreachable.
 
@@ -86,7 +83,7 @@ There are 5 Health indicator tabs into which the variouse services being monitor
 
 ![](images/CASB/7B1AFFA4-DF72-401B-9975-68272079B2F2.png)
 
-"The Health Summary: All Application Instances" card summarizes potential threat information across all registered application instances. The definitions of the different health and risk indicators ( e.g. Policy Alerts) will be presented in additional sessions within this workshop .
+"The Health Summary: All Application Instances" card summarizes potential threat information across all registered application instances. The definitions of the different health and risk indicators (e.g. Policy Alerts) will be presented in additional sessions within this workshop.
 
 #### Access Map
 
@@ -95,15 +92,14 @@ There are 5 Health indicator tabs into which the variouse services being monitor
 The Access Map shows points of origin for both normal (green dot) and suspicious (red dot) events. Click links in the summary information to see more details.
 
 > The other summary cards on the Dashboard Summary tab, such as Suspicious and normal IP addresses, display statistics for specific types of activity that may or may not be suspicious. For each summary card, you can:
-View the summary statistics displayed, Hover over parts of the card to see additional information in pop-ups, and to identify links, click any link in the card to see more detailed information, click the Help icon Image of Help icon in the upper-right corner to see online help about the type of information displayed in any particular card .
-
+View the summary statistics displayed, Hover over parts of the card to see additional information in pop-ups, and to identify links, click any link in the card to see more detailed information, click the Help icon Image of Help icon in the upper-right corner to see online help about the type of information displayed in any particular card.
 
 ## **Exercise 2 . Sanctioned Application Onboarding**
 ___
 ### **Overview**:
 In this session you will be using the Oracle CASB Cloud Service UI to onboard your Salesforce Developer Account into your assigned Oracle CASB Cloud Service tenant.
 
-### **Excercise**:
+### **Exercise**:
 
 #### **STEP 1**: Click on the "Add an App" menu item. 
 
@@ -121,7 +117,7 @@ Press the "Next" button to proceed to the next step of the "Register an app inst
 
 ![](images/CASB/01-add-salesforce-app.png)
 
-> For your information : If a SalesForce account is federated with a supported Cloud Identity Provider ( IdP ) you can select the "The users of this app instance log in using single sign-on through an identity provider" checkbox and select the Identity Provider being used from a list of pre-configured providers
+> For your information: If a SalesForce account is federated with a supported Cloud Identity Provider ( IdP ) you can select the "The users of this app instance log in using single sign-on through an identity provider" checkbox and select the Identity Provider being used from a list of pre-configured providers
 
 #### **STEP 4**: Select Monitoring Type
 
@@ -132,22 +128,22 @@ Select the "Push controls and monitor" radio button and then press the "Next" bu
 
 ![](images/CASB/salesforce_controls.png)
 
-Because the monitor and push option was selected an approval radio button will be displayed that will prompt you to acknowledge and consent to CASB Cloud Service making changes in the target service ( SalesForce for this session ) to bring its security configuration in line with the selected Security Control baseline. 
+Because the monitor and push option was selected an approval radio button will be displayed that will prompt you to acknowledge and consent to CASB Cloud Service making changes in the target service (SalesForce for this session) to bring its security configuration in line with the selected Security Control baseline. 
 
->You can review the Controls begin monitored and enforced under the *Standard* and *Stringent* Security Controls baselines . You can also define your own security control baseline by clicking on the *Custom* radio button and configuring the security controls you would like to enforce for a given sactioned app. 
+>You can review the Controls begin monitored and enforced under the *Standard* and *Stringent* Security Controls baselines. You can also define your own security control baseline by clicking on the *Custom* radio button and configuring the security controls you would like to enforce for a given sanctioned app. 
 
 #### **STEP 6**: Authenticate to SalesForce and allow CASB to access your Salesforce Account 
 You will be redirected to SFDC to login, and you will see the following screen in the process:
 
 ![](images/CASB/01-please-wait-screen.png)
 
-> NOTE: Once logged in, Salesforce may  ask you to verify your identity by sending a code to the email address used to sign-up. If so, retrieve the one time verification code from your email.
+> NOTE: Once logged in, Salesforce may ask you to verify your identity by sending a code to the email address used to sign-up. If so, retrieve the one-time verification code from your email.
 
 Upon log in, you will be asked to confirm that you want to grant access to the Oracle CASB Cloud Service:
 
 ![](images/CASB/01-grant-access.png)
 
-> This is part of  the Salesforce Authorization code OAuth Flow that CASB utilize to gain authorization to access the relevant SalesForce APIs it will use to integrate with SalesForce.
+> This is part of the Salesforce Authorization code OAuth Flow that CASB utilize to gain authorization to access the relevant SalesForce APIs it will use to integrate with SalesForce.
 
 Click the *Allow* button to allow the access.
 You will next be redirected back to the Oracle CASB Cloud Service. Here, you receive confirmation that the application is on-boarded and the initial data load will complete within 30 to 120 minutes. 
@@ -162,7 +158,7 @@ After the data load has taken place, the application will shed the “NEW” ban
 
 #### **STEP 7**: Review changes made in SalesForce to bring it inline with the Security Control baseline we selected .
 
-Recall that we changed the password policy in SalesForce to never expire however notice that the security control we selected with the "standard" profile requires the password to expire in 90 days. After the SalesForce service has been on-boarded CASB  will access the SalesForce APIs to change the password policy in SalesForce to comply with the security control profile we selected in CASB . You can verify the changes by logging in to SalesForce and navigating to the setup menu, then use the upper-left Quick Find box to search for “Password Policies” (no quotes) and review the "User passwords expire in" field to verify that it has been changed back to expire in 90 days, also notice that the enforce password history has been changed back to "3 passwords remembered"  . 
+Recall that we changed the password policy in SalesForce to never expire however notice that the security control we selected with the "standard" profile requires the password to expire in 90 days. After the SalesForce service has been on-boarded CASB will access the SalesForce APIs to change the password policy in SalesForce to comply with the security control profile we selected in CASB . You can verify the changes by logging in to SalesForce and navigating to the setup menu, then use the upper-left Quick Find box to search for “Password Policies” (no quotes) and review the "User passwords expire in" field to verify that it has been changed back to expire in 90 days, also notice that the enforce password history has been changed back to "3 passwords remembered” . 
 
 #### **STEP 8**: View Risk Events from Initial Scan
 
@@ -173,7 +169,7 @@ Next, we’ll update the CASB security control baseline for our Salesforce insta
 
 ![](images/CASB/updatesecuritycontrols.png)
 
->Expand the Password Policy tab to see more detail on which controls are being enforced by the "Stringent" Security control baseline .
+>Expand the Password Policy tab to see more detail on which controls are being enforced by the "Stringent" Security control baseline.
 
 Check the box that says to “use the new threshold values” and click on the Submit button.
 ![](images/CASB/02-check-and-submit.png)
@@ -201,7 +197,7 @@ a Dialog will appear that will prompt the user to upload a log file.
 Press the "Choose File" button and upload the sample log file assigned to you.
   
 
- > Each workshop participant  received a sample logfile that has been uploaded to the individual Box folder 
+ > Each workshop participant received a sample log file that has been uploaded to the individual Box folder 
 
 #### **STEP 3**: Select the log file format & Press the "Import" Button
 
@@ -211,14 +207,14 @@ CASB CS will process the log file and update the view with the progress it has m
 
 ![](images/CASB/upload_indicator.png)
 
-Once the file has been processed CASB will display the results of it's analysis. You can, at any time, go back to your results by making note of where on the timeline your specific sample log fits in. 
+Once the file has been processed CASB will display the results of its analysis. You can, at any time, go back to your results by making note of where on the timeline your specific sample log fits in. 
 
 #### **STEP 4**: Explorer the results of the log file import 
 At the top of the page CASB will display the users who used the most apps as well as the most popular apps that have been discovered 
 
 ![](images/CASB/6AE30331-B060-4825-A24E-A15073420C46.png)
 
-You can select one of the users to filter the table view of discovered apps to only include the apps used by the selected user . You can further select individual apps in the table view to view further detail about the app . For some apps that have a *SecureScorecard* report you can view the  security concerns associated with the app . 
+You can select one of the users to filter the table view of discovered apps to only include the apps used by the selected user. You can further select individual apps in the table view to view further detail about the app. For some apps that have a *SecureScorecard* report you can view the security concerns associated with the app. 
 
 ![](images/CASB/6588AB1E-7C68-46DF-8F01-0A29646AA259.png)
 
@@ -249,14 +245,14 @@ Monitor-only. Oracle CASB Cloud Service reports on these security control values
 Monitor and push preferred values to the cloud application. At registration time, Oracle CASB Cloud Service ensures that your cloud application has your preferred security configuration values. After registration, Oracle CASB Cloud Service reports on changes to these values.
 
 ### **Exercise**:
-Recall that in Exercise 2 we updated the SalesForce instance's security control baseline from the initial "Standard" baseline to the "Stringent" baseline. Because the change in baselines will not automatically push the changes to SalesForce, to bring it in compliance with the new baseline, the next data collection scan from CASB to SalesForce will find a number of Security Control violations resulting from the fact that the settings in SalesForce are in compliance with the initial "Standard" baseline but not with the "Stringent" baseline . 
+Recall that in Exercise 2 we updated the SalesForce instance's security control baseline from the initial "Standard" baseline to the "Stringent" baseline. Because the change in baselines will not automatically push the changes to SalesForce, to bring it in compliance with the new baseline, the next data collection scan from CASB to SalesForce will find a number of Security Control violations resulting from the fact that the settings in SalesForce are in compliance with the initial "Standard" baseline but not with the "Stringent" baseline. 
 
-In this session we will review some of these violations and will see how CASB can perform automated remediation of the security control violations . 
+In this session we will review some of these violations and will see how CASB can perform automated remediation of the security control violations. 
 
 #### **STEP 1**: Review security control violations 
-> There will be a delay between the time the security control baseline is updated until the next scan of the SalesForce tenant's settings will be compared to the new baseline. Any violations will therefore not appear until the next scan takes effect . If you do not see any violations as described bellow move on to the next session and revisit the session  once CASB has had a chance to do a fresh scan of SalesForce.
+> There will be a delay between the time the security control baseline is updated until the next scan of the SalesForce tenant's settings will be compared to the new baseline. Any violations will therefore not appear until the next scan takes effect. If you do not see any violations as described below move on to the next session and revisit the session once CASB has had a chance to do a fresh scan of SalesForce.
 
-There should be an exclamation point in your SalesForce tenant's Application List icon, indicating there are some new Risk Events we can evaluate. Click the your recently on-boarded application, and then choose the “View Details” button.
+There should be an exclamation point in your SalesForce Tenant’s Application List icon, indicating there are some new Risk Events we can evaluate. Click the your recently on-boarded application, and then choose the “View Details” button.
 
 ![](images/CASB/01-choose-view-details.png)
 
@@ -268,30 +264,29 @@ From the details page, a number of non-compliant security controls have been det
 
 From the Action menu, note that we could choose to Create a new incident based on this particular Risk Event. 
 
-#### **STEP 2** Auto remediate a security control risk event . 
+#### **STEP 2** Auto remediate a security control risk event. 
 
-In this step we'll automatically remediate one of the security control Risk events. 
+In this step, we'll automatically remediate one of the security control Risk events. 
 
 Select the "Enable clickjack protection..." incident in the list of incidents and under the Action column select the "View incident" dropdown option.
 
 ![](images/CASB/securityincident.png)
 
-On the "View Incident" dialog select the "Edit Incident" button . 
+On the "View Incident" dialog select the "Edit Incident" button. 
 
 ![](images/CASB/viewincident.png)
 
 On the "Edit Incident" dialog select the "Resolve" button.
 ![](images/CASB/editincident.png)
 
-On the resulting incident dialog ensure that the default "Auto Remediation" radio button is selected and click the "Approval" radio button and then click on the "Resolve Incident" button . 
+On the resulting incident dialog ensure that the default "Auto Remediation" radio button is selected and click the "Approval" radio button and then click on the "Resolve Incident" button. 
 ![](images/CASB/resolve.png)
 
-CASB Cloud Service will now invoke the SalesForce API to change the clickjack protection setting in SalesForce to bring it into compliance with the CASB Security Control baseline that is in effect .  
+CASB Cloud Service will now invoke the SalesForce API to change the clickjack protection setting in SalesForce to bring it into compliance with the CASB Security Control baseline that is in effect.  
 
-In SalesForce navigate to  Setup | Security Controls | Session Settings and verify the Clickjack Protection has been modified in SalesForce
+In SalesForce navigate to: Setup | Security Controls | Session Settings and verify the Clickjack Protection has been modified in SalesForce
 
 ![](images/CASB/clickjack.png)
-
 
 ## **Exercise 5. Policies**
 ___
@@ -328,7 +323,7 @@ and then click New Policy
 
 ![](images/CASB/E77A0F2E-FFE5-44F9-8BE4-291F3AD3744C.png)
 
-#### **STEP 1.2**: Complete the "Name" panel in the "New Policy' wizzard
+#### **STEP 1.2**: Complete the "Name" panel in the "New Policy' wizard
 Choose a unique name of the format “YOURNAME_TEST_POLICY.” Create a description for the policy, set the priority to "*Medium*", and check the box to “*Include in user risk score.*” This is an example of how a policy can effect user risk scores, thus influencing the CASB machine learning algorithms.
 ![](images/CASB/policy1.png)
 Click on Next.
@@ -364,7 +359,7 @@ The Policy will appear in the list of policies available for activation for the 
 
 To test the policy log into the SalesForce account and perform an action on the CEO role that our new policy monitors.
  
- Log into your SalesForce Developer account and follow these steps to create a CEO role and assign a user to it ( This will result in the CASB policy alert )
+ Log into your SalesForce Developer account and follow these steps to create a CEO role and assign a user to it (This will result in the CASB policy alert)
  
  #### **STEP 2.1**:In the SalesForce "Setup" section navigate to Users -> Roles
  
@@ -373,10 +368,10 @@ To test the policy log into the SalesForce account and perform an action on the 
  #### **STEP 2.2**: Select to create the suggested SalesForce Role Hierarchy.
  ![](images/CASB/SFRole2.png)
 
- #### **STEP 2.3**: Select "Assign Users to Role" ( or "New User")
+ #### **STEP 2.3**: Select "Assign Users to Role" (or "New User")
  ![](images/CASB/SFRole3.png)
  
-  #### **STEP 2.4**: Add a user to the policied role
+  #### **STEP 2.4**: Add a user to the policy role
  ![](images/CASB/SFRole4.png)
  Search for a user and add the user to the role by selecting the "Add" button to move the user from the search results to the "Selected Users for CEO" selection box. 
 
@@ -385,7 +380,7 @@ To test the policy log into the SalesForce account and perform an action on the 
 > As noted before there is a delay between data collection cycles for the CASB service and the action you perform in SalesForce might not cause the policy alert in CASB to fire immediately but will appear on the next data collection that CASB does to the SalesForce tenant. 
 
 #### **STEP 3**: View the policy Alert
-Periodically, throughout the duration of the workshop, inspect the SalesForce application's policy alerts to verify that the policy alert associated with the policy you created in STEP 1 did in fact trigger ( Refer to the note above concerning the delay in alerts appearing within CASB )  
+Periodically, throughout the duration of the workshop, inspect the SalesForce application's policy alerts to verify that the policy alert associated with the policy you created in STEP 1 did in fact trigger (Refer to the note above concerning the delay in alerts appearing within CASB)  
 
 ![](images/CASB/policy_alerts.png)
 
@@ -395,10 +390,10 @@ ___
 ### **Overview**:
 Risk events encompass *anomalies* and *threats* that Oracle CASB Cloud Service detects.
 
-Oracle CASB Cloud Service monitors user and agent behavior and automatically generates risk scores and alerts based on their activity patterns. To take advantage of this data, you must find and analyze users at risk, suspicious activity patterns, and activity from suspicious IP addresses .
+Oracle CASB Cloud Service monitors user and agent behavior and automatically generates risk scores and alerts based on their activity patterns. To take advantage of this data, you must find and analyze users at risk, suspicious activity patterns, and activity from suspicious IP addresses.
 
 ### **Exercise**:
-#### **STEP 1**: Add a blacklisted IP address .
+#### **STEP 1**: Add a blacklisted IP address.
 We will demonstrate how to blacklist an IP address. In the Oracle CASB menu (on the left- hand side), click on configuration and then click on “Manage IP addresses.” At the top of the screen you will notice three options: Blacklist, Whitelist, and Exception. In the Blacklist menu, click the “Add IP Address” menu item. You can choose to add an Individual Address or an Address Range. In our case, let’s add a sample IP address for as an Individual Address, like so:
 ![](images/CASB/03-blacklist-ip.png)
 
@@ -410,7 +405,7 @@ When we log into SalesForce from the blacklisted IP we ensure that a future risk
 
 > Note: The risk event will appear after the next scheduled data collection has occurred from your SalesForce tenant. 
 
-Risk events that can be mapped to a geographic location are flagged on the Dashboard Access Map with red markers . 
+Risk events that can be mapped to a geographic location are flagged on the Dashboard Access Map with red markers. 
 
 ![](images/CASB/risk_on_map.png)
 
@@ -421,6 +416,7 @@ Practice drilling down into the risks from a specific location by clicking on th
 #### **STEP 4**: Analyze User Risk
 
 Users pose a variety of different security risks that Oracle CASB Cloud Service can detect. The purpose of this step is to understand how to use the User risk levels card to identify high risk users.
+
 #### **STEP 4.1**: Dashboard User Risk Level Card - Click any area of the chart to view details for the users at the corresponding risk level.
 In the Dashboard, the User risk levels card provides a quick overview of whether any users of your cloud services have an elevated risk score.
 
@@ -466,31 +462,30 @@ Service-specific factors include sharing content with external users; creating, 
 > * Normal activity. Below 60.
 
 #### **STEP 4.3**: To view all details related to a user's risk score, click the user name.
-On the user details page , click a link in the Risk Factors section to view the details related to specific risk factors for a user ( for example *Actions from suspicious IP* )
+On the user details page, click a link in the Risk Factors section to view the details related to specific risk factors for a user (for example *Actions from suspicious IP*)
 
 ![](images/CASB/user_risk.png)
-
 
 #### **STEP 4.4**: Click on the User Activities Button 
 ![](images/CASB/user_activity.png)
 
 A bar chart that presents the weights of the individual risk factors that contributed to the user's particular risk score will be displayed. 
 
-You can click on the individual sections on the bar chart to drill into the individual risk events associated with the user's chart ( presented by date ). 
+You can click on the individual sections on the bar chart to drill into the individual risk events associated with the user's chart (presented by date). 
 
 ![](images/CASB/risk_weight.png)
 
 ## Exercise 7. Event Management
 ___
 Oracle CASB Cloud Service generates a ticket in the Incidents section of the console whenever it detects a behavioral anomaly. Administrators also can create incident tickets manually.
-#### **STEP 1**: Finding an targeting an  Incident in the Incidents Page for remediation.
-Selct one of the SalesForce Security Control related incidents and click the "*remediate*" icon
+#### **STEP 1**: Finding an targeting an Incident in the Incidents Page for remediation.
+Select one of the SalesForce Security Control related incidents and click the "*remediate*" icon
 
 ![](images/CASB/click_remediate.png)
 
 #### **STEP 2**: Review and remediate the incident
-Oracle CASB Cloud Service will open a dialog box with the details of the incident . For security control related indicents you'll notice an actual value and a recommended value that is prescribed by the current active security control baseline. 
-For services,such as SalesForce, that provide APIs to effect the recommended configuration changes in the traget service you'll have an option to perform an "*Auto Remediation*" you can also select to perform a "*Manual Remediation*" .  We'll do a manual remediation in this excersise since we've already demonstrated an "*Auto Remediation*" in a previose excersise . 
+Oracle CASB Cloud Service will open a dialog box with the details of the incident. For security control, related incidents you'll notice an actual value and a recommended value that is prescribed by the current active security control baseline. 
+For services, such as SalesForce, that provide APIs to affect the recommended configuration changes in the target service you'll have an option to perform an "*Auto Remediation*" you can also select to perform a "*Manual Remediation*”.  We'll do a manual remediation in this exercise since we've already demonstrated an "*Auto Remediation*" in a previous exercise. 
 ![](images/CASB/manual_remediation.png)
 
 Supply a description in the "*Reason*" text area of what actions you performed to resolve the incident and click the "*Resolve Incident*" button.
@@ -508,6 +503,7 @@ The category filters are:
 * Monitoring stopped displays only tickets flagged as pertaining to Oracle CASB Cloud Service being unable to connect to a monitored application instance. An Oracle CASB Cloud Service administrator manually creates tickets of this type.
 
 * Other incident types are specialized versions of anomalous activities (threats).
+
 
 
 
