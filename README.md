@@ -30,14 +30,19 @@ First, we must acquire a new Salesforce developer account. Sign-up for a Salesfo
 
 ![](images/CASB/74FCDEE4-C1D1-49FE-960A-43BD91A87BBD.png)
 #### **STEP 2** Configure Salesforce Developer Account for CASB:
-After clicking the verification link, next choose a new password for your Salesforce developer account. You will next be taken to the Salesforce dashboard where you can configure settings. We’ll use this opportunity to configure some sample security settings within Salesforce. In the setup menu, use the upper-left Quick Find box to search for “Password Policies” (no quotes).
+After clicking the verification link, next choose a new password for your Salesforce developer account. You will next be taken to the Salesforce dashboard where you can configure settings. We’ll use this opportunity to configure some sample security settings within Salesforce. In the setup menu, use the upper-left Quick Find box to search for “*Password Policies*” (no quotes).
 ![](images/CASB/01-quick-find-box.png)
-Under “Password Policies,” set user passwords to Never Expire.
+Under “*Password Policies*” set user passwords to "*Never Expire*".
 ![](images/CASB/01-password-never-expire.png)
-Under “Password Policies,” choose to not enforce password history.
+Under “*Password Policies*” choose to not enforce password history.
 ![](images/CASB/01-password-never-remember.png)
-At the bottom of the “Password Policies” page, click the Save button. This completes our tutorial of creating a Salesforce demo instance and setting some sample Salesforce security policies. There are many security settings within Salesforce that can be protected with CASB, but this is just a sample. Note how easy it is for administrators to modify the security settings.
+At the bottom of the “*Password Policies*” page, click the "*Save*" button. 
 
+Finally, create a dedicated CASB user in SalesForce that CASB will use to obtain the SalesForce Oauth tokens it requires to access the SalesForce APIs.
+
+TO DO Add instruction
+
+This completes our tutorial on creating a SalesForce demo instance and setting some sample SalesForce security policies. There are many security settings within Salesforce that can be protected with CASB, but this is just a sample. 
 
 ## **Exercise 1 . CASB Cloud Service Dashboard**
 ___
@@ -48,13 +53,12 @@ This session will familiarize  you with the Oracle CASB Cloud Service User Inter
 
 #### **STEP 1**: Sign on to Oracle CASB Cloud Service
 
-- Using your preferred browser navigate to the Oracle CASB Service home URL at  https://trial.palerra.net/ . 
-You'll be presented with the following login form 
+Using your preferred browser navigate to the Oracle CASB Service home URL at  https://trial.palerra.net/ . 
+You'll be presented with the following login form :
 
+![](images/CASB/66D12B19-6081-445A-9562-B496AFBBE1B3.png)  
 
-    ![](images/CASB/66D12B19-6081-445A-9562-B496AFBBE1B3.png)  
-
-> Your registration confirmation e-mail contains your CASB administrator login credentials.
+> If you are following these instructions as part of the Oracle Cloud Security workshop then your registration confirmation e-mail will contain your CASB administrator login credentials.
 
 #### **STEP 2**: Review select items on the CASB Dashboard
 
@@ -325,8 +329,8 @@ and then click New Policy
 ![](images/CASB/E77A0F2E-FFE5-44F9-8BE4-291F3AD3744C.png)
 
 #### **STEP 1.2**: Complete the "Name" panel in the "New Policy' wizzard
-Choose a unique name of the format “YOURNAME_TEST_POLICY.” Create a description for the policy, set the priority to High, and check the box to “Include in user risk score.” This is an example of how a policy can effect user risk scores, thus influencing the CASB machine learning algorithms.
-![](images/CASB/02-policy-creation.png)
+Choose a unique name of the format “YOURNAME_TEST_POLICY.” Create a description for the policy, set the priority to "*Medium*", and check the box to “*Include in user risk score.*” This is an example of how a policy can effect user risk scores, thus influencing the CASB machine learning algorithms.
+![](images/CASB/policy1.png)
 Click on Next.
 #### **STEP 1.3**: Complete the "Resource" panel 
 Select “Salesforce” for the application type, choose your Salesforce instance, select “Role” as the Resource. And choose a text expression of “CEO” for the Resource Name. For the “Action on this Resource,” leave it set to “Any” (although valid choices also include Assign Role, Create Role, Delete Role, Revoke Role, and Update Role).
@@ -338,15 +342,15 @@ You can leave these settings as default (blank) and click the Next button
 
 #### **STEP 1.5**: Complete the "Conditions" panel
 Specify conditions to limit when the alert is triggered. 
-Add two conditions: one condition for Device equal to Desktop, and a second condition for Device equal to Mobile (use the “Add condition” link to add the second condition). After adding the two policy conditions, click Next to continue.
-![](images/CASB/04-policy-conditions.png)
-> *NOTE:*
-> *You can specify a condition using either of these types of conditions multiple times, and you can specify either type of condition in any order, freely mixing the two types.*
-> *When you specify multiple conditions, the conditions operate independently. Each condition causes the alert to either be triggered (Equal To operator), or not be triggered (Not Equal to operator), for that specific condition. The conditions are neither ANDed nor ORed.*
+Add two conditions: one condition for Device equal to "*Desktop*", and a second condition for Device equal to "*Mobile*" (use the “*Add condition*” link to add the second condition). After adding the two policy conditions, click "*Next*" to continue.
+![](images/CASB/policy_condition.png)
+> NOTE:
+> You can specify a condition using either of these types of conditions multiple times, and you can specify either type of condition in any order, freely mixing the two types.*
+> *When you specify multiple conditions, the conditions operate independently. Each condition causes the alert to either be triggered (Equal To operator), or not be triggered (Not Equal to operator), for that specific condition. The conditions are neither ANDed nor ORed.
 
 #### **STEP 1.6**: Complete the "Actions" panel
 
-Create custom instructions for the resultant alert by checking the box for customization and entering a message. Note that alerts can also be sent in email. Click Next.
+Create custom instructions for the resultant alert by checking the box for customization and entering a message. Note that alerts can also be sent in email. Click "*Next*".
 
 ![](images/CASB/04-custom-action.png)
 
@@ -358,9 +362,9 @@ The Policy will appear in the list of policies available for activation for the 
 
 #### **STEP 2**: Trigger the Policy Alert
 
-To test the policy log into the SalesForce account and perform an action on the role ( CEO ) focused on in the policy . 
+To test the policy log into the SalesForce account and perform an action on the CEO role that our new policy monitors.
  
- Log into your SalesForce Developer account and follow these steps to create a CEO role and assign a user to it ( This will result in the CASB policy alert to be generated )
+ Log into your SalesForce Developer account and follow these steps to create a CEO role and assign a user to it ( This will result in the CASB policy alert )
  
  #### **STEP 2.1**:In the SalesForce "Setup" section navigate to Users -> Roles
  
@@ -383,6 +387,9 @@ To test the policy log into the SalesForce account and perform an action on the 
 #### **STEP 3**: View the policy Alert
 Periodically, throughout the duration of the workshop, inspect the SalesForce application's policy alerts to verify that the policy alert associated with the policy you created in STEP 1 did in fact trigger ( Refer to the note above concerning the delay in alerts appearing within CASB )  
 
+![](images/CASB/policy_alerts.png)
+
+![](images/CASB/policy_triggered.png)
 ## **Exercise 6. Risk Events & User Risk**
 ___
 ### **Overview**:
