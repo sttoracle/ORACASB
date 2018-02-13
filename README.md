@@ -21,7 +21,7 @@ ___
 
 ### **Signup for a SalesForce Trial Account**: 
 
->A SalesForce Developer Account is automatically provisioned for you when you sign-up for the workshop but in the event you did not receive a trial account you can self-register using the following instructions:
+>If you are following these instruction in the context of an Oracle workshop then a SalesForce Developer Account would have been automatically provisioned for you when you signed-up for the workshop .In the event you did not receive a trial account or you are not following these instruction in the context of a workshop then you can self-register for a SalesForce developer account by following the these instructions:
 
 #### **STEP 1**: Create Salesforce Developer Account
 First, we must acquire a new Salesforce developer account. Sign-up for a Salesforce developer account at https://developer.salesforce.com/signup (this is a free account, no credit card required). You will need an email address. After completing the signup process, check your email and click the account verification link. The verification link may look similar to this:
@@ -36,9 +36,48 @@ Under “*Password Policies*” choose to not enforce password history.
 ![](images/CASB/01-password-never-remember.png)
 At the bottom of the “*Password Policies*” page, click the "*Save*" button. 
 
-Finally, create a dedicated CASB user in SalesForce that CASB will use to obtain the SalesForce Oauth tokens it requires to access the SalesForce APIs.
+#### **STEP 3** Creating a Dedicated Profile in Salesforce
+Create a dedicated profile for Oracle CASB Cloud Service in the Salesforce account that you want to monitor.
 
-**TO DO Add instruction**
+* In Salesforce, go to "*Setup*" and expand "*Manage Users*", and then select "*Profiles*".
+
+* In the "*Profiles*" page, click "*New Profile*".
+
+* In the "*Clone Profile*" page, find the "*System Administrator*" profile and then give it a name to identify it as the Oracle CASB Cloud Service user profile.
+
+* Click "*Save*".
+
+* In the Profiles page, select the "*new profile*".
+
+* Scroll to the "*Administrative Permissions*" section, and make sure "*API Enabled*" is selected.
+
+* >If you have purchased the event log API option, scroll to the General User Permissions section and make sure the View event log files option is selected.
+This permission allows Oracle CASB Cloud Service to display security trends and reports related to users who run and export public reports in Salesforce. You must have previously purchased this permission from Salesforce to be able to enable it for the Oracle CASB Cloud Service user. If you have not purchased this option, skip this step.
+
+* Scroll to the bottom of the page and then click "*Save*".
+
+#### **STEP 4** Creating a Dedicated Oracle CASB Cloud Service User in Salesforce
+Create a dedicated user for Oracle CASB Cloud Service in the Salesforce account that you want to monitor.
+
+>This user must have a direct login to Oracle CASB Cloud Service or federated authentication through Okta. The Oracle CASB Cloud Service user cannot use multi-factor authentication to access Salesforce.
+
+* In Salesforce, go to "*Setup*" and expand "*Manage Users*".
+
+* In "*Manage Users*", select "*Users*", and then click "*New User*".
+
+* For Username, give the user a unique login ID. This provides a dedicated account for the Oracle CASB Cloud Service user.
+
+* For Email, provide the email address that you want to use to manage the Oracle CASB Cloud Service user (for example, occs@mycompany.com). This account will generate the OAuth token for Oracle CASB Cloud Service.
+
+* In the "*User License list*", select a license type that permits you to use the "*System Administrator profile*" (example: the Salesforce user license).
+
+* In the "*Profile*" list, select the profile that is based on the System Administrator profile. See the procedure above for details.
+
+* Click "*Save*". Salesforce will send a confirmation email to the address that you supplied above.
+
+* Respond to the email from Salesforce to finish setup for the new Oracle CASB Cloud Service user. You need to create a login password and a password retrieval question.
+
+>Make sure that you log out from this and other Salesforce accounts and clear the browser cache.
 
 ## **Exercise 1 . CASB Cloud Service Dashboard**
 ___
@@ -194,7 +233,7 @@ In this session we will review some of these violations and will see how CASB ca
 
 #### **STEP 1**: Review security control violations 
 
-> ![](images/CASB/clock-icon.jpg) As mentioned , there will be a delay between the time the security control baseline is updated until the next scan of the SalesForce tenant's settings will be compared to the new baseline. Any violations will therefore not appear until the next scan takes effect. If you do not see any violations as described below move on to the next session and revisit the session once CASB has had a chance to do a fresh scan of SalesForce. **If you are following these instructions as part of a workshop you do not have to wait for the next CASB data collection run to take place before you can continue with this excersise. You can sign into the shared CASB tenant and  complete the remainder of the excersise in the  shared tenant.**
+> ![](images/CASB/clock-icon.jpg) As mentioned , there will be a delay between the time the security control baseline is updated until the next scan of the SalesForce tenant's settings will be compared to the new baseline. Any violations will therefore not appear until the next scan takes effect. If you do not see any violations as described below move on to the next session and revisit the session once CASB has had a chance to do a fresh scan of SalesForce. **If you are following these instructions as part of a workshop you do not have to wait for the next CASB data collection run to take place before you can continue with this excersise. You can sign into the shared CASB tenant and  complete the remainder of the excersise in the  shared tenant.** Individual login instructions were provided for each participant if you did not recieve your instructions please inform one of the workshop proctors.
 
 There should be an exclamation point icon in your SalesForce Tenant’s Application List badge indicating there are some new Risk Events we can evaluate. Click the your recently on-boarded application's badge, and then choose the “*View Details*” button from the "*Health Summary*" popup dialog.
 
@@ -339,7 +378,7 @@ To test the policy log into the SalesForce account and perform an action on the 
 
  Click the "*Save*" button 
 
-> ![](images/CASB/clock-icon.jpg) As noted before there is a delay between data collection cycles for the CASB service and the action you perform in SalesForce might not cause the policy alert in CASB to fire immediately but will appear on the next data collection that CASB does to the SalesForce tenant. **If you are following these instructions as part of a workshop you do not have to wait for the next CASB data collection run to take place before you can continue with this excersise. You can sign into the shared CASB tenant and  complete the remainder of the excersise in the  shared tenant.**
+> ![](images/CASB/clock-icon.jpg) As noted before there is a delay between data collection cycles for the CASB service and the action you perform in SalesForce might not cause the policy alert in CASB to fire immediately but will appear on the next data collection that CASB does to the SalesForce tenant. **If you are following these instructions as part of a workshop you do not have to wait for the next CASB data collection run to take place before you can continue with this excersise. You can sign into the shared CASB tenant and  complete the remainder of the excersise in the  shared tenant.** Individual login instructions were provided for each participant if you did not recieve your instructions please inform one of the workshop proctors.
 
 #### **STEP 3**: View the policy Alert
 Periodically, throughout the duration of the workshop, inspect the SalesForce application's policy alerts to verify that the policy alert associated with the policy you created in STEP 1 did in fact trigger (Refer to the note above concerning the delay in alerts appearing within CASB)  
@@ -421,6 +460,7 @@ When we log into SalesForce from the blacklisted IP we ensure that a future risk
 #### **STEP 3**: Analyze the resulting risk even starting from the dashboard
 
 >![](images/CASB/clock-icon.jpg)The risk event will appear after the next scheduled data collection has occurred from your SalesForce tenant.  **If you are following these instructions as part of a workshop you do not have to wait for the next CASB data collection run to take place before you can continue with this excersise. You can sign into the shared CASB tenant and  complete the remainder of the excersise in the  shared tenant.**
+Individual login instructions were provided for each participant if you did not recieve your instructions please inform one of the workshop proctors.
 
 Risk events that can be mapped to a geographic location are flagged on the Dashboard Access Map with red markers. 
 
