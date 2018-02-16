@@ -178,7 +178,7 @@ Select the "*Push controls and monitor*" radio button and then press the "*Next*
 
 #### **STEP 6**: Select Security Controls Policy
 
-![](images/CASB/Salesforce_controls.png)
+![](images/CASB/salesforce_controls.png)
 
 Because the monitor and push option was selected an approval radio button will be displayed that will prompt you to acknowledge and consent to CASB Cloud Service making changes in the target service (Salesforce in this case) to bring its security configuration in line with the selected Security Control baseline. 
 
