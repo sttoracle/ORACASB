@@ -373,7 +373,7 @@ To test the policy log into the Salesforce account and perform an action on the 
  
  #### **STEP 2.1**:In the Salesforce "*Setup*" section navigate to *Users -> Roles*
  
- ![](images/CASB/SFRole1.png)
+ ![](images/CASB/SFrole1.png)
  Press the "*Set Up Roles*" button
 
  #### **STEP 2.2**: Select to create the suggested Salesforce Role Hierarchy.
