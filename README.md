@@ -149,7 +149,7 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 
 #### **STEP 3**: Choose to add a new Salesforce instance by clicking on the Salesforce icon, and click *Next*.
 
-![](images/CASB/Salesforce_app_badge.png)
+![](images/CASB/salesforce_app_badge.png)
 
 #### **STEP 4**: Provide the name of the Salesforce instance.
 
@@ -157,7 +157,7 @@ CASB cloud service allows you to add multiple accounts/tenants of any given clou
 Enter a unique name for the instance of the format: *YOURNAME_SFDC*. Leave all other values to their default as shown.
 Press the "*Next*" button to proceed to the next step of the "*Register an app instance*" wizard
 
-![](images/CASB/01-add-Salesforce-app.png)
+![](images/CASB/01-add-salesforce-app.png)
 
 > If a Salesforce account is federated with a supported Cloud Identity Provider ( IdP ) you can select the "*The users of this app instance log in using single sign-on through an identity provider*" checkbox and select the Identity Provider being used from a list of pre-configured providers
 
