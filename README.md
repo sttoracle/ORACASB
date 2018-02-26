@@ -80,7 +80,7 @@ You'll be presented with the following login form:
 
 ![](images/CASB/66D12B19-6081-445A-9562-B496AFBBE1B3.png)  
 
-> If you are following these instructions as part of the Oracle Cloud Security workshop then you'll recieve a registration confirmation e-mail that will contain  CASB  login credentials to a shared workshop CASB tenant that will be used in  the course of the workshop.
+> If you are following these instructions as part of the Oracle Cloud Security workshop then you'll recieve a registration confirmation e-mail that will contain  CASB  login credentials to a shared workshop CASB tenant that will be used in the course of the workshop. **Use the credentials of the shared tenant you recieved to perform this exercise.**
 
 #### **STEP 2**: Review select items on the CASB Dashboard
 
@@ -122,7 +122,7 @@ The Access Map shows points of origin for both normal (green dot) and suspicious
 ## **Exercise 2. Sanctioned Application Onboarding**
 ___
 ### **Overview**:
-In this session, you will be using the Oracle CASB Cloud Service UI to onboard a Salesforce Developer Account into your Oracle CASB Cloud Service tenant.
+In this session, you will be using the Oracle CASB Cloud Service UI to onboard a Salesforce Developer Account into your Oracle CASB Cloud Service tenant. 
 
 ### **Exercise**:
 
@@ -141,6 +141,7 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 **Make sure that you log out from this and other Salesforce accounts and clear the browser cache before continuing with the rest of the exercise.**
 
 #### **STEP 2**: Click on the "*Add an App*" menu item. 
+> If you are following these instructions in the context of a workshop you may be signed into CASB, in exersise 1 , using the **shared** tenant credentials assigned to you. However , you should perform this exercise 2 using **your own Oracle Cloud Trial tenant account** . To accomplish this start a new private browsing window in your browser ( called incognito window in Chrome) and log into https://trial.palerra.net/  with the credentials of your free Oracle Cloud trial account . Now continue with step 2 in your own trial CASB account.
 
 ![](images/CASB/Add_App.jpg)
 
@@ -294,7 +295,7 @@ On the resulting incident dialog ensure that the default "*Auto Remediation*" ra
 
 CASB Cloud Service will now invoke the Salesforce API to change the "*Clickjack Protection*" setting in Salesforce to bring it into compliance with the CASB Security Control baseline that is in effect.  
 
-In Salesforce navigate to: *Setup | Security Controls | Session Settings* and verify the "*Clickjack Protection*" has been modified in Salesforce.
+In Salesforce navigate to: *Setup -> Security Controls -> Session Settings* and verify the "*Clickjack Protection*" has been modified in Salesforce.
 
 ![](images/CASB/clickjack.png)
 
@@ -429,7 +430,7 @@ a Dialog will appear that will prompt the user to upload a log file.
 
 Press the "*Choose File*" button and upload the sample log file assigned to you.
   
- > Each workshop participant received a sample log file that has been uploaded to the individual Box folder 
+ > The sample log file you should use in this exercise is available for download here.
 
 #### **STEP 3**: Select the log file format & Press the "*Import*" Button
 
