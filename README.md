@@ -33,7 +33,7 @@ First, we must acquire a new Salesforce developer account. Sign-up for a Salesfo
 #### **STEP 2** Creating a Dedicated Profile in Salesforce
 Create a dedicated profile for Oracle CASB Cloud Service in the Salesforce account that you want to monitor.
 
-* In Salesforce, go to "*Setup*" and expand "*Manage Users*", and then select "*Profiles*".
+* In Salesforce, go to "*Setup*" and expand "*Users*", and then select "*Profiles*".
 
 * In the "*Profiles*" page, click "*New Profile*".
 
@@ -45,22 +45,20 @@ Create a dedicated profile for Oracle CASB Cloud Service in the Salesforce accou
 
 * Scroll to the "*Administrative Permissions*" section, and make sure "*API Enabled*" is selected.
 
-* Scroll to the bottom of the page and then click "*Save*".
 
 #### **STEP 3** Creating a Dedicated Oracle CASB Cloud Service User in Salesforce
 Create a dedicated user for Oracle CASB Cloud Service in the Salesforce account that you want to monitor.
 
 >This user must have a direct login to Salesforce or federated authentication through Okta. This Oracle CASB Cloud Service user cannot use multi-factor authentication to access Salesforce.
 
-* In Salesforce, go to "*Setup*" and expand "*Manage Users*".
-
-* In "*Manage Users*", select "*Users*", and then click "*New User*".
+* In Salesforce, go to "*Setup*" and expand "*Users*".
+* In "*Users*", select "*Users*", and then click "*New User*".
 
 * For "*Username*", give the user a unique login ID. This provides a dedicated account for the Oracle CASB Cloud Service user.
 
 * For "*Email*", provide the email address that you want to use to manage the Oracle CASB Cloud Service user (for example, occs@mycompany.com). This account will generate the OAuth token for Oracle CASB Cloud Service.
 
-* In the "*User License list*", select a license type that permits you to use the "*System Administrator profile*" (example: the "*Salesforce user*" license).
+* In the "*User License list*", select a license type that permits you to use the "*System Administrator profile*" (example: the "*Salesforce*" license).
 
 * In the "*Profile*" list, select the profile that is based on the "*System Administrator profile*". See the procedure above for details.
 
@@ -82,7 +80,7 @@ You'll be presented with the following login form:
 
 ![](images/CASB/66D12B19-6081-445A-9562-B496AFBBE1B3.png)  
 
-> If you are following these instructions as part of the Oracle Cloud Security workshop then your registration confirmation e-mail will contain your CASB administrator login credentials.
+> If you are following these instructions as part of the Oracle Cloud Security workshop then you'll recieve a registration confirmation e-mail that will contain  CASB  login credentials to a shared workshop CASB tenant that will be used in  the course of the workshop.
 
 #### **STEP 2**: Review select items on the CASB Dashboard
 
@@ -190,15 +188,19 @@ You will be redirected to Salesforce to login, and you will see the following sc
 
 ![](images/CASB/01-please-wait-screen.png)
 
-> NOTE: Once logged in, Salesforce may ask you to verify your identity by sending a code to the email address used to sign-up. If so, retrieve the one-time verification code from your email. This will not be required if you follow these instructions as part of a workshop where you recieved an assigned Salesforce Developer account. 
+Use the credentials for the Salesforce tenant that has been assigned to you during the workshop. Upon log in, you will be asked to confirm that you want to grant access to the Oracle CASB Cloud Service:
 
-Upon log in, you will be asked to confirm that you want to grant access to the Oracle CASB Cloud Service:
+> If you signed-up for your own Salesforce account use the credentials for the user you created in the Prerequisites section's step 3 in the instructions above. 
+
+>NOTE: Once logged in, Salesforce may ask you to verify your identity by sending a code to the email address used to sign-up. If so, retrieve the one-time verification code from your email. This will not be required if you follow these instructions as part of a workshop where you recieved an assigned Salesforce Developer account. 
 
 ![](images/CASB/01-grant-access.png)
 
 > This is part of the Salesforce Authorization code OAuth flow that CASB utilize to gain authorization, (OAuth Access Token) to access the relevant Salesforce APIs it will use to integrate with Salesforce.
 
-Click the *Allow* button to allow the access. You will be redirected back to the Oracle CASB Cloud Service.
+Click the *Allow* button to allow the access. You will be redirected back to the Oracle CASB Cloud Service. 
+
+Navigate to "*Applications*" using the Navigation Bar on the left of the CASB UI .
 
 ![](images/CASB/clock-icon.jpg) CASB will now start the initial data collection for the new application . You can expect this initial data collection to complete within 30 to 120 minutes. While the initial data collection is taking place, the application will be tagged with the “*NEW*” banner in the application list. 
 
@@ -365,7 +367,7 @@ Create custom instructions for the resultant alert by checking the box for custo
 
 ![](images/CASB/04-custom-action.png)
 
-#### **STEP 1.7**: Click "*Next*" and "*Review & Submit*" the policy 
+#### **STEP 1.7**: Click "*Next*" then "*Submit*" on the "*Review & Submit*" dialog
 
 The Policy will appear in the list of policies available for activation for the tenant.
 
@@ -383,9 +385,14 @@ To test the policy log into the Salesforce account and perform an action on the 
  Press the "*Set Up Roles*" button
 
  #### **STEP 2.2**: Select to create the suggested Salesforce Role Hierarchy.
+
+ Select the CEO role 
+
  ![](images/CASB/SFRole2.png)
 
  #### **STEP 2.3**: Select "*Assign Users to Role*" (or "*New User*")
+ Make sure the user you add to the CEO role is **not** the Service Account user we used to sign in to Salesforce when we onboarded the application in Exercise 2 . The reason is that CASB Cloud Service will not monitor actions performed by that user so as to ensure that the actions CASB take in the persona of that user does not appear in the data CASB present and analize. 
+
  ![](images/CASB/SFRole3.png)
  
   #### **STEP 2.4**: Add a user to the policy role
