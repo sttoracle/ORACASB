@@ -140,8 +140,10 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 
 **Make sure that you log out from this and other Salesforce accounts and clear the browser cache before continuing with the rest of the exercise.**
 
+![](images/CASB/sfLogout.png)
+
 #### **STEP 2**: Click on the "*Add an App*" menu item. 
-> If you are following these instructions in the context of a workshop you may be signed into CASB, in exersise 1 , using the **shared** tenant credentials assigned to you. However , you should perform this exercise 2 using **your own Oracle Cloud Trial tenant account** . To accomplish this start a new private browsing window in your browser ( called incognito window in Chrome) and log into https://trial.palerra.net/  with the credentials of your free Oracle Cloud trial account . Now continue with step 2 in your own trial CASB account.
+> If you are following these instructions in the context of a workshop you may be signed into CASB, after completing exersise 1 , using the **shared** tenant credentials assigned to you. However, exercise 2 should be performed using **your own Oracle Cloud Trial tenant account** . To accomplish this start a new private browsing window in your browser ( called incognito window in Chrome) and log into https://trial.palerra.net/  with the credentials of your free Oracle Cloud trial account . Now continue with step 2 in your own trial CASB account.
 
 ![](images/CASB/Add_App.jpg)
 
@@ -213,7 +215,7 @@ After the data load has taken place, the application will shed the “*NEW*” b
 
 #### **STEP 8**: Review changes made in Salesforce to bring it inline with the Security Control baseline we selected.
 
-Recall that we changed the password policy in Salesforce to never expire however notice that the security control we selected with the "*Standard*" baseline requires the password to expire in 90 days. After the Salesforce service has been on-boarded **CASB will access the Salesforce APIs to change the password policy, among many other configuration settings, in Salesforce to comply with the security control baseline we selected in CASB**. You can verify the changes by logging in to Salesforce and navigating to the "*Setup*" menu, then use the upper-left "*Quick Find*" box to search for “*Password Policies*” (no quotes) and review the "*User passwords expire in*" field to verify that it has been changed back to expire in 90 days, also notice that the enforce password history has been changed back to "*3 passwords remembered*”. 
+Recall that we changed the password policy in Salesforce to never expire however notice that the security control we selected with the "*Standard*" baseline requires the password to expire in 90 days. As the Salesforce service is being on-boarded **CASB will access the Salesforce APIs to change the password policy, among many other configuration settings, in Salesforce to comply with the security control baseline we selected in CASB**. You can verify the changes by logging in to Salesforce and navigating to the "*Setup*" menu, then use the upper-left "*Quick Find*" box to search for “*Password Policies*” (no quotes) and review the "*User passwords expire in*" field to verify that it has been changed back to expire in 90 days, also notice that the enforce password history has been changed back to "*3 passwords remembered*”. 
 
 #### **STEP 9**: View Risk Events from Initial Scan
 
@@ -242,7 +244,7 @@ We will change the Salesforce Application's security control baseline in a way t
 >Note that changing the security control baseline, **after** the initial application onboarding completed (with the *Monitor and push* option selected), does NOT result in the configuration changes being pushed from CASB to the Application. We'll see later in the exercise how configuration changes are pushed after the initial onboarding. 
 
 #### **STEP 1: Update Security Control Baseline**
-Update the CASB security control baseline for our Salesforce instance. To do so, first click on Applications, then find your Salesforce instance (use the search icon in the upper-right, if necessary), click on the instance, click on "*Modify*", and then from the drop-down selection choose "*Update Security Control Baseline*". In the next screen, choose to use a “*Stringent*” security control baseline. 
+Update the CASB security control baseline for our Salesforce instance. To do so, in your free Cloud Trial account tenant ,  click on "*Applications*", then find your Salesforce instance (use the search icon in the upper-right, if necessary), click on the instance, click on "*Modify*", and then from the drop-down selection choose "*Update Security Control Baseline*". In the next screen, choose to use a “*Stringent*” security control baseline. 
 
 ![](images/CASB/updatesecuritycontrols.png)
 
@@ -275,7 +277,7 @@ From the Action menu, note that we could choose to create a new incident based o
 In this step, we'll automatically remediate one of the security control Risk events.
 
 First we'll verify that the "*clickjack*" protection is not enabled in Salesforce:
-In Salesforce navigate to *Setup | Security Controls | Session Settings* and verify the "*Clickjack Protection*" checkbox is unchecked. 
+In Salesforce navigate to *Setup -> Security Controls -> Session Settings* and verify the "*Clickjack Protection*" checkbox is unchecked. 
 
 Select the "*Enable clickjack protection...*" incident in the list of incidents and under the Action column select the "*View incident*" dropdown option.
 
@@ -392,13 +394,15 @@ To test the policy log into the Salesforce account and perform an action on the 
  ![](images/CASB/SFRole2.png)
 
  #### **STEP 2.3**: Select "*Assign Users to Role*" (or "*New User*")
- Make sure the user you add to the CEO role is **not** the Service Account user we used to sign in to Salesforce when we onboarded the application in Exercise 2 . The reason is that CASB Cloud Service will not monitor actions performed by that user so as to ensure that the actions CASB take in the persona of that user does not appear in the data CASB present and analize. 
+ 
 
  ![](images/CASB/SFRole3.png)
  
   #### **STEP 2.4**: Add a user to the policy role
  ![](images/CASB/SFRole4.png)
  Search for a user and add the user to the role by selecting the "*Add*" button to move the user from the search results to the "*Selected Users for CEO*" selection box. 
+
+ > Make sure the user you add to the CEO role is **not** the Service Account user we used to sign-in to Salesforce when we onboarded the application in Exercise 2 . The reason being that CASB Cloud Service will not monitor actions performed by that user so as to ensure that the actions CASB take in the persona of that user, to collect data from Salesforce, does not appear in the data CASB analize.
 
  Click the "*Save*" button 
 
@@ -613,7 +617,8 @@ The category filters are:
 
 * Other incident types are specialized versions of anomalous activities (threats).
 
-
+## **Exercise 6. Reports**
+___
 
 
 
