@@ -80,7 +80,7 @@ You'll be presented with the following login form:
 
 ![](images/CASB/66D12B19-6081-445A-9562-B496AFBBE1B3.png)  
 
-> If you are following these instructions as part of the Oracle Cloud Security workshop then you'll recieve a registration confirmation e-mail that will contain  CASB  login credentials to a shared workshop CASB tenant that will be used in the course of the workshop. **Use the credentials of the shared tenant you recieved to perform this exercise.**
+> If you are following these instructions as part of the Oracle Cloud Security workshop then you'll recieve a registration confirmation e-mail that will contain  CASB  login credentials to a **shared** workshop CASB tenant that will be used in the course of the workshop. **Use the credentials of the shared tenant you recieved to perform this exercise.**
 
 #### **STEP 2**: Review select items on the CASB Dashboard
 
@@ -131,11 +131,17 @@ In this session, you will be using the Oracle CASB Cloud Service UI to onboard a
 Sign into your Salesforce account and navigate to the Setup section. 
 
  We will configure some sample security settings within Salesforce. In the setup menu, use the upper-left Quick Find box to search for *Password Policies* .
+
+ ![](images/CASB/sfSetup.png)
+
 ![](images/CASB/01-quick-find-box.png)
 Under “*Password Policies*” set user passwords to "*Never Expire*".
+
 ![](images/CASB/01-password-never-expire.png)
 Under “*Password Policies*” choose to not enforce password history.
+
 ![](images/CASB/01-password-never-remember.png)
+
 At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 
 **Make sure that you log out from this and other Salesforce accounts and clear the browser cache before continuing with the rest of the exercise.**
@@ -154,7 +160,7 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 #### **STEP 4**: Provide the name of the Salesforce instance.
 
 CASB cloud service allows you to add multiple accounts/tenants of any given cloud service as long as each instance has a unique name.
-Enter a unique name for the instance of the format: *YOURNAME_SFDC*. Leave all other values to their default as shown.
+Enter a unique name for the instance for example: *YOURNAME_SFDC*. Set all other values as shown in the following screen capture.
 Press the "*Next*" button to proceed to the next step of the "*Register an app instance*" wizard
 
 ![](images/CASB/01-add-salesforce-app.png)
@@ -203,7 +209,9 @@ Use the credentials for the Salesforce tenant that has been assigned to you duri
 
 Click the *Allow* button to allow the access. You will be redirected back to the Oracle CASB Cloud Service. 
 
-Navigate to "*Applications*" using the Navigation Bar on the left of the CASB UI .
+Then click on the "*Done*" button on the following screen that informs you about the data collection delay that you should expect 
+
+Next , click  on   "*Applications*" using the Navigation Bar on the left of the CASB UI .
 
 ![](images/CASB/clock-icon.jpg) CASB will now start the initial data collection for the new application . You can expect this initial data collection to complete within 30 to 120 minutes. While the initial data collection is taking place, the application will be tagged with the “*NEW*” banner in the application list. 
 
@@ -215,7 +223,7 @@ After the data load has taken place, the application will shed the “*NEW*” b
 
 #### **STEP 8**: Review changes made in Salesforce to bring it inline with the Security Control baseline we selected.
 
-Recall that we changed the password policy in Salesforce to never expire however notice that the security control we selected with the "*Standard*" baseline requires the password to expire in 90 days. As the Salesforce service is being on-boarded **CASB will access the Salesforce APIs to change the password policy, among many other configuration settings, in Salesforce to comply with the security control baseline we selected in CASB**. You can verify the changes by logging in to Salesforce and navigating to the "*Setup*" menu, then use the upper-left "*Quick Find*" box to search for “*Password Policies*” (no quotes) and review the "*User passwords expire in*" field to verify that it has been changed back to expire in 90 days, also notice that the enforce password history has been changed back to "*3 passwords remembered*”. 
+Recall that we changed the password policy in Salesforce to never expire however notice that the security control we selected with the "*Standard*" baseline requires the password to expire in 90 days. As the Salesforce service is being on-boarded **CASB will access the Salesforce APIs to change the password policy, among many other configuration settings, in Salesforce to comply with the security control baseline we selected in CASB**. You can verify the changes by logging in to Salesforce and navigating to the "*Setup*" menu, then use the upper-left "*Quick Find*" box to search for “*Password Policies*” (no quotes) and review the "*User passwords expire in*" field to verify that it has been **changed back** to expire in 90 days, also notice that the enforce password history has been changed back to "*3 passwords remembered*”. 
 
 #### **STEP 9**: View Risk Events from Initial Scan
 
