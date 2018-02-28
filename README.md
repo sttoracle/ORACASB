@@ -252,7 +252,7 @@ We will change the Salesforce Application's security control baseline in a way t
 >Note that changing the security control baseline, **after** the initial application onboarding completed (with the *Monitor and push* option selected), does NOT result in the configuration changes being pushed from CASB to the Application. We'll see later in the exercise how configuration changes are pushed after the initial onboarding. 
 
 #### **STEP 1: Update Security Control Baseline**
-Update the CASB security control baseline for our Salesforce instance. To do so, in your free Cloud Trial account tenant ,  click on "*Applications*", then find your Salesforce instance (use the search icon in the upper-right, if necessary), click on the instance, click on "*Modify*", and then from the drop-down selection choose "*Update Security Control Baseline*". In the next screen, choose to use a “*Stringent*” security control baseline. 
+Update the CASB security control baseline for your assigned Salesforce instance. To do so, **in your free Cloud Trial account tenant** ,  click on "*Applications*", then find your Salesforce instance (use the search icon in the upper-right, if necessary), click on the instance, click on "*Modify*", and then from the drop-down selection choose "*Update Security Control Baseline*". In the next screen, choose to use a “*Stringent*” security control baseline. 
 
 ![](images/CASB/updatesecuritycontrols.png)
 
