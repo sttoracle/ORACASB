@@ -450,6 +450,8 @@ Press the "*Choose File*" button and upload the sample log file assigned to you.
 
 CASB CS will process the log file and update the view with the progress it has made in analyzing the log file. 
 
+>Note, if the progress indicator show the log file processing is complete but **you do not see any applications** that were discovered being listed then hit the browser "*reload button*" to update the progress indicator
+
 ![](images/CASB/upload_indicator.png)
 
 Once the file has been processed CASB will display the results of its analysis. You can, at any time, go back to your results by making note of where on the timeline your specific sample log fits in. 
@@ -515,7 +517,7 @@ We will demonstrate how to blacklist an IP address. In the Oracle CASB menu (on 
 
 #### **STEP 2**: Log into Salesforce
 
-When we log into Salesforce from your blacklisted IP we ensure that a future risk event will be generated for Salesforce that flags the access to Salesforce from the black listed IP address. 
+When we log into  Salesforce from your blacklisted IP we ensure that a future risk event will be generated for Salesforce that flags the access to Salesforce from the black listed IP address. 
 
 #### **STEP 3**: Analyze the resulting risk even starting from the dashboard
 
