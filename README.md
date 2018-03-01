@@ -387,8 +387,6 @@ The Policy will appear in the list of policies available for activation for the 
 
 To test the policy log into the Salesforce account and perform an action on the *CEO* role that our new policy monitors.
  
- Log into your Salesforce Developer account and follow these steps to create a *CEO* role and assign a user to it (This will result in the CASB policy alert)
- 
  #### **STEP 2.1**:In the Salesforce "*Setup*" section navigate to *Users -> Roles*.
  
  ![](images/CASB/SFrole1.png)
@@ -396,7 +394,7 @@ To test the policy log into the Salesforce account and perform an action on the 
 
 #### **STEP 2.2**: Select to create the suggested Salesforce Role Hierarchy.
 
- Select the CEO role 
+ Select the "*CEO*" role 
 
  ![](images/CASB/SFRole2.png)
 
@@ -407,9 +405,9 @@ To test the policy log into the Salesforce account and perform an action on the 
 #### **STEP 2.4**: Add a user to the policy role
 
  ![](images/CASB/SFRole4.png)
- Search for a user and add the user to the role by selecting the "*Add*" button to move the user from the search results to the "*Selected Users for CEO*" selection box. 
+ Select the "*Add*" button to move the user from the "*Available Users*" list box to the "*Selected Users for CEO*" list box. 
 
- > Make sure the user you add to the CEO role is **not** the Service Account user we used to sign-in to Salesforce when we on boarded the application in Exercise 2 . The reason being that CASB Cloud Service will not monitor actions performed by that user so as to ensure that the actions CASB take in the persona of that user, to collect data from Salesforce, does not appear in the data CASB analyze.
+ > Make sure the user you add to the CEO role is **not** the Service Account user we used to sign-in to Salesforce when you on-boarded the application in Exercise 2 . The reason being that CASB Cloud Service will not monitor actions performed by that user so as to ensure that the actions CASB take in the persona of that user, to collect data from Salesforce, does not appear in the data CASB analyze.
 
  Click the "*Save*" button 
 
