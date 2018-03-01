@@ -14,7 +14,7 @@ The exercises will cover the following CASB features and concepts:
  - CASB Discovery (Shadow IT)
  - Risk Events & User Risk
  - Incident Management
- - Reports
+
 
 ## **Prerequisites**
 ___
@@ -628,8 +628,6 @@ The category filters are:
 
 * Other incident types are specialized versions of anomalous activities (threats).
 
-## **Exercise 6. Reports**
-___
 
 
 
