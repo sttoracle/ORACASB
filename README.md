@@ -13,7 +13,7 @@ The exercises will cover the following CASB features and concepts:
  - Policies
  - CASB Discovery (Shadow IT)
  - Risk Events & User Risk
- - Event Management
+ - Incident Management
  - Reports
 
 ## **Prerequisites**
