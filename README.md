@@ -282,12 +282,12 @@ From the Action menu, note that we could choose to create a new incident based o
 
 #### **STEP 3** Auto remediate a security control risk event. 
 
-In this step, we'll automatically remediate one of the security control Risk events.
+In this step, we'll automatically remediate one of the security control Risk events : .
 
 First we'll verify that the "*clickjack*" protection is not enabled in Salesforce:
-In Salesforce navigate to *Setup -> Security Controls -> Session Settings* and verify the "*Clickjack Protection*" checkbox is unchecked. 
+In Salesforce navigate to *Setup -> Security -> Session Settings* and verify the "*Enable clickjack protection for customer Visualforce pages with standard headers*" checkbox is unchecked. 
 
-Select the "*Enable clickjack protection...*" incident in the list of incidents and under the Action column select the "*View incident*" dropdown option.
+Select the "*Enable clickjack protection for customer Visualforce pages with standard headers*" incident in the list of incidents and under the Action column select the "*View incident*" dropdown option.
 
 ![](images/CASB/securityincident.png)
 
@@ -305,7 +305,7 @@ On the resulting incident dialog ensure that the default "*Auto Remediation*" ra
 
 CASB Cloud Service will now invoke the Salesforce API to change the "*Clickjack Protection*" setting in Salesforce to bring it into compliance with the CASB Security Control baseline that is in effect.  
 
-In Salesforce navigate to: *Setup -> Security Controls -> Session Settings* and verify the "*Clickjack Protection*" has been modified in Salesforce.
+In Salesforce navigate to: *Setup -> Security  -> Session Settings* again and verify the "*Clickjack Protection*" has been modified in Salesforce.
 
 ![](images/CASB/clickjack.png)
 
@@ -442,7 +442,7 @@ a Dialog will appear that will prompt the user to upload a log file.
 
 Press the "*Choose File*" button and upload the sample log file assigned to you.
   
- > The sample log file you should use in this exercise is available for download here.
+ > The sample log file you should use in this exercise is available for download [here](docs/CASBDiscovery-import.log). Right click on the link and save the file to your local machine and make a note where you save it since you'll be uploading the file to CASB Cloud Service in the course of this exercise.
 
 #### **STEP 3**: Select the log file format & Press the "*Import*" Button
 
