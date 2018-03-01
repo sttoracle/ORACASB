@@ -1,4 +1,4 @@
-Updated: Feb 16, 2018
+Updated: March 1, 2018
 
 ## **Introduction**
 ___
@@ -352,7 +352,7 @@ Choose a unique name of the format “*YOURNAME_TEST_POLICY*” Create a descrip
 Click on "*Next*".
 
 #### **STEP 1.3**: Complete the "*Resource*" panel 
-Select “*Salesforce*” for the application type, choose your Salesforce instance, select “*Role*” as the Resource. And choose a text expression of “*CEO*” for the Resource Name. For the “*Action on this Resource*” leave it set to “*Any*” (although valid choices also include *Assign Role*, *Create Role*, *Delete Role*, *Revoke Role*, and *Update Role*).
+Select "*Salesforce*" for the "*Application type*", choose your Salesforce instance as your "*Application Instance*", select “*Role*” as the "*Resource*". And choose a text expression of “*CEO*” for the "*Resource Name*". For the “*Action on this Resource*” leave it set to “*Any*” (although valid choices also include Assign Role, Create Role, Delete Role, Revoke Role, and Update Role).
 
 ![](images/CASB/04-policy-setup.png)
 
