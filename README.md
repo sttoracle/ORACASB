@@ -45,7 +45,6 @@ Create a dedicated profile for Oracle CASB Cloud Service in the Salesforce accou
 
 * Scroll to the "*Administrative Permissions*" section, and make sure "*API Enabled*" is selected.
 
-
 #### **STEP 3** Creating a Dedicated Oracle CASB Cloud Service User in Salesforce
 Create a dedicated user for Oracle CASB Cloud Service in the Salesforce account that you want to monitor.
 
@@ -80,7 +79,7 @@ You'll be presented with the following login form:
 
 ![](images/CASB/66D12B19-6081-445A-9562-B496AFBBE1B3.png)  
 
-> If you are following these instructions as part of the Oracle Cloud Security workshop then you'll recieve a registration confirmation e-mail that will contain  CASB  login credentials to a **shared** workshop CASB tenant that will be used in the course of the workshop. **Use the credentials of the shared tenant you recieved to perform this exercise.**
+> If you are following these instructions as part of the Oracle Cloud Security workshop then you'll receive a registration confirmation that will contain CASB login credentials to a **shared** workshop CASB tenant that will be used in the course of the workshop. **Use the credentials of the shared tenant you received to perform this exercise.**
 
 #### **STEP 2**: Review select items on the CASB Dashboard
 
@@ -117,7 +116,7 @@ There are 5 Health indicator tabs into which the various services being monitore
 
 The Access Map shows points of origin for both normal (green dot) and suspicious (red dot) events. Click links in the summary information to see more details.
 
-> The other summary cards on the Dashboard Summary tab, such as Suspicious and normal IP addresses, display statistics for specific types of activity that may or may not be suspicious. For each summary card, you can :  View the summary statistics displayed, Hover over parts of the card to see additional information in pop-ups, and to identify links, click any link in the card to see more detailed information, click the Help icon Image of Help icon in the upper-right corner to see online help about the type of information displayed in any particular card.
+> The other summary cards on the Dashboard Summary tab, such as Suspicious and normal IP addresses, display statistics for specific types of activity that may or may not be suspicious. For each summary card, you can:  View the summary statistics displayed, Hover over parts of the card to see additional information in pop-ups, and to identify links, click any link in the card to see more detailed information, click the Help icon Image of Help icon in the upper-right corner to see online help about the type of information displayed in any particular card.
 
 ## **Exercise 2. Sanctioned Application Onboarding**
 ___
@@ -149,7 +148,7 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 ![](images/CASB/sfLogout.png)
 
 #### **STEP 2**: Click on the "*Add an App*" menu item. 
-> If you are following these instructions in the context of a workshop you may be signed into CASB, after completing exersise 1 , using the **shared** tenant credentials assigned to you. However, exercise 2 should be performed using **your own Oracle Cloud Trial tenant account** . To accomplish this start a new private browsing window in your browser ( called incognito window in Chrome) and log into https://trial.palerra.net/  with the credentials of your free Oracle Cloud trial account . Now continue with step 2 in your own trial CASB account.
+> If you are following these instructions in the context of a workshop you may be signed into CASB, after completing exercise 1 , using the **shared** tenant credentials assigned to you. However, exercise 2 should be performed using **your own Oracle Cloud Trial tenant account**. To accomplish this start a new private browsing window in your browser (called incognito window in Chrome) and log into https://trial.palerra.net/  with the credentials of your free Oracle Cloud trial account . Now continue with step 2 in your own trial CASB account.
 
 ![](images/CASB/Add_App.jpg)
 
@@ -201,7 +200,7 @@ Use the credentials for the Salesforce tenant that has been assigned to you duri
 
 > If you signed-up for your own Salesforce account use the credentials for the user you created in the Prerequisites section's step 3 in the instructions above. 
 
->NOTE: Once logged in, Salesforce may ask you to verify your identity by sending a code to the email address used to sign-up. If so, retrieve the one-time verification code from your email. This will not be required if you follow these instructions as part of a workshop where you recieved an assigned Salesforce Developer account. 
+>NOTE: Once logged in, Salesforce may ask you to verify your identity by sending a code to the email address used to sign-up. If so, retrieve the one-time verification code from your email. This will not be required if you follow these instructions as part of a workshop where you received an assigned Salesforce Developer account. 
 
 ![](images/CASB/01-grant-access.png)
 
@@ -211,7 +210,7 @@ Click the *Allow* button to allow the access. You will be redirected back to the
 
 Then click on the "*Done*" button on the following screen that informs you about the data collection delay that you should expect 
 
-Next , click  on   "*Applications*" using the Navigation Bar on the left of the CASB UI .
+Next, click on   "*Applications*" using the Navigation Bar on the left of the CASB UI .
 
 ![](images/CASB/clock-icon.jpg) CASB will now start the initial data collection for the new application . You can expect this initial data collection to complete within 30 to 120 minutes. While the initial data collection is taking place, the application will be tagged with the “*NEW*” banner in the application list. 
 
@@ -221,7 +220,7 @@ Next , click  on   "*Applications*" using the Navigation Bar on the left of the 
 
 After the data load has taken place, the application will shed the “*NEW*” banner
 
-#### **STEP 8**: Review changes made in Salesforce to bring it inline with the Security Control baseline we selected.
+#### **STEP 8**: Review changes made in Salesforce to bring it in line with the Security Control baseline we selected.
 
 Recall that we changed the password policy in Salesforce to never expire however notice that the security control we selected with the "*Standard*" baseline requires the password to expire in 90 days. As the Salesforce service is being on-boarded **CASB will access the Salesforce APIs to change the password policy, among many other configuration settings, in Salesforce to comply with the security control baseline we selected in CASB**. You can verify the changes by logging in to Salesforce and navigating to the "*Setup*" menu, then use the upper-left "*Quick Find*" box to search for “*Password Policies*” (no quotes) and review the "*User passwords expire in*" field to verify that it has been **changed back** to expire in 90 days, also notice that the enforce password history has been changed back to "*3 passwords remembered*”. 
 
@@ -325,7 +324,7 @@ A policy is a rule or a guideline, such as, "*only people in Finance can view fi
 Oracle CASB Cloud Service generates an alert whenever an event that matches the policy occurs. The console displays a description of the policy violation and can provide recommendations for responding to it. You can also configure the alert to be sent to you over email or SMS.
 
 ### **Exercise**:
-In this exercise we will define a policy, for Saleforce, that will generate an incident when "*Any*" action is performed on the Salesforce CEO role (This includes adding or removing users to the role). 
+In this exercise we will define a policy, for Salesforce, that will generate an incident when "*Any*" action is performed on the Salesforce CEO role (This includes adding or removing users to the role). 
 
 #### **STEP 1**: Create a Policy
 The basics of a policy consist of these components:
@@ -410,7 +409,7 @@ To test the policy log into the Salesforce account and perform an action on the 
  ![](images/CASB/SFRole4.png)
  Search for a user and add the user to the role by selecting the "*Add*" button to move the user from the search results to the "*Selected Users for CEO*" selection box. 
 
- > Make sure the user you add to the CEO role is **not** the Service Account user we used to sign-in to Salesforce when we onboarded the application in Exercise 2 . The reason being that CASB Cloud Service will not monitor actions performed by that user so as to ensure that the actions CASB take in the persona of that user, to collect data from Salesforce, does not appear in the data CASB analize.
+ > Make sure the user you add to the CEO role is **not** the Service Account user we used to sign-in to Salesforce when we on boarded the application in Exercise 2 . The reason being that CASB Cloud Service will not monitor actions performed by that user so as to ensure that the actions CASB take in the persona of that user, to collect data from Salesforce, does not appear in the data CASB analyze.
 
  Click the "*Save*" button 
 
@@ -517,7 +516,7 @@ We will demonstrate how to blacklist an IP address. In the Oracle CASB menu (on 
 
 #### **STEP 2**: Log into Salesforce
 
-When we log into  Salesforce from your blacklisted IP we ensure that a future risk event will be generated for Salesforce that flags the access to Salesforce from the black listed IP address. 
+When we log into Salesforce from your blacklisted IP we ensure that a future risk event will be generated for Salesforce that flags the access to Salesforce from the black listed IP address. 
 
 #### **STEP 3**: Analyze the resulting risk even starting from the dashboard
 
@@ -598,7 +597,7 @@ You can click on the individual sections on the bar chart to drill into the indi
 ___
 Oracle CASB Cloud Service generates a ticket in the Incidents section of the console whenever it detects a behavioral anomaly. Administrators also can create incident tickets manually.
 
-Incidents are automaticaly or manually assigned to CASB Cloud Service users.
+Incidents are automatically or manually assigned to CASB Cloud Service users.
 
 > Note, this is similar to what we did in Exercises 2 but via a different UI route that involves less steps. 
 
@@ -631,6 +630,7 @@ The category filters are:
 
 ## **Exercise 6. Reports**
 ___
+
 
 
 
