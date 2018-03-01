@@ -442,7 +442,7 @@ a Dialog will appear that will prompt the user to upload a log file.
 
 Press the "*Choose File*" button and upload the sample log file assigned to you.
   
- > The sample log file you should use in this exercise is available for download [here](docs/CASBDiscovery-import.log). Right click on the link and save the file to your local machine and make a note where you save it since you'll be uploading the file to CASB Cloud Service in the course of this exercise.
+ > The sample log file you should use in this exercise is available for download [here](docs/CASBDiscovery-import.log). Right click on the link and save the file to your local machine and make a note where you save it since you'll be required to upload the file to CASB Cloud Service in the course of this exercise.
 
 #### **STEP 3**: Select the log file format & Press the "*Import*" Button
 
