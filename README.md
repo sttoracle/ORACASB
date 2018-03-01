@@ -427,7 +427,7 @@ Periodically, throughout the duration of the workshop, inspect the Salesforce ap
 ___
 ### **Overview**:
 
-We will use Oracle CASB Cloud Service – Discovery to find applications that are not explicitly authorized, but are running in your environment and may present a security threat.
+We will use Oracle CASB Cloud Service – Discovery to find applications that are not explicitly authorized, but are being used in your organization, that may present a security threat.
 
 Oracle CASB Cloud Service Discovery allows you to uncover any applications or plug-ins that do not have explicit organizational approval.
 
@@ -454,7 +454,7 @@ CASB CS will process the log file and update the view with the progress it has m
 
 ![](images/CASB/upload_indicator.png)
 
-Once the file has been processed CASB will display the results of its analysis. You can, at any time, go back to your results by making note of where on the timeline your specific sample log fits in. 
+Once the file has been processed CASB will display the results of its analysis.
 
 #### **STEP 4**: Explorer the results of the log file import 
 At the top of the page CASB will display the users who used the most apps as well as the most popular apps that have been discovered 
@@ -594,14 +594,16 @@ You can click on the individual sections on the bar chart to drill into the indi
 
 ![](images/CASB/risk_weight.png)
 
-## Exercise 7. Event Management
+## Exercise 7. Incident Management
 ___
 Oracle CASB Cloud Service generates a ticket in the Incidents section of the console whenever it detects a behavioral anomaly. Administrators also can create incident tickets manually.
 
-> Note, this is similar to what we did in Exercises 2 but via a different UI route that entails less steps. 
+Incidents are automaticaly or manually assigned to CASB Cloud Service users.
+
+> Note, this is similar to what we did in Exercises 2 but via a different UI route that involves less steps. 
 
 #### **STEP 1**: Finding a targeting an Incident in the Incidents Page for remediation.
-Select one of the Salesforce Security Control related incidents and click the "*remediate*" icon
+Select one of the Salesforce Security Control related incidents and click the "*remediate*" icon.
 
 ![](images/CASB/click_remediate.png)
 
