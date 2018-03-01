@@ -389,23 +389,23 @@ To test the policy log into the Salesforce account and perform an action on the 
  
  Log into your Salesforce Developer account and follow these steps to create a *CEO* role and assign a user to it (This will result in the CASB policy alert)
  
- #### **STEP 2.1**:In the Salesforce "*Setup*" section navigate to *Users -> Roles*
+ #### **STEP 2.1**:In the Salesforce "*Setup*" section navigate to *Users -> Roles*.
  
  ![](images/CASB/SFrole1.png)
  Press the "*Set Up Roles*" button
 
- #### **STEP 2.2**: Select to create the suggested Salesforce Role Hierarchy.
+#### **STEP 2.2**: Select to create the suggested Salesforce Role Hierarchy.
 
  Select the CEO role 
 
  ![](images/CASB/SFRole2.png)
 
- #### **STEP 2.3**: Select "*Assign Users to Role*" (or "*New User*")
+#### **STEP 2.3**: Select "*Assign Users to Role*" (or "*New User*").
  
-
  ![](images/CASB/SFRole3.png)
  
-  #### **STEP 2.4**: Add a user to the policy role
+#### **STEP 2.4**: Add a user to the policy role
+
  ![](images/CASB/SFRole4.png)
  Search for a user and add the user to the role by selecting the "*Add*" button to move the user from the search results to the "*Selected Users for CEO*" selection box. 
 
