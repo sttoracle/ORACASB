@@ -74,10 +74,10 @@ This session will familiarize you with the Oracle CASB Cloud Service User Interf
 
 #### **STEP 1**: Sign on to Oracle CASB Cloud Service
 
-Using your preferred browser navigate to the Oracle CASB Service home URL at  https://trial.palerra.net/ . 
+Using your preferred browser navigate to the Oracle CASB Service home URL at  https://trial.palerra.net/sessions . 
 You'll be presented with the following login form:
 
-![](images/CASB/66D12B19-6081-445A-9562-B496AFBBE1B3.png)  
+![](images/CASB/casb_login.png)  
 
 > If you are following these instructions as part of the Oracle Cloud Security workshop you should have received an extra handout that will contain CASB login credentials to a **shared** workshop CASB tenant that will be used in the course of the workshop. **Use the credentials of the shared tenant you received to perform this exercise.**
 
@@ -148,7 +148,9 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 ![](images/CASB/sfLogout.png)
 
 #### **STEP 2**: Click on the "*Add an App*" menu item. 
-> If you are following these instructions in the context of a workshop you may be signed into CASB, after completing exercise 1 , using the **shared** tenant credentials assigned to you. However, exercise 2 should be performed using **your own Oracle Cloud Trial tenant account**. To accomplish this start a new private browsing window in your browser (called incognito window in Chrome) and log into https://trial.palerra.net/  with the credentials of your free Oracle Cloud trial account . Now continue with step 2 in your own trial CASB account.
+> If you are following these instructions in the context of a workshop you may be signed into CASB, after completing exercise 1 , using the **shared** tenant credentials assigned to you. However, exercise 2 should be performed using **your own Oracle Cloud Trial tenant account**. To accomplish this start a new private browsing window in your browser (called incognito window in Chrome) and log into your Oracle Cloud Trial Account with the appropriate credentials. Find the CASB Cloud Service in your list of services and click on that to be taken to the CASB dashboard of your own trial tenant.
+![](images/CASB/casb_service.png) 
+
 
 ![](images/CASB/Add_App.jpg)
 
@@ -199,8 +201,7 @@ You will be redirected to Salesforce to login, and you will see the following sc
 Use the credentials for the Salesforce tenant that has been assigned to you during the workshop. Upon log in, you will be asked to confirm that you want to grant access to the Oracle CASB Cloud Service:
 
 > If you signed-up for your own Salesforce account use the credentials for the user you created in the Prerequisites section's step 3 in the instructions above. 
-
->NOTE: Once logged in, Salesforce may ask you to verify your identity by sending a code to the email address used to sign-up. If so, retrieve the one-time verification code from your email. This will not be required if you follow these instructions as part of a workshop where you received an assigned Salesforce Developer account. 
+*Once logged in, Salesforce may ask you to verify your identity by sending a code to the email address used to sign-up. If so, retrieve the one-time verification code from your email. In a workshop context the verification e-mail will be sent to the workshop leader's mailbox . Provision will be made in the workshop to forward the verification e-mail to individual participants .*
 
 ![](images/CASB/01-grant-access.png)
 
@@ -210,7 +211,7 @@ Click the *Allow* button to allow the access. You will be redirected back to the
 
 Then click on the "*Done*" button on the following screen that informs you about the data collection delay that you should expect 
 
-Next, click on   "*Applications*" using the Navigation Bar on the left of the CASB UI .
+Click on the "*Applications*" navigation option using the Navigation Bar on the left of the CASB UI .
 
 ![](images/CASB/clock-icon.jpg) CASB will now start the initial data collection for the new application . You can expect this initial data collection to complete within 30 to 120 minutes. While the initial data collection is taking place, the application will be tagged with the “*NEW*” banner in the application list. 
 
