@@ -1,8 +1,8 @@
-Updated: March 1, 2018
+Updated: March 2, 2018
 
 ## **Introduction**
 ___
- The purpose of these self-directed exercises is to provide participants hands-on experience using the Oracle CASB Cloud Service trail account to perform some key CASB use cases 
+ The purpose of these self-directed exercises is to provide participants hands-on experience, using the Oracle CASB Cloud Service trail account, to perform some key CASB use cases.
 
 ## **Objectives**
 ___
@@ -21,17 +21,17 @@ ___
 
 ### **Signup for a Salesforce Trial Account**: 
 
->If you are following these instruction in the context of an Oracle workshop then a Salesforce Developer Account would have been automatically provisioned for you when you signed-up for the workshop. In the event you did not receive a trial account or you are not following these instruction in the context of a workshop then you can self-register for a Salesforce developer account by following these instructions:
+>If you are following these instruction in the context of an Oracle workshop then a Salesforce Developer Account would have been assigned to you at the start of the workshop. In the event you did not receive a trial account or you are not following these instruction in the context of a workshop then you can self-register for a Salesforce developer account by following these instructions:
 
 #### **STEP 1**: Create Salesforce Developer Account
-First, we must acquire a new Salesforce developer account. Sign-up for a Salesforce developer account at https://developer.Salesforce.com/signup (this is a free account, no credit card required). You will need an email address. After completing the signup process, check your email and click the account verification link. The verification link may look similar to this:
+ Sign-up for a Salesforce developer account at https://developer.Salesforce.com/signup (this is a free account, no credit card required). You will need an email address. After completing the signup process, check your email and click the account verification link. The verification link may look similar to this:
 
 ![](images/CASB/74FCDEE4-C1D1-49FE-960A-43BD91A87BBD.png)
  
  After clicking the verification link, next choose a new password for your Salesforce developer account.
 
 #### **STEP 2** Creating a Dedicated Profile in Salesforce
-Create a dedicated profile for Oracle CASB Cloud Service in the Salesforce account that you want to monitor.
+Create a dedicated profile for Oracle CASB Cloud Service in the Salesforce account.
 
 * In Salesforce, go to "*Setup*" and expand "*Users*", and then select "*Profiles*".
 
@@ -59,11 +59,11 @@ Create a dedicated user for Oracle CASB Cloud Service in the Salesforce account 
 
 * In the "*User License list*", select a license type that permits you to use the "*System Administrator profile*" (example: the "*Salesforce*" license).
 
-* In the "*Profile*" list, select the profile that is based on the "*System Administrator profile*". See the procedure above for details.
+* In the "*Profile*" list, select the profile, that you created in the previouse step,  that is based on the "*System Administrator profile*". See the procedure above for details.
 
 * Click "*Save*". Salesforce will send a confirmation email to the address that you supplied above.
 
-* Respond to the email from Salesforce to finish setup for the new Oracle CASB Cloud Service user. You need to create a login password and a password retrieval question.
+* Respond to the email from Salesforce to finish setup for the new Oracle CASB Cloud Service user. You need to create a login password and a password retrieval question. **This user will be used to login to Salesforce when you onboard the Salesforce instance into CASB in Excercise 2**
 
 ## **Exercise 1. CASB Cloud Service Dashboard**
 ___
@@ -73,13 +73,13 @@ This session will familiarize you with the Oracle CASB Cloud Service User Interf
 ### **Exercise**:
 
 #### **STEP 1**: Sign on to Oracle CASB Cloud Service
+Log into your free Oracle Cloud Trial account and select the "Oracle CASB Cloud Service from the list of availble services.
 
-Using your preferred browser navigate to the Oracle CASB Service home URL at  https://trial.palerra.net/sessions . 
-You'll be presented with the following login form:
+> If you are following these instructions as a participant of the Oracle Cloud Security workshop you should have received an extra handout that will contain CASB login credentials to a **shared** workshop CASB tenant that will be used in the course of the workshop. Navigate to the Oracle CASB Service home URL at  https://trial.palerra.net/sessions and **use the credentials of the shared tenant you received to perform this exercise.**
 
-![](images/CASB/casb_login.png)  
+>![](images/CASB/casb_login.png)  
 
-> If you are following these instructions as part of the Oracle Cloud Security workshop you should have received an extra handout that will contain CASB login credentials to a **shared** workshop CASB tenant that will be used in the course of the workshop. **Use the credentials of the shared tenant you received to perform this exercise.**
+
 
 #### **STEP 2**: Review select items on the CASB Dashboard
 
