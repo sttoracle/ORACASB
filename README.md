@@ -143,10 +143,6 @@ Under “*Password Policies*” choose to not enforce password history.
 
 At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 
-**Make sure that you log out from this and other Salesforce accounts and clear the browser cache before continuing with the rest of the exercise.**
-
-![](images/CASB/sfLogout.png)
-
 #### **STEP 2**: Click on the "*Add an App*" menu item. 
 > If you are following these instructions in the context of a workshop you may be signed into CASB, after completing exercise 1 , using the **shared** tenant credentials assigned to you. However, exercise 2 should be performed using **your own Oracle Cloud Trial tenant account**. To accomplish this start a new private browsing window in your browser (called incognito window in Chrome) and log into your Oracle Cloud Trial Account with the appropriate credentials. Find the CASB Cloud Service in your list of services and click on that to be taken to the CASB dashboard of your own trial tenant.
 ![](images/CASB/casb_service.png) 
