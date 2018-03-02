@@ -79,7 +79,7 @@ You'll be presented with the following login form:
 
 ![](images/CASB/66D12B19-6081-445A-9562-B496AFBBE1B3.png)  
 
-> If you are following these instructions as part of the Oracle Cloud Security workshop then you'll receive a registration confirmation that will contain CASB login credentials to a **shared** workshop CASB tenant that will be used in the course of the workshop. **Use the credentials of the shared tenant you received to perform this exercise.**
+> If you are following these instructions as part of the Oracle Cloud Security workshop you should have received an extra handout that will contain CASB login credentials to a **shared** workshop CASB tenant that will be used in the course of the workshop. **Use the credentials of the shared tenant you received to perform this exercise.**
 
 #### **STEP 2**: Review select items on the CASB Dashboard
 
