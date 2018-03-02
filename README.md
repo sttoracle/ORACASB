@@ -73,13 +73,11 @@ This session will familiarize you with the Oracle CASB Cloud Service User Interf
 ### **Exercise**:
 
 #### **STEP 1**: Sign on to Oracle CASB Cloud Service
-Log into your free Oracle Cloud Trial account and select the "*Oracle CASB Cloud Service*" from the list of available services.
+If you are following these instructions as a participant of the Oracle Cloud Security workshop you should have received an extra handout that will contain CASB login credentials to a **shared** workshop CASB tenant that will be used in the course of the workshop. Navigate to the Oracle CASB Service home URL at  https://trial.palerra.net/sessions and **use the credentials of the shared tenant you received to perform this exercise.**
 
-> If you are following these instructions as a participant of the Oracle Cloud Security workshop you should have received an extra handout that will contain CASB login credentials to a **shared** workshop CASB tenant that will be used in the course of the workshop. Navigate to the Oracle CASB Service home URL at  https://trial.palerra.net/sessions and **use the credentials of the shared tenant you received to perform this exercise.**
+![](images/CASB/casb_login.png)  
 
->![](images/CASB/casb_login.png)  
-
-
+>If you are not following these instructions in the context of a workshop then log in to your free Oracle Cloud Trial account and select the "*Oracle CASB Cloud Service*" from the list of available services.
 
 #### **STEP 2**: Review select items on the CASB Dashboard
 
