@@ -21,7 +21,7 @@ ___
 
 ### **Signup for a Salesforce Trial Account**: 
 
->If you are following these instruction in the context of an Oracle workshop then a Salesforce Developer Account would have been assigned to you at the start of the workshop. In the event you did not receive a trial account or you are not following these instruction in the context of a workshop then you can self-register for a Salesforce developer account by following these instructions:
+>If you are following these instruction in the context of an Oracle workshop then a Salesforce Developer Account would have been assigned to you at the start of the workshop. In the event you did not receive a trial account or you are not following these instruction in the context of a workshop then you can self-register for a Salesforce developer account by following these prerequisite instructions:
 
 #### **STEP 1**: Create Salesforce Developer Account
  Sign-up for a Salesforce developer account at https://developer.Salesforce.com/signup (this is a free account, no credit card required). You will need an email address. After completing the signup process, check your email and click the account verification link. The verification link may look similar to this:
