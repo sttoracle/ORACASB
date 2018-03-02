@@ -395,15 +395,11 @@ To test the policy log into the Salesforce account and perform an action on the 
 
 #### **STEP 2.2**: Select to create the suggested Salesforce Role Hierarchy.
 
- Select the "*CEO*" role 
+ Select the "*Assign*" link next to the "*CEO*" role 
 
  ![](images/CASB/SFRole2.png)
 
-#### **STEP 2.3**: Select "*Assign Users to Role*" (or "*New User*").
- 
- ![](images/CASB/SFRole3.png)
- 
-#### **STEP 2.4**: Add a user to the policy role
+#### **STEP 2.3**: Add a user to the policy role
 
  ![](images/CASB/SFRole4.png)
  Select the "*Add*" button to move the user from the "*Available Users*" list box to the "*Selected Users for CEO*" list box. 
