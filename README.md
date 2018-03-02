@@ -77,7 +77,7 @@ If you are following these instructions as a participant of the Oracle Cloud Sec
 
 ![](images/CASB/casb_login.png)  
 
->If you are not following these instructions in the context of a workshop then log in to your free Oracle Cloud Trial account and select the "*Oracle CASB Cloud Service*" from the list of available services.
+>If you are **not** following these instructions in the context of a workshop then log in to your free Oracle Cloud Trial account and select the "*Oracle CASB Cloud Service*" from the list of available services.
 
 #### **STEP 2**: Review select items on the CASB Dashboard
 
@@ -126,6 +126,9 @@ In this session, you will be using the Oracle CASB Cloud Service UI to onboard a
 #### **STEP 1** Pre-configure your Salesforce Developer Account for this exercise:
 
 Sign into your Salesforce account and navigate to the Setup section. 
+
+> Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following Slack channel ( TODO add slack channel).
+You can browse the Slack channel and find the verification code matching your assigned Salesforce User.
 
  We will configure some sample security settings within Salesforce. In the setup menu, use the upper-left Quick Find box to search for *Password Policies* .
 
