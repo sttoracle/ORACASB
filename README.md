@@ -130,7 +130,7 @@ Sign into your Salesforce account and navigate to the Setup section.
 > Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following Slack channel ( TODO add slack channel).
 You can browse the Slack channel and find the verification code matching your assigned Salesforce User.
 
- We will configure some sample security settings within Salesforce. In the setup menu, use the upper-left Quick Find box to search for *Password Policies* .
+ We will configure some sample security settings within Salesforce. Go to the Salesforce "*Setup*" UI by clicking on the gear icon at the top right of the Salesforce UI . Once you're in the Saleforce Setup UI Use the upper-left "*Quick Find*" box to search for *Password Policies* .
 
  ![](images/CASB/sfSetup.png)
 
