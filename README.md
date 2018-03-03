@@ -195,7 +195,7 @@ You will be redirected to Salesforce to login, and you will see the following sc
 
 ![](images/CASB/01-please-wait-screen.png)
 
-Use the credentials for the Salesforce tenant that has been assigned to you during the workshop. Upon log in, you will be asked to confirm that you want to grant access to the Oracle CASB Cloud Service:
+**Use the credentials for the Salesforce tenant that has been assigned to you during the workshop**. Upon login, you will be asked to confirm that you want to grant access to the Oracle CASB Cloud Service:
 
 > If you signed-up for your own Salesforce account use the credentials for the user you created in the Prerequisites section's step 3 in the instructions above. 
 *Once logged in, Salesforce may ask you to verify your identity by sending a code to the email address used to sign-up. If so, retrieve the one-time verification code from your email. In a workshop context the verification e-mail will be sent to the workshop leader's mailbox . Provision will be made in the workshop to forward the verification e-mail to individual participants .*
