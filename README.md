@@ -76,7 +76,7 @@ In this session, you will be using the Oracle CASB Cloud Service UI to onboard a
 
 #### **STEP 1** Pre-configure your Salesforce Developer Account for this exercise:
 
-Sign into your Salesforce account at https://login.salesforce.com and navigate to the Setup section. 
+Sign into your Salesforce account at https://login.salesforce.com and navigate to the "*Setup*" menu. 
 
 > **Note :** Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following [link](https://cloudsecurityday.blogspot.com/ ).
 You can browse the link and find the code for your assigned Salesforce User.
