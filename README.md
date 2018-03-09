@@ -174,6 +174,7 @@ Recall that we changed the password policy in Salesforce to *never expire*, howe
 Since we selected to have the CASB Cloud Service push the security control setting to Salesforce the new Salesforce instance should not have any violations, **After the initial load is complete**, and should appear in the low risk services category. 
  
  > If we selected the "*Monitor Only*" option instead of the "*Push Controls and Monitor*" option in step 4 we would have had security control violations appear in the CASB dashboard for the Salesforce tenant after the initial scan. 
+ 
 ## **Exercise 3. CASB Discovery**
 ___
 ### **Overview**:
