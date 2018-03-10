@@ -319,17 +319,17 @@ In this exercise we will define a policy, for Salesforce, that will generate an 
 <div style='color:grey; background-color:#eee; padding-left:7px'>
 
 FYI, The basics of a policy consist of these components:     
-
-**Actions** that users or administrators perform (for example, creating or deleting)
-
-**Resources** that these users act upon (for example, files, folders, or EC2 instances).
-
+<br>
+<b>Actions</b> that users or administrators perform (for example, creating or deleting)
+<br>
+<b>Resources</b> that these users act upon (for example, files, folders, or EC2 instances).
+<br>
 Optionally, you can identify additional filters such as people or groups who perform the action, the IP address of the actor, and the recipient of the action (for actions such as sharing and collaboration).
-
+<br>
 You can also add instructions for the person who reads the alert. For example, if you create an alert related to deleting access control lists, you can add instructions to inform the group that is responsible for managing the access control lists.
-
+<br>
 You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.
-
+<br>
 </div>
 
 
