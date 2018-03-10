@@ -316,7 +316,8 @@ In this exercise we will define a policy, for Salesforce, that will generate an 
 #### STEP 1: Create a Policy
 
 
-<span style="color:grey;background-color:#eee">The basics of a policy consist of these components:
+<span style="color:grey;background-color:#eee">
+The basics of a policy consist of these components:
 
 **Actions** that users or administrators perform (for example, creating or deleting)
 
@@ -326,7 +327,8 @@ Optionally, you can identify additional filters such as people or groups who per
 
 You can also add instructions for the person who reads the alert. For example, if you create an alert related to deleting access control lists, you can add instructions to inform the group that is responsible for managing the access control lists.
 
-You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.</span>
+You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.
+</span>
 
 
 <span style='color:red'>**Log in to your Oracle Free Trial CASB tenant </span> [(instructions here )](../Cloud-Security-Day/CSD-SETUP.html)  and perform the following** 
