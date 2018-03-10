@@ -8,11 +8,12 @@ ___
 ___
 The exercises will cover the following CASB features and concepts:
  - The CASB Cloud Service Dashboard
- - Sanctioned Application On-boarding
  - CASB Discovery (Shadow IT)
+ - Sanctioned Application On-boarding
  - Analyzing Security Controls
  - Policies
  - Risk Events & User Risk
+ - Reports
  - Incident Management
 
 
@@ -24,7 +25,7 @@ This session will familiarize you with the Oracle CASB Cloud Service User Interf
 ### **Exercise**:
 
 #### **STEP 1**: Sign on to Oracle CASB Cloud Service
-You should have received an extra handout that will contain CASB login credentials to a **shared** workshop CASB tenant that will be used in the course of the workshop. Within a new private browsing window, navigate to the shared Oracle CASB Service URL at  https://trial.palerra.net/sessions and **use the credentials of the shared tenant you received to perform this exercise.**
+You should have received an extra handout that will contain CASB login credentials to a **shared** workshop CASB tenant that will be used in the course of the workshop. Within a new private browsing window, navigate to the shared Oracle CASB Service URL at  [https://trial.palerra.net/sessions](https://trial.palerra.net/sessions)  and **use the credentials of the shared tenant you received to perform this exercise.**
 
 ![](images/CASB/casb_login.png)  
 
@@ -65,9 +66,99 @@ There are 5 Health indicator tabs into which the various services being monitore
 
 The Access Map shows points of origin for both normal (green dot) and suspicious (red dot) events. Click links in the summary information to see more details.
 
+Legent : 
+
+![](images/CASB/icon_accessmap_green.png) - Indicates a cluster of normal events. Click this symbol to see individual normal events.
+
+![](images/CASB/icon_accessmap_green_indiv.png)- Indicates an individual normal event.
+
+![](images/CASB/icon_accessmap_red.png) -Indicates a cluster of suspicious events. Click this symbol to see individual suspicious events.
+
+![](images/CASB/icon_accessmap_red_indiv.png) - Indicates an individual suspicious event.
+
+
+
 > The other summary cards on the Dashboard Summary tab, such as Suspicious and normal IP addresses, display statistics for specific types of activity that may or may not be suspicious. For each summary card, you can:  View the summary statistics displayed, Hover over parts of the card to see additional information in pop-ups, and to identify links, click any link in the card to see more detailed information, click the Help icon Image of Help icon in the upper-right corner to see online help about the type of information displayed in any particular card.
 
-## **Exercise 2. Sanctioned Application Onboarding**
+## **Exercise 2. CASB Discovery**
+___
+### **Overview**:
+
+We will use Oracle CASB Cloud Service – Discovery to find applications that are not explicitly authorized, but are being used in your organization, that may present a security threat.
+
+Oracle CASB Cloud Service Discovery allows you to uncover any applications or plug-ins that do not have explicit organizational approval.
+
+> **Note:** CASB Discovery is not enabled in Oracle Cloud Trial Accounts therefor the App Discovery tab shown in the screenshot bellow will not appear inyour trial account . We will use the shared tenant to perform the shadow IT Discovery exercise in the workshop.
+
+### **Exercise**:
+#### **STEP 1**: On the CASB Dashboard page select the "*App Discovery*" tab 
+
+![](images/CASB/1400C83D-8157-483A-814D-069867A9EC4C.png)
+
+#### **STEP 2**: Press the "*Import from Logs*” button 
+
+a Dialog will appear that will prompt the user to upload a log file. 
+
+Press the "*Choose File*" button and upload the sample log file assigned to you.
+  
+ The sample log file you should use in this exercise is available for download [here](docs/CASBDiscovery-import.log). Right click on the link and save the file to your local machine and make a note where you save it since you'll be required to upload the file to CASB Cloud Service in the course of this exercise.
+
+#### **STEP 3**: Select the log file format & Press the "*Import*" Button
+
+![](images/CASB/log_upload.png)
+
+CASB CS will process the log file and update the view with the progress it has made in analyzing the log file. 
+
+>Note, if the progress indicator show the log file processing is complete but **you do not see any applications** that were discovered being listed then hit the browser "*reload button*" to update the progress indicator
+
+![](images/CASB/upload_indicator.png)
+
+Once the file has been processed CASB will display the results of its analysis.
+
+#### **STEP 4**: Explorer the results of the log file import 
+At the top of the page CASB will display the users who used the most apps as well as the most popular apps that have been discovered 
+
+![](images/CASB/6AE30331-B060-4825-A24E-A15073420C46.png)
+
+You can select one of the users to filter the table view of discovered apps to only include the apps used by the selected user. You can further select individual apps in the table view to view further detail about the app. 
+
+![](images/CASB/6588AB1E-7C68-46DF-8F01-0A29646AA259.png)
+
+#### **STEP 6** : Explore discovered App/Domain risk factors
+For some apps, that have a *SecureScorecard* report, you can view the security concerns associated with the app. 
+
+SecureScorecard evaluates many internet destinations in the context of 10 risk factors:
+* Network Security: Checks vendor’s insecure network settings.
+* DNS Health: Checks vendor’s DNS insecure configurations and vulnerabilities.
+* Patching Cadence: Checks vendor’s software inventory for out of date or vulnerable applications.
+* Endpoint Security: Measures security level of vendor’s employee workstations and mobile devices.
+* IP Reputation:
+Checks suspicious activity, such as malware or spam, in the vendor’s network.
+* Web Application Security: A proprietary algorithm that checks for vendor’s implementation of common security best practices.
+* Cubit Score: A proprietary algorithm that checks for vendor’s implementation of common security best practices.
+* Hacker Chatter: Checks hacker sites for chatter about the vendor.
+* Leaked Credentials: Sensitive application information exposed in public code repositories.
+* Social Engineering: Measures vendor’s employee awareness to a social engineering or phishing attack.
+
+Select a site, with a SecureScorecard report, and then select a highlighted risk factor to get a more detailed explanation of the risk factor in context of the selected site.
+
+For example, for the bing.com site, in the supplied sample log file, we can see that its Scorecard has an active "*Leaked information*” risk factor link . Click on the link to get a more detailed explanation of the information that contributed to the risk and its severity. 
+
+![](images/CASB/securecard.png)
+
+#### **STEP 7**: Create a new Incident for one of the discovered apps
+
+Press the "*Create Incident*" action for any one of the apps available in you trial tenant.
+
+![](images/CASB/create_incident.png)
+
+Fill out the "*New Incident*" Dialog and click the "*Save*" button.
+
+![](images/CASB/BFD830FC-EE87-42D3-A25D-39659D05098C.png)
+
+You'll notice there are 3 new actions available for the app you created an incident for in the CASB App Discovery "*Discovered App*" table view. Mouse over the icons to see a description. Go ahead and explore the new actions that are available.
+
+## **Exercise 3. Sanctioned Application Onboarding**
 ___
 ### **Overview**:
 In this session, you will be using the Oracle CASB Cloud Service UI to onboard a Salesforce Developer Account into your Oracle CASB Cloud Service tenant. 
@@ -97,7 +188,7 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 
 #### **STEP 2**: Login to your Oracle  Cloud Trial account and navigate to the Oracle CASB Cloud Service.
 
-You would have signed into CASB, after completing exercise 1 , using the **shared** tenant credentials assigned to you. However, exercise 2 should be performed using **your own Oracle Cloud Trial tenant account**. To accomplish this start a **new private browsing** window in your browser and log into your Oracle Cloud Trial Account with the appropriate credentials. Find the CASB Cloud Service, in your list of services, and click on it to navigate to the CASB landing page ( The "*Applications*" view if you have no applications onboarded yet) of your own trial tenant.
+You would have signed into CASB, after completing Exercise 1 , using the **shared** tenant credentials assigned to you. However, exercise 2 should be performed using **your own Oracle Cloud Trial tenant account**. To accomplish this start a **new private browsing** window in your browser and log into your Oracle Cloud Trial Account with the appropriate credentials. Find the CASB Cloud Service, in your list of services, and click on it to navigate to the CASB landing page ( The "*Applications*" view if you have no applications onboarded yet) of your own trial tenant.
 ![](images/CASB/casb_service.png) 
 
 #### **STEP 2**: Click on the "*Add an App*" menu item. 
@@ -175,81 +266,6 @@ Since we selected to have the CASB Cloud Service push the security control setti
  
  > If we selected the "*Monitor Only*" option instead of the "*Push Controls and Monitor*" option in step 4 we would have had security control violations appear in the CASB dashboard for the Salesforce tenant after the initial scan. 
 
-## **Exercise 3. CASB Discovery**
-___
-### **Overview**:
-
-We will use Oracle CASB Cloud Service – Discovery to find applications that are not explicitly authorized, but are being used in your organization, that may present a security threat.
-
-Oracle CASB Cloud Service Discovery allows you to uncover any applications or plug-ins that do not have explicit organizational approval.
-
-### **Exercise**:
-#### **STEP 1**: On the CASB Dashboard page select the "*App Discovery*" tab 
-
-![](images/CASB/1400C83D-8157-483A-814D-069867A9EC4C.png)
-
-#### **STEP 2**: Press the "*Import from Logs*” button 
-
-a Dialog will appear that will prompt the user to upload a log file. 
-
-Press the "*Choose File*" button and upload the sample log file assigned to you.
-  
- > The sample log file you should use in this exercise is available for download [here](docs/CASBDiscovery-import.log). Right click on the link and save the file to your local machine and make a note where you save it since you'll be required to upload the file to CASB Cloud Service in the course of this exercise.
-
-#### **STEP 3**: Select the log file format & Press the "*Import*" Button
-
-![](images/CASB/log_upload.png)
-
-CASB CS will process the log file and update the view with the progress it has made in analyzing the log file. 
-
->Note, if the progress indicator show the log file processing is complete but **you do not see any applications** that were discovered being listed then hit the browser "*reload button*" to update the progress indicator
-
-![](images/CASB/upload_indicator.png)
-
-Once the file has been processed CASB will display the results of its analysis.
-
-#### **STEP 4**: Explorer the results of the log file import 
-At the top of the page CASB will display the users who used the most apps as well as the most popular apps that have been discovered 
-
-![](images/CASB/6AE30331-B060-4825-A24E-A15073420C46.png)
-
-You can select one of the users to filter the table view of discovered apps to only include the apps used by the selected user. You can further select individual apps in the table view to view further detail about the app. 
-
-![](images/CASB/6588AB1E-7C68-46DF-8F01-0A29646AA259.png)
-
-#### **STEP 6** : Explore discovered App/Domain risk factors
-For some apps, that have a *SecureScorecard* report, you can view the security concerns associated with the app. 
-
-SecureScorecard evaluates many internet destinations in the context of 10 risk factors:
-* Network Security: Checks vendor’s insecure network settings.
-* DNS Health: Checks vendor’s DNS insecure configurations and vulnerabilities.
-* Patching Cadence: Checks vendor’s software inventory for out of date or vulnerable applications.
-* Endpoint Security: Measures security level of vendor’s employee workstations and mobile devices.
-* IP Reputation:
-Checks suspicious activity, such as malware or spam, in the vendor’s network.
-* Web Application Security: A proprietary algorithm that checks for vendor’s implementation of common security best practices.
-* Cubit Score: A proprietary algorithm that checks for vendor’s implementation of common security best practices.
-* Hacker Chatter: Checks hacker sites for chatter about the vendor.
-* Leaked Credentials: Sensitive application information exposed in public code repositories.
-* Social Engineering: Measures vendor’s employee awareness to a social engineering or phishing attack.
-
-Select a site, with a SecureScorecard report, and then select a highlighted risk factor to get a more detailed explanation of the risk factor in context of the selected site.
-
-For example, for the bing.com site, in the supplied sample log file, we can see that its Scorecard has an active "*Leaked information*” risk factor link . Click on the link to get a more detailed explanation of the information that contributed to the risk and its severity. 
-
-![](images/CASB/securecard.png)
-
-#### **STEP 7**: Create a new Incident for one of the discovered apps
-
-Press the "*Create Incident*" action for any one of the apps available in you trial tenant.
-
-![](images/CASB/create_incident.png)
-
-Fill out the "*New Incident*" Dialog and click the "*Save*" button.
-
-![](images/CASB/BFD830FC-EE87-42D3-A25D-39659D05098C.png)
-
-You'll notice there are 3 new actions available for the app you created an incident for in the CASB App Discovery "*Discovered App*" table view. Mouse over the icons to see a description. Go ahead and explore the new actions that are available.
 
 ## **Exercise 4. Analyze Security Controls**
 ___
@@ -264,6 +280,7 @@ Oracle CASB Cloud Service looks at cloud service configurations and identifies w
 Monitor-only. Oracle CASB Cloud Service reports on these security control values, but doesn’t change them in the cloud application.
 
 Monitor and push preferred values to the cloud application. At registration time, Oracle CASB Cloud Service ensures that your cloud application has your preferred security configuration values. After registration, Oracle CASB Cloud Service reports on changes to these values.
+
 
 ### **Exercise**:
 
@@ -286,7 +303,8 @@ You will now see a message that indicates that the baseline has been updated. Cl
 
 #### **STEP 2**: Review security control violations 
 
-> ![](images/CASB/clock-icon.jpg) As mentioned , there will be a delay between the time the security control baseline is updated until the next scan of the Salesforce tenant's settings will be compared to the new baseline. Any violations will therefore not appear until the next scan takes effect. If you do not see any violations as described below move on to the next exercise and revisit this exercise once CASB has had a chance to do a fresh scan of Salesforce. **If you are following these instructions as part of a workshop you do not have to wait for the next CASB data collection run to take place before you can continue with this exercise. You can sign into the shared CASB tenant and complete the remainder of the exercise in the shared tenant.** Individual login instructions were provided for each workshop participant. If you did not receive your instructions please inform one of the workshop proctors.
+> ![](images/CASB/clock-icon.jpg) As mentioned , there will be a delay between the time the security control baseline is updated until the next scan of the Salesforce tenant's settings will be compared to the new baseline. Possible violations will therefore not appear until the next scan takes effect. <span style='color:red'> **You can sign in to the shared CASB tenant at [https://trial.palerra.net/sessions](https://trial.palerra.net/sessions)  and complete the remainder of the exercise in the shared tenant.** <span>
+Individual login instructions were provided for each workshop participant. If you did not receive your instructions please inform one of the workshop proctors.
 
 There should be an exclamation point icon in your Salesforce Tenant’s Application List badge indicating there are some new Risk Events we can evaluate for the application. Click, your recently on-boarded, application's badge, and then choose the “*View Details*” button from the "*Health Summary*" popup dialog.
 
@@ -305,7 +323,9 @@ From the Action menu, note that we could choose to create a new incident based o
 In this step, we'll automatically remediate one of the security control Risk events : .
 
 First we'll verify that the "*clickjack*" protection is not enabled in Salesforce:
-In Salesforce navigate to *Setup -> Security -> Session Settings* and verify the "*Enable clickjack protection for customer Visualforce pages with standard headers*" checkbox is unchecked. 
+With your assigned Salesforce account navigate to *Setup -> Security -> Session Settings* and verify the "*Enable clickjack protection for customer Visualforce pages with standard headers*" checkbox is unchecked. 
+
+![](images/CASB/sf_clickjack.png)
 
 Select the "*Enable clickjack protection for customer Visualforce pages with standard headers*" incident in the list of incidents and under the Action column select the "*View incident*" dropdown option.
 
@@ -325,7 +345,7 @@ On the resulting incident dialog ensure that the default "*Auto Remediation*" ra
 
 CASB Cloud Service will now invoke the Salesforce API to change the "*Clickjack Protection*" setting in Salesforce to bring it into compliance with the CASB Security Control baseline that is in effect.  
 
-In Salesforce navigate to: *Setup -> Security  -> Session Settings* again and verify the "*Clickjack Protection*" has been modified in Salesforce.
+**In Salesforce** navigate to: *Setup -> Security  -> Session Settings* again and verify the "*Clickjack Protection*" has been modified in Salesforce.
 
 ![](images/CASB/clickjack.png)
 
@@ -348,6 +368,8 @@ Oracle CASB Cloud Service generates an alert whenever an event that matches the 
 In this exercise we will define a policy, for Salesforce, that will generate an incident when "*Any*" action is performed on the Salesforce CEO role (This includes adding or removing users to the role). 
 
 #### **STEP 1**: Create a Policy
+
+
 The basics of a policy consist of these components:
 
 **Actions** that users or administrators perform (for example, creating or deleting)
@@ -359,7 +381,11 @@ Optionally, you can identify additional filters such as people or groups who per
 You can also add instructions for the person who reads the alert. For example, if you create an alert related to deleting access control lists, you can add instructions to inform the group that is responsible for managing the access control lists.
 
 You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.
-#### **STEP 1.1**: In the Oracle CASB Cloud Service console, select Configuration, select "*Policy Management*"
+
+
+<span style='color:red'>**Log in to your Oracle Free Trial CASB tenant </span> [(instructions here )](../Cloud-Security-Day/CSD-SETUP.html)  and perform the following** 
+
+#### **STEP 1.1**: In the Oracle CASB Cloud Service console, select Configuration then select "*Policy Management*"
 
 ![](images/CASB/policy_management.png)
 
@@ -406,11 +432,14 @@ The Policy will appear in the list of policies available for activation for the 
 
 #### **STEP 2**: Trigger the Policy Alert
 
-To test the policy log into the Salesforce account and perform an action on the *CEO* role that our new policy monitors.
- 
- #### **STEP 2.1**: In the Salesforce "*Setup*" section navigate to *Users -> Roles*.
+To test the policy log in to the Salesforce account and perform an action on the *CEO* role that our new policy monitors.
+
+>**Note**: For the workshop you have one assigned Salesforce user which is the same user you used when you Onboarded Salesforce in Exercise 3. If you decide to sign-up for your own free Salesforce Developer account and you follow these instructions you should ensure you followed the Salesforce preperation steps described in your workshop handout that prepares a dedicated Salesforce user for CASB to use to monitor salesforce. This dedicated Salesforce user should be used to in Exercise 3 when you onboard your Salesforce account into CASB. All other Salesforce instructions in this workshop should be performed with the Salesforce Admin user that you created when you signed up for your free Salesforce Developer account . The reason this is important is because CASB will not report on an actions performed by  Salesforce user dedicated to CASB and if you perform these steps with that dedicated user the policy described in this exercise will not be triggered.  
+
+ #### **STEP 2.1**: In the Salesforce "*Setup*" section navigate to *Users -> Roles*
  
  ![](images/CASB/SFrole1.png)
+
  Press the "*Set Up Roles*" button
 
 #### **STEP 2.2**: Select to create the suggested Salesforce Role Hierarchy.
@@ -424,7 +453,7 @@ To test the policy log into the Salesforce account and perform an action on the 
  ![](images/CASB/SFRole4.png)
  Select the "*Add*" button to move the user from the "*Available Users*" list box to the "*Selected Users for CEO*" list box. 
 
- > Make sure the user you add to the CEO role is **not** the Service Account user we used to sign-in to Salesforce when you on-boarded the application in Exercise 2 . The reason being that CASB Cloud Service will not monitor actions performed by that user so as to ensure that the actions CASB take in the persona of that user, to collect data from Salesforce, does not appear in the data CASB analyze.
+ > Make sure the user you add to the CEO role is **not the Service Account** user we used to sign-in to Salesforce when you on-boarded the application in Exercise 2 . The reason being that CASB Cloud Service will not monitor actions performed by that user so as to ensure that the actions CASB take in the persona of that user, to collect data from Salesforce, does not appear in the data CASB analyze.
 
  Click the "*Save*" button 
 
