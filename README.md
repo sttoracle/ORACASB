@@ -327,7 +327,7 @@ In this exercise we will define a policy, for Salesforce, that will generate an 
 
 >You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.
 
-<span style='color:red'>**Log in to your Oracle Free Trial CASB tenant </span> [(instructions here )](../Cloud-Security-Day/CSD-SETUP.html)  and perform the following** 
+<span style='color:red'>**Log in to your Oracle Free Trial CASB tenant**</span> [(instructions here )](../Cloud-Security-Day/CSD-SETUP.html)  and perform the following 
 
 #### STEP 1.1: In the Oracle CASB Cloud Service console, select Configuration then select "*Policy Management*"
 
