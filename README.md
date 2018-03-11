@@ -26,15 +26,20 @@ In this session, you will be using the Oracle CASB Cloud Service UI to onboard a
 
 #### STEP 1: Prepare your assigned Salesforce Developer Account for this exercise by configuring an insecure password policy in Salesforce :
 
-Sign into your Salesforce account at https://login.salesforce.com and navigate to the "*Setup*" menu. 
+Sign in to your Salesforce account at [https://login.salesforce.com](https://login.salesforce.com ) 
 
-**Note :** Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following [link](https://cloudsecurityday.blogspot.com/ ).
-You can browse the link and find the code for your assigned Salesforce User.
+**Note :** 
 
- ![](images/CASB/sfSetup.png)
+You may run into two issues at this point:
 
- We will configure some sample security settings within Salesforce. Go to the Salesforce "*Setup*" UI by clicking on the gear icon at the top right of the Salesforce UI. Once you're in the Saleforce Setup UI Use the upper-left "*Quick Find*" box to search for *Password Policies*.
+* You may not be able to access the Salesforce login page. Refer to you handout that you recieved ,that contains your Salesforce account credentials, for instruction on how to bypass the issues that prevents you from connecting to Salesforce from the Oracle guest network. 
 
+* After you provide your credentials Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following [link](https://cloudsecurityday.blogspot.com/ ).
+You can browse the link and find the code for your assigned Salesforce User. 
+
+We will configure some sample security settings within Salesforce. Go to the Salesforce "*Setup*" UI by clicking on the gear icon at the top right of the Salesforce UI. Once you're in the Saleforce Setup UI Use the upper-left "*Quick Find*" box to search for *Password Policies*.
+
+![](images/CASB/sfSetup.png)
 ![](images/CASB/01-quick-find-box.png)
 Under “*Password Policies*” set user passwords to "*Never Expire*".
 
