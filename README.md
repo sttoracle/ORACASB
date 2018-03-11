@@ -27,8 +27,8 @@ In this session, you will be using the Oracle CASB Cloud Service UI to onboard a
 #### STEP 1: Prepare your assigned Salesforce Developer Account for this exercise by configuring an insecure password policy in Salesforce :
 
 Sign in to your Salesforce account at [https://login.salesforce.com](https://login.salesforce.com ) 
-
-**Note :** 
+<div style="border:1px solid grey;padding:7px;margin-bottom:6px">
+<b>Note:</b> 
 
 You may run into two issues at this point:
 
@@ -36,8 +36,8 @@ You may run into two issues at this point:
 
 * After you provide your credentials Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following [link](https://cloudsecurityday.blogspot.com/ ).
 You can browse the link and find the code for your assigned Salesforce User. 
-
-We will configure some sample security settings within Salesforce. Go to the Salesforce "*Setup*" UI by clicking on the gear icon at the top right of the Salesforce UI. Once you're in the Saleforce Setup UI Use the upper-left "*Quick Find*" box to search for *Password Policies*.
+</div>
+Go to the Salesforce "*Setup*" UI by clicking on the gear icon at the top right of the Salesforce UI. Once you're in the Saleforce Setup UI Use the upper-left "*Quick Find*" box to search for *Password Policies*.
 
 ![](images/CASB/sfSetup.png)
 ![](images/CASB/01-quick-find-box.png)
