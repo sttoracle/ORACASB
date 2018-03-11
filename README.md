@@ -34,7 +34,7 @@ You may run into two issues at this point
 <br><br>
 1. You may not be able to access the Salesforce login page. Refer to you handout that you recieved ,that contains your Salesforce account credentials, for instruction on how to bypass the issues that prevents you from connecting to Salesforce from the Oracle guest network. 
 <br><br>
-2. After you provide your credentials Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following <a href=https://cloudsecurityday.blogspot.com>link.</a>
+2. After you provide your credentials Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following <a href="https://cloudsecurityday.blogspot.com">link.</a>
 You can browse the link and find the code for your assigned Salesforce User. 
 </div>
 Go to the Salesforce "*Setup*" UI by clicking on the gear icon at the top right of the Salesforce UI. Once you're in the Saleforce Setup UI Use the upper-left "*Quick Find*" box to search for *Password Policies*.
