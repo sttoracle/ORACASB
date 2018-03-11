@@ -487,14 +487,14 @@ Oracle CASB Cloud Service typically collects 10 days of data before creating a r
 Typically, the longer Oracle CASB Cloud Service monitors a user's behavior, the more accurate the risk score will be.
 Examples of behaviors that can generate a high-risk score:
 
-<li>Downloading an unusual number of files, or deleting an unusual number of files, from IP addresses that the user had not used in the past.
-<br><br>
+<p><li>Downloading an unusual number of files, or deleting an unusual number of files, from IP addresses that the user had not used in the past.
+</li></p>
 
-<li>Traversing an unusually long geographical distance in a relatively short amount of time, particularly when benchmarked against the user's typical behavior.
-<br><br>
-<li>Accessing a cloud service from new IP addresses and locations outside of typical work hours for that user.
+<p><li>Traversing an unusually long geographical distance in a relatively short amount of time, particularly when benchmarked against the user's typical behavior.</li></p>
 
-Unusual application-specific activities for the user that might involve sensitive data. For example, In Salesforce, Oracle CASB Cloud Service monitors actions such as changes to security controls (for example, session timeout settings), changes to federated identity providers (known as Security Assertion Markup Language, or SAML providers), mass transfers and deletes, and changes to authentication certificates.
+<p><li>Accessing a cloud service from new IP addresses and locations outside of typical work hours for that user.</li></p>
+
+<p>Unusual application-specific activities for the user that might involve sensitive data. For example, In Salesforce, Oracle CASB Cloud Service monitors actions such as changes to security controls (for example, session timeout settings), changes to federated identity providers (known as Security Assertion Markup Language, or SAML providers), mass transfers and deletes, and changes to authentication certificates.</p>
 
 </div>
 
