@@ -495,6 +495,7 @@ Examples of behaviors that can generate a high-risk score:
 <li>Accessing a cloud service from new IP addresses and locations outside of typical work hours for that user.
 
 Unusual application-specific activities for the user that might involve sensitive data. For example, In Salesforce, Oracle CASB Cloud Service monitors actions such as changes to security controls (for example, session timeout settings), changes to federated identity providers (known as Security Assertion Markup Language, or SAML providers), mass transfers and deletes, and changes to authentication certificates.
+
 </div>
 
 ![](images/CASB/user_list.png)
