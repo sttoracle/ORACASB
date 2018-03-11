@@ -29,12 +29,12 @@ In this session, you will be using the Oracle CASB Cloud Service UI to onboard a
 Sign in to your Salesforce account at [https://login.salesforce.com](https://login.salesforce.com ) 
 <div style="border:1px solid grey;padding:7px;margin-bottom:6px">
 <b>Note:</b> 
-<br><br>
-You may run into two issues at this point:
+<br>
+You may run into two issues at this point
 <br><br>
 1. You may not be able to access the Salesforce login page. Refer to you handout that you recieved ,that contains your Salesforce account credentials, for instruction on how to bypass the issues that prevents you from connecting to Salesforce from the Oracle guest network. 
 <br><br>
-2. After you provide your credentials Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following <href src=https://cloudsecurityday.blogspot.com>link.</href>
+2. After you provide your credentials Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following <a href=https://cloudsecurityday.blogspot.com>link.</a>
 You can browse the link and find the code for your assigned Salesforce User. 
 </div>
 Go to the Salesforce "*Setup*" UI by clicking on the gear icon at the top right of the Salesforce UI. Once you're in the Saleforce Setup UI Use the upper-left "*Quick Find*" box to search for *Password Policies*.
@@ -75,16 +75,16 @@ Press the "*Next*" button to proceed to the next step of the "*Register an app i
 #### STEP 5: Select Security Control Monitoring Option
 <div style="border:1px solid grey;padding:7px;margin-bottom:6px">
 <b>Explanation:</b> 
-
+<br><br>
 Security controls will be explained in more detail in a later exercise but suffice it to say for now that Enterprise Cloud Applications have security-related settings, such as password complexity requirements and idle session timeouts that Oracle CASB Cloud Service can monitor and change according to a baseline configuration, for a particular Enterprise Cloud Application, that is defined in CASB Cloud Service
-
+<br><br>
 On this screen, we can choose to either:
-
-"*Monitor-only*" in which case Oracle CASB Cloud Service reports on these security control values, but doesn’t change them in the cloud application.
-
+<br><br>
+"<i>Monitor-only</i>" in which case Oracle CASB Cloud Service reports on these security control values, but doesn’t change them in the cloud application.
+<br><br>
 or 
-
-"*Monitor and push*" the preferred values to the cloud application. At registration time, Oracle CASB Cloud Service ensures that your cloud application has your preferred security configuration values. After registration, Oracle CASB Cloud Service reports on changes to these values.
+<br><br>
+"<i>Monitor and push</i>" the preferred values to the cloud application. At registration time, Oracle CASB Cloud Service ensures that your cloud application has your preferred security configuration values. After registration, Oracle CASB Cloud Service reports on changes to these values.
 </div>
 
 ![](images/CASB/pushAndMonitor.png)
