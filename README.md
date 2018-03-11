@@ -549,17 +549,15 @@ You can filter by incident ID, application instance name, dates, and additional 
 <b>Explanation:</b> 
 
 The category filters are:
-<p><li>Anomalous activity is related to a threat that has been categorized as atypical user behavior. This is the category you also must assign to the ticket to export it to ServiceNow (see the procedure following this one).
+<p><li>Anomalous activity is related to a threat that has been categorized as atypical user behavior. This is the category you also must assign to the ticket to export it to ServiceNow (see the procedure following this one).</li></p>
 
-<p><li>Security control displays only tickets flagged as pertaining to a security configuration issue. An Oracle CASB Cloud Service administrator manually creates tickets of this type.
+<p><li>Security control displays only tickets flagged as pertaining to a security configuration issue. An Oracle CASB Cloud Service administrator manually creates tickets of this type.</li></p>
 
-<p><li>Policy alert displays only tickets flagged as pertaining to a policy alert. An Oracle CASB Cloud Service administrator manually creates tickets of this type.
+<p><li>Policy alert displays only tickets flagged as pertaining to a policy alert. An Oracle CASB Cloud Service administrator manually creates tickets of this type.</li></p>
 
-<p><li>Monitoring stopped displays only tickets flagged as pertaining to Oracle CASB Cloud Service being unable to connect to a monitored application instance. An Oracle CASB Cloud Service administrator manually creates tickets of this type.
+<p><li>Monitoring stopped displays only tickets flagged as pertaining to Oracle CASB Cloud Service being unable to connect to a monitored application instance. An Oracle CASB Cloud Service administrator manually creates tickets of this type.</li></p>
 
-<p><li>Other incident types are specialized versions of anomalous activities (threats).
-
-</div>
+<p><li>Other incident types are specialized versions of anomalous activities (threats).</li></p></div>
 
 ## Exercise 7. CASB Discovery
 ___
@@ -610,19 +608,19 @@ For some apps, that have a *SecureScorecard* report, you can view the security c
 <div style="border:1px solid grey;padding:10px;margin-bottom:6px">
 <b>Explanation:</b>
 
-<p><li>SecureScorecard evaluates many internet destinations in the context of 10 risk factors:
+<p><li>SecureScorecard evaluates many internet destinations in the context of 10 risk factors:</li></p>
 
-<p><li>Network Security: Checks vendor’s insecure network settings.
-<p><li>DNS Health: Checks vendor’s DNS insecure configurations and vulnerabilities.
-<p><li>Patching Cadence: Checks vendor’s software inventory for out of date or vulnerable applications.
-<p><li>Endpoint Security: Measures security level of vendor’s employee workstations and mobile devices.
+<p><li>Network Security: Checks vendor’s insecure network settings.</li></p>
+<p><li>DNS Health: Checks vendor’s DNS insecure configurations and vulnerabilities.</li></p>
+<p><li>Patching Cadence: Checks vendor’s software inventory for out of date or vulnerable applications.</li></p>
+<p><li>Endpoint Security: Measures security level of vendor’s employee workstations and mobile devices.</li></p>
 <p><li>IP Reputation:
-Checks suspicious activity, such as malware or spam, in the vendor’s network.
-<p><li>Web Application Security: A proprietary algorithm that checks for vendor’s implementation of common security best practices.
-<p><li>Cubit Score: A proprietary algorithm that checks for vendor’s implementation of common security best practices.
-<p><li>Hacker Chatter: Checks hacker sites for chatter about the vendor.
-<p><li>Leaked Credentials: Sensitive application information exposed in public code repositories.
-<p><li>Social Engineering: Measures vendor’s employee awareness to a social engineering or phishing attack.
+Checks suspicious activity, such as malware or spam, in the vendor’s network.</li></p>
+<p><li>Web Application Security: A proprietary algorithm that checks for vendor’s implementation of common security best practices.</li></p>
+<p><li>Cubit Score: A proprietary algorithm that checks for vendor’s implementation of common security best practices.</li></p>
+<p><li>Hacker Chatter: Checks hacker sites for chatter about the vendor.</li></p>
+<p><li>Leaked Credentials: Sensitive application information exposed in public code repositories.</li></p>
+<p><li>Social Engineering: Measures vendor’s employee awareness to a social engineering or phishing attack.</li></p>
 </div>
 
 Select a site, with a SecureScorecard report, and then select a highlighted risk factor to get a more detailed explanation of the risk factor in context of the selected site.
