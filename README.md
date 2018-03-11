@@ -27,7 +27,7 @@ In this session, you will be using the Oracle CASB Cloud Service UI to onboard a
 #### STEP 1: Prepare your assigned Salesforce Developer Account for this exercise by configuring an insecure password policy in Salesforce :
 
 Sign in to your Salesforce account at [https://login.salesforce.com](https://login.salesforce.com ) 
-<div style="border:1px solid grey;padding:7px;margin-bottom:6px">
+<div style="border:1px solid grey;padding:10px;margin-bottom:6px">
 <b>Note:</b> 
 <br>
 You may run into two issues at this point
@@ -73,7 +73,7 @@ Press the "*Next*" button to proceed to the next step of the "*Register an app i
 ><span style="color:grey">FYI, If a Salesforce account is federated with a supported Cloud Identity Provider (IdP) you can select the "*The users of this app instance log in using single sign-on through an identity provider*" checkbox and select the Identity Provider being used from a list of pre-configured providers</span>
 
 #### STEP 5: Select Security Control Monitoring Option
-<div style="border:1px solid grey;padding:7px;margin-bottom:6px">
+<div style="border:1px solid grey;padding:10px;margin-bottom:6px">
 <b>Explanation:</b> 
 <br><br>
 Security controls will be explained in more detail in a later exercise but suffice it to say for now that Enterprise Cloud Applications have security-related settings, such as password complexity requirements and idle session timeouts that Oracle CASB Cloud Service can monitor and change according to a baseline configuration, for a particular Enterprise Cloud Application, that is defined in CASB Cloud Service
@@ -234,7 +234,7 @@ then find your Salesforce instance (use the search icon in the upper-right, if n
 
 ![](images/CASB/updatesecuritycontrols.png)
 
-><span style="color:grey">**Optional**: Expand the Password Policy and Session Settings sections to see more detail on which controls are being enforced by the "*Stringent*" Security control baseline.</span>
+**Optional**: Expand the Password Policy and Session Settings sections to see more detail on which controls are being enforced by the "*Stringent*" Security control baseline.
 
 Check the Confirmation box that says to “*Use the new threshold values*” and click on the 
 "*Submit*" button.
@@ -323,19 +323,21 @@ In this exercise we will define a policy, for Salesforce, that will generate an 
 
 #### STEP 1: Create a Policy
 
-***Explanation**:*
+<div style="border:1px solid grey;padding:10px;margin-bottom:6px">
+<b>Explanation:</b>
 
-*The basics of a policy consist of these components:*   
+The basics of a policy consist of these components:   
 
-*Actions, that users or administrators perform (for example, creating or deleting)*
+<b>Actions</b> that users or administrators perform (for example, creating or deleting)
 
-*Resources, that these users act upon (for example, files, folders, or EC2 instances).*
+<b>Resources</b> that these users act upon (for example, files, folders, or EC2 instances).
 
-*Optionally, you can identify additional filters such as people or groups who perform the action, the IP address of the actor, and the recipient of the action (for actions such as sharing and collaboration).*
+Optionally, you can identify additional filters such as people or groups who perform the action, the IP address of the actor, and the recipient of the action (for actions such as sharing and collaboration).
 
-*You can also add instructions for the person who reads the alert. For example, if you create an alert related to deleting access control lists, you can add instructions to inform the group that is responsible for managing the access control lists.*
+You can also add instructions for the person who reads the alert. For example, if you create an alert related to deleting access control lists, you can add instructions to inform the group that is responsible for managing the access control lists.
 
-*You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.*
+You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.
+</div>
 
 <span style='color:red'>**Log in to your Oracle Free Trial CASB tenant**</span> [(instructions here)](../Cloud-Security-Day/CSD-SETUP.html)  and perform the following 
 
@@ -388,7 +390,11 @@ The Policy will appear in the list of policies available for activation for the 
 
 To test the policy log in to the Salesforce account and perform an action on the *CEO* role that our new policy monitors.
 
->**Note if you are not following these instructions onsite in an Oracle instructor lead workshop**: For the workshop you have one assigned Salesforce user which is the same user you used when you on-boarded Salesforce in Exercise 1. If you decide to sign-up for your own free Salesforce Developer account and you follow these instructions you should ensure you followed the Salesforce preperation steps described in your workshop handout. These steps prepares a dedicated Salesforce user, for CASB to use to monitor Salesforce. This dedicated Salesforce user should be used in Exercise 1 when you onboard your Salesforce account into CASB outside the context of the instructor lead workshop. **Take note**, all other Salesforce instructions in this workshop should be performed with the  Salesforce Admin user that was created when you signed-up for your free Salesforce Developer account . The reason this is important is because CASB will not report on any actions performed by  the Salesforce user that is  dedicated to CASB ( used in Exercise 1 when you on-boarded Salesforce)  and if you perform these steps with that dedicated user the policy described in this exercise will not be triggered. 
+<div style="border:1px solid grey;padding:10px;margin-bottom:6px">
+<b>Note, if you are not following these instructions onsite in an Oracle instructor lead workshop:</b><br> 
+For the workshop you have one assigned Salesforce user which is the same user you used when you on-boarded Salesforce in Exercise 1. 
+If you decide to sign-up for your own free Salesforce Developer account and you follow these instructions you should ensure you followed the Salesforce preperation steps described in your workshop handout. These steps prepares a dedicated Salesforce user, for CASB to use to monitor Salesforce. This dedicated Salesforce user should be used in Exercise 1 when you onboard your Salesforce account into CASB outside the context of the instructor lead workshop.<br> <b>Take note</b>, all other Salesforce instructions in this workshop should be performed with the  Salesforce Admin user that was created when you signed-up for your free Salesforce Developer account . The reason this is important is because CASB will not report on any actions performed by  the Salesforce user that is  dedicated to CASB ( used in Exercise 1 when you on-boarded Salesforce)  and if you perform these steps with that dedicated user the policy described in this exercise will not be triggered. 
+</div>
 
  #### STEP 2.1: In the Salesforce "*Setup*" section navigate to *Users -> Roles*
  
@@ -472,21 +478,24 @@ Users pose a variety of different security risks that Oracle CASB Cloud Service 
 
 ![](images/CASB/user_risk_level.png)
 
-***Explanation**:*
+<div style="border:1px solid grey;padding:10px;margin-bottom:6px">
+<b>Explanation:</b>
 
-*In the Dashboard, the User risk levels card provides a quick overview of whether any users of your cloud services have an elevated risk score. The chart is segmented into 3 color coded areas. Green are normal users, Yellow indicate the number of medium risk users and red represent users that are considered high risk.*
+In the Dashboard, the User risk levels card provides a quick overview of whether any users of your cloud services have an elevated risk score. The chart is segmented into 3 color coded areas. Green are normal users, Yellow indicate the number of medium risk users and red represent users that are considered high risk.
 
-*Oracle CASB Cloud Service typically collects 10 days of data before creating a risk profile for a user. It then generates a risk score for the user. This score is based on the degree to which the user's actions over the past day (24 hours) has deviated from their typical usage pattern. Oracle CASB Cloud Service does not analyze every action when calculating this risk score. Instead, it looks at actions that are often implicated in malicious insider or external hacker activity.
+Oracle CASB Cloud Service typically collects 10 days of data before creating a risk profile for a user. It then generates a risk score for the user. This score is based on the degree to which the user's actions over the past day (24 hours) has deviated from their typical usage pattern. Oracle CASB Cloud Service does not analyze every action when calculating this risk score. Instead, it looks at actions that are often implicated in malicious insider or external hacker activity.
 Typically, the longer Oracle CASB Cloud Service monitors a user's behavior, the more accurate the risk score will be.
-Examples of behaviors that can generate a high-risk score:*
+Examples of behaviors that can generate a high-risk score:
 
-* *Downloading an unusual number of files, or deleting an unusual number of files, from IP addresses that the user had not used in the past.*
+<li>Downloading an unusual number of files, or deleting an unusual number of files, from IP addresses that the user had not used in the past.
+<br><br>
 
-* *Traversing an unusually long geographical distance in a relatively short amount of time, particularly when benchmarked against the user's typical behavior.*
+<li>Traversing an unusually long geographical distance in a relatively short amount of time, particularly when benchmarked against the user's typical behavior.
+<br><br>
+<li>Accessing a cloud service from new IP addresses and locations outside of typical work hours for that user.
 
-* *Accessing a cloud service from new IP addresses and locations outside of typical work hours for that user.*
-
-* *Unusual application-specific activities for the user that might involve sensitive data. For example, In Salesforce, Oracle CASB Cloud Service monitors actions such as changes to security controls (for example, session timeout settings), changes to federated identity providers (known as Security Assertion Markup Language, or SAML providers), mass transfers and deletes, and changes to authentication certificates.*
+Unusual application-specific activities for the user that might involve sensitive data. For example, In Salesforce, Oracle CASB Cloud Service monitors actions such as changes to security controls (for example, session timeout settings), changes to federated identity providers (known as Security Assertion Markup Language, or SAML providers), mass transfers and deletes, and changes to authentication certificates.
+</div>
 
 ![](images/CASB/user_list.png)
 
@@ -537,20 +546,21 @@ Supply a description in the "*Reason*" text area of what actions you performed t
 
 #### STEP 3: Expand Filters if filters are not displayed
 You can filter by incident ID, application instance name, dates, and additional criteria. 
+<div style="border:1px solid grey;padding:10px;margin-bottom:6px">
+<b>Explanation:</b> 
 
-***Explanation**:* 
+The category filters are:
+<p><li>Anomalous activity is related to a threat that has been categorized as atypical user behavior. This is the category you also must assign to the ticket to export it to ServiceNow (see the procedure following this one).
 
-*The category filters are:*
-* *Anomalous activity is related to a threat that has been categorized as atypical user behavior. This is the category you also must assign to the ticket to export it to ServiceNow (see the procedure following this one).*
+<p><li>Security control displays only tickets flagged as pertaining to a security configuration issue. An Oracle CASB Cloud Service administrator manually creates tickets of this type.
 
-* *Security control displays only tickets flagged as pertaining to a security configuration issue. An Oracle CASB Cloud Service administrator manually creates tickets of this type.*
+<p><li>Policy alert displays only tickets flagged as pertaining to a policy alert. An Oracle CASB Cloud Service administrator manually creates tickets of this type.
 
-* *Policy alert displays only tickets flagged as pertaining to a policy alert. An Oracle CASB Cloud Service administrator manually creates tickets of this type.*
+<p><li>Monitoring stopped displays only tickets flagged as pertaining to Oracle CASB Cloud Service being unable to connect to a monitored application instance. An Oracle CASB Cloud Service administrator manually creates tickets of this type.
 
-* *Monitoring stopped displays only tickets flagged as pertaining to Oracle CASB Cloud Service being unable to connect to a monitored application instance. An Oracle CASB Cloud Service administrator manually creates tickets of this type.*
+<p><li>Other incident types are specialized versions of anomalous activities (threats).
 
-* *Other incident types are specialized versions of anomalous activities (threats).*
-
+</div>
 
 ## Exercise 7. CASB Discovery
 ___
@@ -560,7 +570,9 @@ We will use Oracle CASB Cloud Service – Discovery to find applications that ar
 
 Oracle CASB Cloud Service Discovery allows you to uncover any applications or plug-ins that do not have explicit organizational approval.
 
-**Note:** CASB Discovery is not enabled in Oracle Cloud Trial Accounts therefor the App Discovery tab shown in the screenshot bellow will not appear in your trial account . The instructor will use the shared tenant to perform the shadow IT Discovery exercise in the workshop.
+<div style="border:1px solid grey;padding:10px;margin-bottom:6px">
+<b>Note:</b> CASB Discovery is not enabled in Oracle Cloud Trial Accounts therefor the App Discovery tab shown in the screenshot bellow will not appear in your trial account . The instructor will use the shared tenant to perform the shadow IT Discovery exercise in the workshop.
+</div>
 
 ### Exercise:
 #### STEP 1: On the CASB Dashboard page select the "*App Discovery*" tab 
@@ -596,21 +608,23 @@ You can select one of the users to filter the table view of discovered apps to o
 
 #### STEP 6: Explore discovered App/Domain risk factors
 For some apps, that have a *SecureScorecard* report, you can view the security concerns associated with the app. 
+<div style="border:1px solid grey;padding:10px;margin-bottom:6px">
+<b>Explanation:</b>
 
-***Explanation**:* 
+<p><li>SecureScorecard evaluates many internet destinations in the context of 10 risk factors:
 
-*SecureScorecard evaluates many internet destinations in the context of 10 risk factors:*
-* *Network Security: Checks vendor’s insecure network settings.*
-* *DNS Health: Checks vendor’s DNS insecure configurations and vulnerabilities.*
-* *Patching Cadence: Checks vendor’s software inventory for out of date or vulnerable applications.*
-* *Endpoint Security: Measures security level of vendor’s employee workstations and mobile devices.*
-* *IP Reputation:
-Checks suspicious activity, such as malware or spam, in the vendor’s network.*
-* *Web Application Security: A proprietary algorithm that checks for vendor’s implementation of common security best practices.*
-* *Cubit Score: A proprietary algorithm that checks for vendor’s implementation of common security best practices.*
-* *Hacker Chatter: Checks hacker sites for chatter about the vendor.*
-* *Leaked Credentials: Sensitive application information exposed in public code repositories.*
-* *Social Engineering: Measures vendor’s employee awareness to a social engineering or phishing attack.*
+<p><li>Network Security: Checks vendor’s insecure network settings.
+<p><li>DNS Health: Checks vendor’s DNS insecure configurations and vulnerabilities.
+<p><li>Patching Cadence: Checks vendor’s software inventory for out of date or vulnerable applications.
+<p><li>Endpoint Security: Measures security level of vendor’s employee workstations and mobile devices.
+<p><li>IP Reputation:
+Checks suspicious activity, such as malware or spam, in the vendor’s network.
+<p><li>Web Application Security: A proprietary algorithm that checks for vendor’s implementation of common security best practices.
+<p><li>Cubit Score: A proprietary algorithm that checks for vendor’s implementation of common security best practices.
+<p><li>Hacker Chatter: Checks hacker sites for chatter about the vendor.
+<p><li>Leaked Credentials: Sensitive application information exposed in public code repositories.
+<p><li>Social Engineering: Measures vendor’s employee awareness to a social engineering or phishing attack.
+</div>
 
 Select a site, with a SecureScorecard report, and then select a highlighted risk factor to get a more detailed explanation of the risk factor in context of the selected site.
 
