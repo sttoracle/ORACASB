@@ -314,20 +314,19 @@ Oracle CASB Cloud Service generates an alert whenever an event that matches the 
 In this exercise we will define a policy, for Salesforce, that will generate an incident when "*Any*" action is performed on the Salesforce CEO role (This includes adding or removing users to the role). 
 
 #### STEP 1: Create a Policy
+The basics of a policy consist of these components:    
 
->FYI, The basics of a policy consist of these components:     
+**Actions** that users or administrators perform (for example, creating or deleting)
 
->**Actions** that users or administrators perform (for example, creating or deleting)
+**Resources** that these users act upon (for example, files, folders, or EC2 instances).
 
->**Resources** that these users act upon (for example, files, folders, or EC2 instances).
+Optionally, you can identify additional filters such as people or groups who perform the action, the IP address of the actor, and the recipient of the action (for actions such as sharing and collaboration).
 
->Optionally, you can identify additional filters such as people or groups who perform the action, the IP address of the actor, and the recipient of the action (for actions such as sharing and collaboration).
+You can also add instructions for the person who reads the alert. For example, if you create an alert related to deleting access control lists, you can add instructions to inform the group that is responsible for managing the access control lists.
 
->You can also add instructions for the person who reads the alert. For example, if you create an alert related to deleting access control lists, you can add instructions to inform the group that is responsible for managing the access control lists.
+You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.
 
->You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.
-
-<span style='color:red'>**Log in to your Oracle Free Trial CASB tenant**</span> [(instructions here )](../Cloud-Security-Day/CSD-SETUP.html)  and perform the following 
+<span style='color:red'>**Log in to your Oracle Free Trial CASB tenant**</span> [(instructions here)](../Cloud-Security-Day/CSD-SETUP.html)  and perform the following 
 
 #### STEP 1.1: In the Oracle CASB Cloud Service console, select Configuration then select "*Policy Management*"
 
@@ -351,15 +350,15 @@ After adding this information, click on "*Next*".
 
 #### STEP 1.4: (Optional) Complete the "*Username*" panel
 You can leave these settings as default (blank) and click the "*Next*" button
-> Exception: If the resource action is Login, you identify the user who is logging-in in the previous step (the Resources page) and skip this step.   
+  
 
 #### STEP 1.5: Complete the "*Conditions*" panel
-Specify conditions to limit when the alert is triggered. 
+**Optional** : Specify conditions to limit when the alert is triggered. 
 Add two conditions: one condition for Device equal to "*Desktop*", and a second condition for Device equal to "*Mobile*" (use the “*Add condition*” link to add the second condition). After adding the two policy conditions, click "*Next*" to continue.
 
 ![](images/CASB/policy_condition.png)
-> NOTE:
-> You can specify a condition using either of these types of conditions multiple times, and you can specify either type of condition in any order, freely mixing the two types.
+
+> FYI, You can specify a condition using either of these types of conditions multiple times, and you can specify either type of condition in any order, freely mixing the two types.
 > When you specify multiple conditions, the conditions operate independently. Each condition causes the alert to either be triggered (Equal To operator), or not be triggered (Not Equal to operator), for that specific condition. The conditions are neither ANDed nor ORed.
 
 #### STEP 1.6: Complete the "*Actions*" panel
@@ -378,7 +377,7 @@ The Policy will appear in the list of policies available for activation for the 
 
 To test the policy log in to the Salesforce account and perform an action on the *CEO* role that our new policy monitors.
 
-><span style="color:grey">**Note**: For the workshop you have one assigned Salesforce user which is the same user you used when you Onboarded Salesforce in Exercise 3. If you decide to sign-up for your own free Salesforce Developer account and you follow these instructions you should ensure you followed the Salesforce preperation steps described in your workshop handout that prepares a dedicated Salesforce user for CASB to use to monitor salesforce. This dedicated Salesforce user should be used to in Exercise 3 when you onboard your Salesforce account into CASB. All other Salesforce instructions in this workshop should be performed with the Salesforce Admin user that you created when you signed up for your free Salesforce Developer account . The reason this is important is because CASB will not report on an actions performed by  Salesforce user dedicated to CASB and if you perform these steps with that dedicated user the policy described in this exercise will not be triggered.</span>  
+>**Note if you are not following these instructions onsite in an Oracle instructor lead workshop**: For the workshop you have one assigned Salesforce user which is the same user you used when you on-boarded Salesforce in Exercise 1. If you decide to sign-up for your own free Salesforce Developer account and you follow these instructions you should ensure you followed the Salesforce preperation steps described in your workshop handout. These steps prepares a dedicated Salesforce user, for CASB to use to monitor Salesforce. This dedicated Salesforce user should be used in Exercise 1 when you onboard your Salesforce account into CASB outside the context of the instructor lead workshop. **Take note**, all other Salesforce instructions in this workshop should be performed with the  Salesforce Admin user that was created when you signed-up for your free Salesforce Developer account . The reason this is important is because CASB will not report on any actions performed by  the Salesforce user that is  dedicated to CASB ( used in Exercise 1 when you on-boarded Salesforce)  and if you perform these steps with that dedicated user the policy described in this exercise will not be triggered. 
 
  #### STEP 2.1: In the Salesforce "*Setup*" section navigate to *Users -> Roles*
  
@@ -395,22 +394,26 @@ To test the policy log in to the Salesforce account and perform an action on the
 #### STEP 2.3: Add a user to the policy role
 
  ![](images/CASB/SFRole4.png)
+
  Select the "*Add*" button to move the user from the "*Available Users*" list box to the "*Selected Users for CEO*" list box. 
 
- > Make sure the user you add to the CEO role is **not the Service Account** user we used to sign-in to Salesforce when you on-boarded the application in Exercise 2 . The reason being that CASB Cloud Service will not monitor actions performed by that user so as to ensure that the actions CASB take in the persona of that user, to collect data from Salesforce, does not appear in the data CASB analyze.
+ Make sure the user you add to the CEO role is **not the Service Account** user we used to sign-in to Salesforce when you on-boarded the application in Exercise 2 . The reason being, as mentioned above,  that CASB Cloud Service will not monitor actions performed by that user so as to ensure that the actions CASB take in the persona of that user, to collect data from Salesforce, does not appear in the data CASB analyze.
 
  Click the "*Save*" button 
 
-> ![](images/CASB/clock-icon.jpg) As noted before there is a delay between data collection cycles for the CASB service and the action you perform in Salesforce might not cause the policy alert in CASB to fire immediately but will appear on the next data collection that CASB does to the Salesforce tenant. **If you are following these instructions as part of a workshop you do not have to wait for the next CASB data collection run to take place before you can continue with this exercise. You can sign into the shared CASB tenant and complete the remainder of the exercise in the shared tenant.** Individual login instructions were provided for each participant if you did not receive your instructions please inform one of the workshop proctors.
+> ![](images/CASB/clock-icon.jpg) As noted before there is a delay between data collection cycles for the CASB service and the action you perform in Salesforce might not cause the policy alert in CASB to fire immediately but will appear on the next data collection that CASB does to the Salesforce tenant. If you are following these instructions as part of a workshop you do not have to wait for the next CASB data collection run to take place before you can continue with this exercise. You can use the shared CASB tenant and complete the remainder of the exercise in the shared tenant. Individual login instructions were provided for each participant if you did not receive your instructions please inform one of the workshop proctors.
 
 #### STEP 3: View the policy Alert
-Periodically, throughout the duration of the workshop, inspect the Salesforce application's policy alerts to verify that the policy alert associated with the policy you created in STEP 1 did in fact trigger (Refer to the note above concerning the delay in alerts appearing within CASB)  
+In the <span style="color:red">**shared CASB tenant**</span>, using the "*Applications*" link in the left navigation menu, access the "*Applications*" view.
+
+Click on your assigned Salesforce application to bring up the "*Health Summary*" panel. Click on the "Policy alerts" box as shown in the following screen capture. 
 
 ![](images/CASB/policy_alerts.png)
 
+You will be placed in the "*App Details*" drill down view with the risk events filtered to only include "*Policy alerts*". Notice the Policy alert produced by our custom policy . 
 ![](images/CASB/policy_triggered.png)
 
-## Exercise 6. Risk Events & User Risk
+## Exercise 5. Risk Events & User Risk
 ___
 ### Overview:
 Risk events encompass *anomalies* and *threats* that Oracle CASB Cloud Service detects.
@@ -419,30 +422,34 @@ Oracle CASB Cloud Service monitors user and agent behavior and automatically gen
 
 ### Exercise:
 #### STEP 1: Add a blacklisted IP address.
-We will demonstrate how to blacklist an IP address. In the Oracle CASB menu (on the left- hand side), click on "*Configuration*" and then click on “*Manage IP addresses*” At the top of the screen you will notice three options: Blacklist, Whitelist, and Exception. In the Blacklist menu, click the “*Add IP Address*” menu item. You can choose to add an Individual Address or an Address Range. In our case, we'll add our own current IP address as an Individual Address.
+In the Oracle CASB navigation menu <span style="color:red">**of your free Oracle Cloud trial account tenant**</span>, click on "*Configuration*" and then click on “*Manage IP addresses*”. At the top of the screen you will notice three tabs: "*Blacklist*", "*Whitelist*", and "*Exception*". In the "*Blacklist*" tab, click the “*Add IP Address*” menu item. You can choose to add an Individual Address or an Address Range. In our case, we'll add our own current IP address as an Individual Address.
 
 ![](images/CASB/manage_ip.png)
 
->To discover your current IP address you can access this [link](https://www.bing.com/search?q=what+is+my+ip)
+**To discover your current IP address you can access this** [link](https://www.bing.com/search?q=what+is+my+ip)
 
 ![](images/CASB/03-blacklist-ip.png)
 
->Note that the Salesforce instance you'll use on this dialog will be the one you on boarded in Exercise 2.
+Note, that the Salesforce instance you will use on this dialog will be the one you on-boarded in Exercise 1.
 
-#### STEP 2: Log into Salesforce
+#### STEP 2: Log in to Salesforce
 
-When we log into Salesforce from your blacklisted IP we ensure that a future risk event will be generated for Salesforce that flags the access to Salesforce from the black listed IP address. 
+**IMPORTANT : If you are already logged in to Salesforce ensure you log out of Salesforce first and then log in to Salesforce again.**
 
-#### STEP 3: Analyze the resulting risk even starting from the dashboard
+When you log in to Salesforce from your blacklisted IP you ensure that a future risk event will be generated for Salesforce that will flag your access to Salesforce from the black listed IP address. 
 
->![](images/CASB/clock-icon.jpg)The risk event will appear after the next scheduled data collection has occurred from your Salesforce tenant.  **If you are following these instructions as part of a workshop you do not have to wait for the next CASB data collection run to take place before you can continue with this exercise. You can log into the shared CASB tenant and complete the remainder of the exercise in the shared tenant.**
+#### STEP 3: Analyze the resulting risk event starting from the dashboard
+
+![](images/CASB/clock-icon.jpg)The risk event will appear after the next scheduled data collection has occurred for your Salesforce tenant.  **If you are following these instructions as part of a workshop you do not have to wait for the next CASB data collection run to take place before you can continue with this exercise. You can <span style="color:red">log in to the shared CASB tenant</span> and complete the remainder of the exercise in the shared tenant.**
 Individual login instructions were provided for each participant. If you did not receive your instructions please inform one of the workshop proctors.
+
+#### STEP 3.1:Using the CASB left navigation menu select "*Dashboard*".
 
 Risk events that can be mapped to a geographic location (such as those that result from access from blacklisted IP addresses) are flagged on the Dashboard Access Map with red markers. 
 
 ![](images/CASB/risk_on_map.png)
 
-Practice drilling down into the risks from a specific location by clicking on the red markers to get to the list of events from that given location marker. 
+#### STEP 3.2: Practice drilling down into the risks from a specific location by clicking on the red markers to get to the list of events from that given location marker. 
 
 ![](images/CASB/map_drilldown.png)
 
@@ -450,72 +457,60 @@ Practice drilling down into the risks from a specific location by clicking on th
 
 Users pose a variety of different security risks that Oracle CASB Cloud Service can detect. The purpose of this step is to understand how to use the User risk levels card to identify high risk users.
 
-#### STEP 4.1: Dashboard User Risk Level Card - Click any area of the chart to view details for the users at the corresponding risk level.
-
-In the Dashboard, the User risk levels card provides a quick overview of whether any users of your cloud services have an elevated risk score. The chart is segmented into 3 color coded areas. Green are normal users, Yellow indicate the number of medium risk users and red represent users that are considered high risk. 
+#### STEP 4.1: In the Dashboard "*User Risk Level*" Card  click any area of the chart to view details for the users at the corresponding risk level.
 
 ![](images/CASB/user_risk_level.png)
 
-Oracle CASB Cloud Service typically collects 10 days of data before creating a risk profile for a user. It then generates a risk score for the user. This score is based on the degree to which the user's actions over the past day (24 hours) has deviated from their typical usage pattern. Oracle CASB Cloud Service does not analyze every action when calculating this risk score. Instead, it looks at actions that are often implicated in malicious insider or external hacker activity.
+***Explanation:** 
+In the Dashboard, the User risk levels card provides a quick overview of whether any users of your cloud services have an elevated risk score. The chart is segmented into 3 color coded areas. Green are normal users, Yellow indicate the number of medium risk users and red represent users that are considered high risk.*
+
+*Oracle CASB Cloud Service typically collects 10 days of data before creating a risk profile for a user. It then generates a risk score for the user. This score is based on the degree to which the user's actions over the past day (24 hours) has deviated from their typical usage pattern. Oracle CASB Cloud Service does not analyze every action when calculating this risk score. Instead, it looks at actions that are often implicated in malicious insider or external hacker activity.
 Typically, the longer Oracle CASB Cloud Service monitors a user's behavior, the more accurate the risk score will be.
-Examples of behaviors that can generate a high-risk score:
+Examples of behaviors that can generate a high-risk score:*
 
-* Downloading an unusual number of files, or deleting an unusual number of files, from IP addresses that the user had not used in the past.
+* *Downloading an unusual number of files, or deleting an unusual number of files, from IP addresses that the user had not used in the past.*
 
-* Traversing an unusually long geographical distance in a relatively short amount of time, particularly when benchmarked against the user's typical behavior.
+* *Traversing an unusually long geographical distance in a relatively short amount of time, particularly when benchmarked against the user's typical behavior.*
 
-* Accessing a cloud service from new IP addresses and locations outside of typical work hours for that user.
+* *Accessing a cloud service from new IP addresses and locations outside of typical work hours for that user.*
 
-* Unusual application-specific activities for the user that might involve sensitive data. For example, In Salesforce, Oracle CASB Cloud Service monitors actions such as changes to security controls (for example, session timeout settings), changes to federated identity providers (known as Security Assertion Markup Language, or SAML providers), mass transfers and deletes, and changes to authentication certificates.
-
-This Dashboard card provides a summary of users and highlights which users are showing normal activity and which users have shown behaviors that puts their account at risk.
+* *Unusual application-specific activities for the user that might involve sensitive data. For example, In Salesforce, Oracle CASB Cloud Service monitors actions such as changes to security controls (for example, session timeout settings), changes to federated identity providers (known as Security Assertion Markup Language, or SAML providers), mass transfers and deletes, and changes to authentication certificates.*
 
 > You can also click the report icon in this card (the grid) to view a detailed report of users who are at risk (also accessible from the Users page).
 
-#### STEP 4.2: The Users Page - From the admin console, select Users
-
-The Users page provides a risk profile for all users who access the cloud applications or services that Oracle CASB Cloud Service monitors.
-
 ![](images/CASB/user_list.png)
 
-Each risk profile is based on activity that Oracle CASB Cloud Service considers atypical. These activities can be generic (for example, an unusually high number of login attempts or access IP addresses) or specific to an application type (for example, sensitive administrative operations that are specific to Amazon Web Services).
-For the first ten days that Oracle CASB Cloud Service monitors a user, it bases its risk score on internal benchmarks. After ten days of monitoring a particular user, Oracle CASB Cloud Service bases the risk score on significant changes in the user's behavior, relative to that user's previous behavior. The longer Oracle CASB Cloud Service monitors a user, the more stable Oracle CASB Cloud Service's model of the user becomes. 
+These are the risk ratings in the Users page:
 
-Oracle CASB Cloud Service recalculates its risk score daily based on new input and raises or lowers the risk score relative to the new risk factors detected:
-Generic factors include the user's locations and IP addresses, file download activity, and number of operating systems used.
-Service-specific factors include sharing content with external users; creating, updating, and deleting content; and administrative activity, such as creating, modifying, and deleting users.
+* High. A risk score of 90 and above is categorized as high risk.
 
-> These are the risk ratings in the Users page:
+* Medium. 80-89.
 
-> * High. A risk score of 90 and above is categorized as high risk.
+* Low (some) risk. 60-79.
 
-> * Medium. 80-89.
-
-> * Low (some) risk. 60-79.
-
-> * Normal activity. Below 60.
-
-#### STEP 4.3: To view all details related to a user's risk score, click the user name.
-On the user details page, click a link in the Risk Factors section to view the details related to specific risk factors for a user (for example *Actions from suspicious IP*)
+* Normal activity. Below 60.
+#### STEP 4.3: To view all details related to a user's risk score, click the user's name.
+On the selected *Users* drill down page, click a link in the Risk Factors section to view the details related to specific risk factors for a user (for example *Actions from suspicious IP*)
 
 ![](images/CASB/user_risk.png)
 
-#### STEP 4.4: Click on the User Activities Button 
-![](images/CASB/user_activity.png)
 
-A bar chart that presents the weights of the individual risk factors that contributed to the user's particular risk score will be displayed. 
+#### STEP 4.4: Click on the "*User Risk Score Trending*" Button 
+![](images/CASB/trending.png)
 
-You can click on the individual sections on the bar chart to drill into the individual risk events associated with the user's chart (presented by date). 
+This graph displays the user's risk score as it has changed over the past 30 days:
+
+You can visualize the weights of the individual risk factors that contributed to the user's particular risk score over a 30 day period. 
+
+Click on the individual risk factors on the bar chart to drill into , by date, the individual risk events associated with the selected risk factor on the  user's chart (presented by date). 
 
 ![](images/CASB/risk_weight.png)
 
-## Exercise 7. Incident Management
+## Exercise 6. Incident Management
 ___
 Oracle CASB Cloud Service generates a ticket in the Incidents section of the console whenever it detects a behavioral anomaly. Administrators also can create incident tickets manually.
 
 Incidents are automatically or manually assigned to CASB Cloud Service users.
-
-> Note, this is similar to what we did in Exercises 2 but via a different UI route that involves less steps. 
 
 #### STEP 1: Finding a targeting an Incident in the Incidents Page for remediation.
 Select one of the Salesforce Security Control related incidents and click the "*remediate*" icon.
@@ -545,7 +540,7 @@ The category filters are:
 * Other incident types are specialized versions of anomalous activities (threats).
 
 
-## Exercise 1. CASB Discovery
+## Exercise 7. CASB Discovery
 ___
 ### Overview:
 
