@@ -24,7 +24,7 @@ In this session, you will be using the Oracle CASB Cloud Service UI to onboard a
 
 ### Exercise:
 
-#### STEP 1: Pre-configure your assigned Salesforce Developer Account for this exercise by configuring an insecure password policy in Salesforce :
+#### STEP 1: Prepare your assigned Salesforce Developer Account for this exercise by configuring an insecure password policy in Salesforce :
 
 Sign into your Salesforce account at https://login.salesforce.com and navigate to the "*Setup*" menu. 
 
