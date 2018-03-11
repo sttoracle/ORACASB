@@ -1,4 +1,4 @@
-Updated: March 9, 2018
+Updated: March 10, 2018
 
 ## Introduction
 ___
@@ -69,15 +69,17 @@ Press the "*Next*" button to proceed to the next step of the "*Register an app i
 
 #### STEP 5: Select Security Control Monitoring Option
 
-Security controls will be explained in more detail in a later exercise but suffice it to say for now that Enterprise Cloud Applications have security-related settings, such as password complexity requirements and idle session timeouts that Oracle CASB Cloud Service can monitor and change according to a baseline configuration, for a particular Enterprise Cloud Application, that is defined in CASB Cloud Service 
+***Explanation**:* 
 
-On this screen, we can choose to either:
+*Security controls will be explained in more detail in a later exercise but suffice it to say for now that Enterprise Cloud Applications have security-related settings, such as password complexity requirements and idle session timeouts that Oracle CASB Cloud Service can monitor and change according to a baseline configuration, for a particular Enterprise Cloud Application, that is defined in CASB Cloud Service*
 
-"*Monitor-only*" in which case Oracle CASB Cloud Service reports on these security control values, but doesn’t change them in the cloud application.
+*On this screen, we can choose to either:*
 
-or 
+*"*Monitor-only*" in which case Oracle CASB Cloud Service reports on these security control values, but doesn’t change them in the cloud application.*
 
-"*Monitor and push*" the preferred values to the cloud application. At registration time, Oracle CASB Cloud Service ensures that your cloud application has your preferred security configuration values. After registration, Oracle CASB Cloud Service reports on changes to these values. 
+*or* 
+
+*"*Monitor and push*" the preferred values to the cloud application. At registration time, Oracle CASB Cloud Service ensures that your cloud application has your preferred security configuration values. After registration, Oracle CASB Cloud Service reports on changes to these values.*
 
 ![](images/CASB/pushAndMonitor.png)
 
@@ -91,7 +93,7 @@ Because the monitor and push option was selected an "*Approval*" radio button wi
 
 Click the "*Next*" button 
 
-<span style="color:grey">**Optional:** You can review the Controls begin monitored and enforced under the *Standard* and *Stringent* Security Controls baselines. You can also define your own security control baseline by clicking on the *Custom* radio button and configuring the security controls you would like to enforce for a given sanctioned app.</span> 
+**Optional:** You can review the Controls begin monitored and enforced under the *Standard* and *Stringent* Security Controls baselines. You can also define your own security control baseline by clicking on the *Custom* radio button and configuring the security controls you would like to enforce for a given sanctioned app. 
 
 #### STEP 7: Authenticate to Salesforce and allow CASB to access your Salesforce Account 
 You will be redirected to Salesforce to login, and you will see the following screen in the process:
@@ -314,17 +316,20 @@ Oracle CASB Cloud Service generates an alert whenever an event that matches the 
 In this exercise we will define a policy, for Salesforce, that will generate an incident when "*Any*" action is performed on the Salesforce CEO role (This includes adding or removing users to the role). 
 
 #### STEP 1: Create a Policy
-The basics of a policy consist of these components:    
 
-**Actions** that users or administrators perform (for example, creating or deleting)
+***Explanation**:*
 
-**Resources** that these users act upon (for example, files, folders, or EC2 instances).
+*The basics of a policy consist of these components:*   
 
-Optionally, you can identify additional filters such as people or groups who perform the action, the IP address of the actor, and the recipient of the action (for actions such as sharing and collaboration).
+*Actions, that users or administrators perform (for example, creating or deleting)*
 
-You can also add instructions for the person who reads the alert. For example, if you create an alert related to deleting access control lists, you can add instructions to inform the group that is responsible for managing the access control lists.
+*Resources, that these users act upon (for example, files, folders, or EC2 instances).*
 
-You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.
+*Optionally, you can identify additional filters such as people or groups who perform the action, the IP address of the actor, and the recipient of the action (for actions such as sharing and collaboration).*
+
+*You can also add instructions for the person who reads the alert. For example, if you create an alert related to deleting access control lists, you can add instructions to inform the group that is responsible for managing the access control lists.*
+
+*You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.*
 
 <span style='color:red'>**Log in to your Oracle Free Trial CASB tenant**</span> [(instructions here)](../Cloud-Security-Day/CSD-SETUP.html)  and perform the following 
 
@@ -461,8 +466,9 @@ Users pose a variety of different security risks that Oracle CASB Cloud Service 
 
 ![](images/CASB/user_risk_level.png)
 
-***Explanation:** 
-In the Dashboard, the User risk levels card provides a quick overview of whether any users of your cloud services have an elevated risk score. The chart is segmented into 3 color coded areas. Green are normal users, Yellow indicate the number of medium risk users and red represent users that are considered high risk.*
+***Explanation**:*
+
+*In the Dashboard, the User risk levels card provides a quick overview of whether any users of your cloud services have an elevated risk score. The chart is segmented into 3 color coded areas. Green are normal users, Yellow indicate the number of medium risk users and red represent users that are considered high risk.*
 
 *Oracle CASB Cloud Service typically collects 10 days of data before creating a risk profile for a user. It then generates a risk score for the user. This score is based on the degree to which the user's actions over the past day (24 hours) has deviated from their typical usage pattern. Oracle CASB Cloud Service does not analyze every action when calculating this risk score. Instead, it looks at actions that are often implicated in malicious insider or external hacker activity.
 Typically, the longer Oracle CASB Cloud Service monitors a user's behavior, the more accurate the risk score will be.
@@ -475,8 +481,6 @@ Examples of behaviors that can generate a high-risk score:*
 * *Accessing a cloud service from new IP addresses and locations outside of typical work hours for that user.*
 
 * *Unusual application-specific activities for the user that might involve sensitive data. For example, In Salesforce, Oracle CASB Cloud Service monitors actions such as changes to security controls (for example, session timeout settings), changes to federated identity providers (known as Security Assertion Markup Language, or SAML providers), mass transfers and deletes, and changes to authentication certificates.*
-
-> You can also click the report icon in this card (the grid) to view a detailed report of users who are at risk (also accessible from the Users page).
 
 ![](images/CASB/user_list.png)
 
@@ -528,16 +532,18 @@ Supply a description in the "*Reason*" text area of what actions you performed t
 #### STEP 3: Expand Filters if filters are not displayed
 You can filter by incident ID, application instance name, dates, and additional criteria. 
 
-The category filters are:
-* Anomalous activity is related to a threat that has been categorized as atypical user behavior. This is the category you also must assign to the ticket to export it to ServiceNow (see the procedure following this one).
+***Explanation**:* 
 
-* Security control displays only tickets flagged as pertaining to a security configuration issue. An Oracle CASB Cloud Service administrator manually creates tickets of this type.
+*The category filters are:*
+* *Anomalous activity is related to a threat that has been categorized as atypical user behavior. This is the category you also must assign to the ticket to export it to ServiceNow (see the procedure following this one).*
 
-* Policy alert displays only tickets flagged as pertaining to a policy alert. An Oracle CASB Cloud Service administrator manually creates tickets of this type.
+* *Security control displays only tickets flagged as pertaining to a security configuration issue. An Oracle CASB Cloud Service administrator manually creates tickets of this type.*
 
-* Monitoring stopped displays only tickets flagged as pertaining to Oracle CASB Cloud Service being unable to connect to a monitored application instance. An Oracle CASB Cloud Service administrator manually creates tickets of this type.
+* *Policy alert displays only tickets flagged as pertaining to a policy alert. An Oracle CASB Cloud Service administrator manually creates tickets of this type.*
 
-* Other incident types are specialized versions of anomalous activities (threats).
+* *Monitoring stopped displays only tickets flagged as pertaining to Oracle CASB Cloud Service being unable to connect to a monitored application instance. An Oracle CASB Cloud Service administrator manually creates tickets of this type.*
+
+* *Other incident types are specialized versions of anomalous activities (threats).*
 
 
 ## Exercise 7. CASB Discovery
@@ -585,18 +591,20 @@ You can select one of the users to filter the table view of discovered apps to o
 #### STEP 6: Explore discovered App/Domain risk factors
 For some apps, that have a *SecureScorecard* report, you can view the security concerns associated with the app. 
 
-SecureScorecard evaluates many internet destinations in the context of 10 risk factors:
-* Network Security: Checks vendor’s insecure network settings.
-* DNS Health: Checks vendor’s DNS insecure configurations and vulnerabilities.
-* Patching Cadence: Checks vendor’s software inventory for out of date or vulnerable applications.
-* Endpoint Security: Measures security level of vendor’s employee workstations and mobile devices.
-* IP Reputation:
-Checks suspicious activity, such as malware or spam, in the vendor’s network.
-* Web Application Security: A proprietary algorithm that checks for vendor’s implementation of common security best practices.
-* Cubit Score: A proprietary algorithm that checks for vendor’s implementation of common security best practices.
-* Hacker Chatter: Checks hacker sites for chatter about the vendor.
-* Leaked Credentials: Sensitive application information exposed in public code repositories.
-* Social Engineering: Measures vendor’s employee awareness to a social engineering or phishing attack.
+***Explanation**:* 
+
+*SecureScorecard evaluates many internet destinations in the context of 10 risk factors:*
+* *Network Security: Checks vendor’s insecure network settings.*
+* *DNS Health: Checks vendor’s DNS insecure configurations and vulnerabilities.*
+* *Patching Cadence: Checks vendor’s software inventory for out of date or vulnerable applications.*
+* *Endpoint Security: Measures security level of vendor’s employee workstations and mobile devices.*
+* *IP Reputation:
+Checks suspicious activity, such as malware or spam, in the vendor’s network.*
+* *Web Application Security: A proprietary algorithm that checks for vendor’s implementation of common security best practices.*
+* *Cubit Score: A proprietary algorithm that checks for vendor’s implementation of common security best practices.*
+* *Hacker Chatter: Checks hacker sites for chatter about the vendor.*
+* *Leaked Credentials: Sensitive application information exposed in public code repositories.*
+* *Social Engineering: Measures vendor’s employee awareness to a social engineering or phishing attack.*
 
 Select a site, with a SecureScorecard report, and then select a highlighted risk factor to get a more detailed explanation of the risk factor in context of the selected site.
 
