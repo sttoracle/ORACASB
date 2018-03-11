@@ -481,11 +481,11 @@ Users pose a variety of different security risks that Oracle CASB Cloud Service 
 <div style="border:1px solid grey;padding:10px;margin-bottom:6px">
 <b>Explanation:</b>
 
-In the Dashboard, the User risk levels card provides a quick overview of whether any users of your cloud services have an elevated risk score. The chart is segmented into 3 color coded areas. Green are normal users, Yellow indicate the number of medium risk users and red represent users that are considered high risk.
+<p>In the Dashboard, the User risk levels card provides a quick overview of whether any users of your cloud services have an elevated risk score. The chart is segmented into 3 color coded areas. Green are normal users, Yellow indicate the number of medium risk users and red represent users that are considered high risk.</p>
 
-Oracle CASB Cloud Service typically collects 10 days of data before creating a risk profile for a user. It then generates a risk score for the user. This score is based on the degree to which the user's actions over the past day (24 hours) has deviated from their typical usage pattern. Oracle CASB Cloud Service does not analyze every action when calculating this risk score. Instead, it looks at actions that are often implicated in malicious insider or external hacker activity.
+<p>Oracle CASB Cloud Service typically collects 10 days of data before creating a risk profile for a user. It then generates a risk score for the user. This score is based on the degree to which the user's actions over the past day (24 hours) has deviated from their typical usage pattern. Oracle CASB Cloud Service does not analyze every action when calculating this risk score. Instead, it looks at actions that are often implicated in malicious insider or external hacker activity.
 Typically, the longer Oracle CASB Cloud Service monitors a user's behavior, the more accurate the risk score will be.
-Examples of behaviors that can generate a high-risk score:
+Examples of behaviors that can generate a high-risk score:</p>
 
 <p><li>Downloading an unusual number of files, or deleting an unusual number of files, from IP addresses that the user had not used in the past.
 </li></p>
@@ -494,9 +494,7 @@ Examples of behaviors that can generate a high-risk score:
 
 <p><li>Accessing a cloud service from new IP addresses and locations outside of typical work hours for that user.</li></p>
 
-<p>Unusual application-specific activities for the user that might involve sensitive data. For example, In Salesforce, Oracle CASB Cloud Service monitors actions such as changes to security controls (for example, session timeout settings), changes to federated identity providers (known as Security Assertion Markup Language, or SAML providers), mass transfers and deletes, and changes to authentication certificates.</p>
-
-</div>
+<p>Unusual application-specific activities for the user that might involve sensitive data. For example, In Salesforce, Oracle CASB Cloud Service monitors actions such as changes to security controls (for example, session timeout settings), changes to federated identity providers (known as Security Assertion Markup Language, or SAML providers), mass transfers and deletes, and changes to authentication certificates.</p></div>
 
 ![](images/CASB/user_list.png)
 
