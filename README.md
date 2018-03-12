@@ -2,7 +2,7 @@ Updated: March 10, 2018
 
 ## Introduction
 ___
- The purpose of these self-directed exercises is to provide participants hands-on experience, using the Oracle CASB Cloud Service trail account, to perform some key CASB use cases. Please ensure that you have completed the Oracle Security Cloud Day [workshop re-requisites](../Cloud-Security-Day/CSD-SETUP.html) before attempting this workshop.
+ The purpose of these self-directed exercises is to provide participants hands-on experience, using the Oracle CASB Cloud Service trail account, to perform some key CASB use cases. Please ensure that you have completed the Oracle Security Cloud Day [workshop re-requisites](https://csdoracle.github.io/Cloud-Security-Day/CSD-SETUP.html) before attempting this workshop.
 
 ## Objectives
 ___
@@ -52,7 +52,7 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 
 #### STEP 2: Login to your Oracle  Cloud Trial account and navigate to the Oracle CASB Cloud Service.
 
- Start a **new private browsing window** in your browser and log into your Oracle Cloud Trial Account with the appropriate credentials. Refer to the [workshop re-requisites](../Cloud-Security-Day/CSD-SETUP.html) for instruction how to sign in to your Oracle Cloud trial account and access the CASB service.
+ Start a **new private browsing window** in your browser and log into your Oracle Cloud Trial Account with the appropriate credentials. Refer to the [workshop re-requisites](https://csdoracle.github.io/Cloud-Security-Day/CSD-SETUP.html) for instruction how to sign in to your Oracle Cloud trial account and access the CASB service.
 
 #### STEP 2: Click on the "*Add an App*" menu item. 
 
