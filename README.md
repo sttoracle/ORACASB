@@ -30,9 +30,9 @@ Sign in to your Salesforce account at [https://login.salesforce.com](https://log
 <div style="border:1px solid grey;padding:10px;margin-bottom:6px">
 <b>Note:</b> 
 <br>
-You may run into two issues at this point
+You may run into the following issues 
 <br><br>
-1. You may not be able to access the Salesforce login page. Refer to you handout that you recieved ,that contains your Salesforce account credentials, for instruction on how to bypass the issues that prevents you from connecting to Salesforce from the Oracle guest network. 
+1. If you are unable to access the Salesforce login form due to an SSL warning in your browser,  refer to the printed handout that you recieved ,that contains your Salesforce account credentials, for instruction on how to bypass the issue that prevents you from connecting to Salesforce from the Oracle guest network. 
 <br><br>
 2. After you provide your credentials Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following <a href="https://cloudsecurityday.blogspot.com">link.</a>
 You can browse the link and find the code for your assigned Salesforce User. 
