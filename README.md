@@ -326,17 +326,17 @@ In this exercise we will define a policy, for Salesforce, that will generate an 
 <div style="border:1px solid grey;padding:10px;margin-bottom:6px">
 <b>Explanation:</b>
 
-The basics of a policy consist of these components:   
+<p>The basics of a policy consist of these components:</p>   
 
-<b>Actions</b> that users or administrators perform (for example, creating or deleting)
+<p><b>Actions</b> that users or administrators perform (for example, creating or deleting)</p>
 
-<b>Resources</b> that these users act upon (for example, files, folders, or EC2 instances).
+<p><b>Resources</b> that these users act upon (for example, files, folders, or EC2 instances).</p>
 
-Optionally, you can identify additional filters such as people or groups who perform the action, the IP address of the actor, and the recipient of the action (for actions such as sharing and collaboration).
+<p>Optionally, you can identify additional filters such as people or groups who perform the action, the IP address of the actor, and the recipient of the action (for actions such as sharing and collaboration).</p>
 
-You can also add instructions for the person who reads the alert. For example, if you create an alert related to deleting access control lists, you can add instructions to inform the group that is responsible for managing the access control lists.
+<p>You can also add instructions for the person who reads the alert. For example, if you create an alert related to deleting access control lists, you can add instructions to inform the group that is responsible for managing the access control lists.</p>
 
-You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.
+<p>You can set up email notifications when the alert is triggered. This supplement the ability of users to request notifications for all high-risk events in Setting Your Password, Time Zone, and Email Alerting.</p>
 </div>
 
 <span style='color:red'>**Log in to your Oracle Free Trial CASB tenant**</span> [(instructions here)](../Cloud-Security-Day/CSD-SETUP.html)  and perform the following 
