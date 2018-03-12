@@ -76,7 +76,7 @@ Press the "*Next*" button to proceed to the next step of the "*Register an app i
 <div style="border:1px solid grey;padding:10px;margin-bottom:6px">
 <b>Explanation:</b> 
 <br><br>
-Security controls will be explained in more detail in a later exercise but suffice it to say for now that Enterprise Cloud Applications have security-related settings, such as password complexity requirements and idle session timeouts that Oracle CASB Cloud Service can monitor and change according to a baseline configuration, for a particular Enterprise Cloud Application, that is defined in CASB Cloud Service
+Security controls will be explained in more detail in a later exercise but suffice it to say for now that Enterprise Cloud Applications have security-related settings, such as password complexity requirements and idle session timeouts, that Oracle CASB Cloud Service can monitor and change according to a baseline configuration, for a particular Enterprise Cloud Application, that is defined in CASB Cloud Service
 <br><br>
 On this screen, we can choose to either:
 <br><br>
