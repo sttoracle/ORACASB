@@ -31,7 +31,7 @@ In this session, you will be using the Oracle CASB Cloud Service UI to onboard a
 <center>
 <b>Account</b>
 
-![](images/CASB/sf.png)   
+<img src="images/CASB/sf.png"></img>   
 
 </center>
 </div>
@@ -71,7 +71,7 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 
 <b>Account</b>
 
- ![](images/CASB/casb-trial.png) 
+ <img src="images/CASB/casb-trial.png"></img> 
  
  </center>
  </div>  
@@ -172,7 +172,7 @@ This session will familiarize you with the Oracle CASB Cloud Service User Interf
 <center>
 <b>Account</b>
 
-![](images/CASB/casb-shared.png)   
+<img src="images/CASB/casb-shared.png"></img>  
 
 </center>
 </div>
@@ -259,7 +259,7 @@ We will change the Salesforce Application's security control baseline in a way t
 <center>
 <b>Account</b>
 
-![](images/CASB/casb-trial.png)   
+<img src="images/CASB/casb-trial.png"></img>  
 
 </center>
 </div>
@@ -295,7 +295,7 @@ You will now see a message that indicates that the baseline has been updated. Cl
 <center>
 <b>Account</b>
 
-![](images/CASB/casb-shared.png)   
+<img src="images/CASB/casb-shared.png"></img>   
 
 </center>
 </div>
@@ -360,7 +360,7 @@ On the resulting incident dialog ensure that the default "*Auto Remediation*" ra
 <center>
 <b>Account</b>
 
-![](images/CASB/sf.png)   
+<img src="images/CASB/sf.png"></img>   
 
 </center>
 </div>
@@ -410,7 +410,7 @@ In this exercise we will define a policy, for Salesforce, that will generate an 
 <center>
 <b>Account</b>
 
-![](images/CASB/casb-trial.png)   <span style='color:red'>
+<img src="images/CASB/casb-trial.png"></img>   <span style='color:red'>
 
 </center>
 </div>
@@ -469,7 +469,7 @@ The Policy will appear in the list of policies available for activation for the 
 <center>
 <b>Account</b>
 
-![](images/CASB/sf.png)   
+<img src="images/CASB/sf.png"></img>   
 
 </center>
 </div>
@@ -512,7 +512,7 @@ If you decide to sign-up for your own free Salesforce Developer account and you 
 <center>
 <b>Account</b>
 
-![](images/CASB/casb-shared.png)   
+<img src="images/CASB/casb-shared.png"></img> 
 
 </center>
 </div>
@@ -540,7 +540,7 @@ Oracle CASB Cloud Service monitors user and agent behavior and automatically gen
 <center>
 <b>Account</b>
 
-![](images/CASB/casb-trial.png)   
+<img src="images/CASB/casb-trial.png"></img>  
 
 </center>
 </div>
@@ -570,7 +570,7 @@ When you log in to Salesforce from your blacklisted IP you ensure that a future 
 <center>
 <b>Account</b>
 
-![](images/CASB/casb-shared.png)   
+<img src="images/CASB/casb-shared.png"></img>   
 
 </center>
 </div>
@@ -696,7 +696,7 @@ Oracle CASB Cloud Service Discovery allows you to uncover any applications or pl
 <center>
 <b>Account</b>
 
-![](images/CASB/casb-shared.png) 
+<img src="images/CASB/casb-shared.png"></img> 
 
 </center>
 </div>
