@@ -29,9 +29,9 @@ In this session, you will be using the Oracle CASB Cloud Service UI to onboard a
 <div style="border:1px #bbb;padding:10px;margin-bottom:6px;background-color:#eee;margin-left:13px;margin-right:13px">
 
 <center>
-<b>Account</b>
+<b>Account</b><br>
 
-<img src="images/CASB/sf.png"></img>   
+<img src="images/CASB/sf.png">   
 
 </center>
 </div>
@@ -69,9 +69,9 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 
 <center>
 
-<b>Account</b>
+<b>Account</b><br>
 
- <img src="images/CASB/casb-trial.png"></img> 
+ <img src="images/CASB/casb-trial.png">
  
  </center>
  </div>  
@@ -172,7 +172,9 @@ This session will familiarize you with the Oracle CASB Cloud Service User Interf
 <center>
 <b>Account</b>
 
-<img src="images/CASB/casb-shared.png"></img>  
+<br>
+
+<img src="images/CASB/casb-shared.png"> 
 
 </center>
 </div>
