@@ -77,7 +77,8 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
  </div>  
  
  Start a **new private browsing window in your browser and log into your Oracle Cloud Trial Account** with the appropriate credentials. Refer to the [workshop re-requisites](https://csdoracle.github.io/Cloud-Security-Day/CSD-SETUP.html) for instruction how to sign in to your Oracle Cloud trial account then go to the cloud "*Dashboard*" access the CASB service.
-
+ 
+ ![](images/CASB/cloud_dash.png)
 
  ![](images/CASB/launch_trial_casb.png)
 
