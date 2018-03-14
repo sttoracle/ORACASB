@@ -89,7 +89,7 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 #### STEP 2: Choose to add a new Salesforce instance by clicking on the Salesforce icon, and click *Next*.
 
 In a new CASB tenant , with no Applications integrated yet, you will start at the "*Applications"" page with a collection of badges that represent variosuse santioned applications that can be integrated with CASB .
-![](images/CASB/salesforce_app_badge.png)
+<img src="images/CASB/salesforce_app_badge.png" width="200px">
 
 #### STEP 3: Provide the name of the Salesforce instance.
 
@@ -116,7 +116,7 @@ or
 "<i>Monitor and push</i>" the preferred values to the cloud application. At registration time, Oracle CASB Cloud Service ensures that your cloud application has your preferred security configuration values. After registration, Oracle CASB Cloud Service reports on changes to these values.
 </div>
 
-![](images/CASB/pushAndMonitor.png)
+<img src="images/CASB/pushAndMonitor.png" width="400px">
 
 Select the "*Push controls and monitor*" radio button and then press the "*Next*" button.
 
@@ -137,7 +137,7 @@ You will be redirected to Salesforce to login ( a second  time ) , and you will 
 
 **Use the credentials for the Salesforce tenant that has been assigned to you during the workshop**. Upon login, you will be asked to confirm that you want to grant access to the Oracle CASB Cloud Service:
 
-![](images/CASB/01-grant-access.png)
+<img src="images/CASB/01-grant-access.png" width="400px">
 
 <div style="border:1px solid grey;padding:10px;margin-bottom:6px">
 
@@ -153,7 +153,7 @@ Click on the "*Applications*" navigation option using the Navigation Bar on the 
 
 ![](images/CASB/clock-icon.jpg) CASB will now start the initial data collection for the new application . You can expect this initial data collection to complete within 30 to 120 minutes. While the initial data collection is taking place, the application will be tagged with the “*NEW*” banner in the application list. 
 
- ![](images/CASB/01-new-banner.png)
+ <img src="images/CASB/01-new-banner.png" width="200px">
 
 After the data load has taken place, the application will shed the “*NEW*” banner
 
@@ -210,9 +210,10 @@ We will change the Salesforce Application's security control baseline in a way t
 
 Update the CASB security control baseline for your assigned Salesforce instance. To do so, **in <span style="color:red">your free Cloud Trial account</span> CASB Service** ( it should already be open in one of your private browsing tabs ),  click on "*Applications*" in the left navigation bar
 
-![](images/CASB/hamburger.png) 
+<img src="images/CASB/hamburger.png" width="400px">
+<br> 
 
-![](images/CASB/applications.png)
+<img src="images/CASB/applications.png" width="200px">
 
 then find your Salesforce instance (use the search icon in the upper-right, if necessary), click on the instance, click on "*Modify*", and then from the drop-down selection choose "*Update Security Control Baseline*".
 
@@ -220,7 +221,7 @@ then find your Salesforce instance (use the search icon in the upper-right, if n
 
  In the next screen, choose to use a “*Stringent*” security control baseline. 
 
-![](images/CASB/updatesecuritycontrols.png)
+<img src="images/CASB/updatesecuritycontrols.png">
 
 **Optional**: Expand the Password Policy and Session Settings sections to see more detail on which controls are being enforced by the "*Stringent*" Security control baseline.
 
@@ -366,7 +367,7 @@ There are 5 Health indicator tabs into which the various services being monitore
 
 #### Health Summary: All App Instances
 
-![](images/CASB/7B1AFFA4-DF72-401B-9975-68272079B2F2.png)
+<img src="images/CASB/7B1AFFA4-DF72-401B-9975-68272079B2F2.png" width="500px">
 
 "*The Health Summary: All Application Instances*" card summarizes potential threat information across **all** registered application instances. The definitions of the different health and risk indicators listed on this card (e.g. Policy Alerts) will be presented in additional sessions within this workshop.
 
@@ -379,11 +380,11 @@ The Access Map shows points of origin for both normal (green dot) and suspicious
 
 Legend : 
 
-![](images/CASB/icon_accessmap_green.png) - Indicates a cluster of normal events. Click this symbol to see individual normal events.
+<img src="images/CASB/icon_accessmap_green.png" width="50px"> - Indicates a cluster of normal events. Click this symbol to see individual normal events.
 
 ![](images/CASB/icon_accessmap_green_indiv.png)- Indicates an individual normal event.
 
-![](images/CASB/icon_accessmap_red.png) -Indicates a cluster of suspicious events. Click this symbol to see individual suspicious events.
+<img src="images/CASB/icon_accessmap_red.png" width="50px"> -Indicates a cluster of suspicious events. Click this symbol to see individual suspicious events.
 
 ![](images/CASB/icon_accessmap_red_indiv.png) - Indicates an individual suspicious event.
 
@@ -443,7 +444,7 @@ In this exercise we will define a policy, for Salesforce, that will generate an 
 
 #### STEP 1.1: In the Oracle CASB Cloud Service console, select Configuration then select "*Policy Management*"
 
-![](images/CASB/policy_management.png)
+<img src="images/CASB/policy_management.png" width="300px">
 
 and then click New Policy
 
@@ -618,7 +619,7 @@ Users pose a variety of different security risks that Oracle CASB Cloud Service 
 
 #### STEP 4.1: In the Dashboard "*User Risk Level*" Card  click any area of the chart to view details for the users at the corresponding risk level.
 
-![](images/CASB/user_risk_level.png)
+<img src="images/CASB/user_risk_level.png" width="500px">
 
 <div style="border:1px solid grey;padding:10px;margin-bottom:6px">
 <b>Explanation:</b>
@@ -740,7 +741,7 @@ Press the "*Choose File*" button and upload the sample log file assigned to you.
 
 #### STEP 3: Select the log file format & Press the "*Import*" Button
 
-![](images/CASB/log_upload.png)
+<img src="images/CASB/log_upload.png" width="500px">
 
 CASB CS will process the log file and update the view with the progress it has made in analyzing the log file. 
 
