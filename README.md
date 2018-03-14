@@ -516,11 +516,10 @@ If you decide to sign-up for your own free Salesforce Developer account and you 
 </div>
 
 
- #### STEP 2.1: In the Salesforce "*Setup*" section navigate to *Users -> Roles* 
+ #### STEP 2.1: In the Salesforce "*Setup*" section navigate to *Users -> Roles*
  
 
- 
- ![](images/CASB/SFrole1.png)
+![](images/CASB/SFrole1.png)
 
  Press the "*Set Up Roles*" button
 
