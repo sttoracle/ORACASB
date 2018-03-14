@@ -436,12 +436,12 @@ In this exercise we will define a policy, for Salesforce, that will generate an 
 <center>
 <b>Account</b><br>
 
-<img src="images/CASB/casb-trial.png">   <span style='color:red'>
+<img src="images/CASB/casb-trial.png">   >
 
 </center>
 </div>
 
-**Log in to your Oracle Free Trial CASB tenant**</span> [(instructions here)](../Cloud-Security-Day/CSD-SETUP.html)  and perform the following 
+**Log in to your Oracle Free Trial CASB tenant** [(instructions here)](../Cloud-Security-Day/CSD-SETUP.html)  and perform the following 
 
 #### STEP 1.1: In the Oracle CASB Cloud Service console, select Configuration then select "*Policy Management*"
 
