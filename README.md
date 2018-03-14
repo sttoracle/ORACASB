@@ -515,7 +515,8 @@ For the workshop you have one assigned Salesforce user which is the same user yo
 If you decide to sign-up for your own free Salesforce Developer account and you follow these instructions you should ensure you followed the Salesforce preperation steps described in your workshop handout. These steps prepares a dedicated Salesforce user, for CASB to use to monitor Salesforce. This dedicated Salesforce user should be used in Exercise 1 when you onboard your Salesforce account into CASB outside the context of the instructor lead workshop.<br> <b>Take note</b>, all other Salesforce instructions in this workshop should be performed with the  Salesforce Admin user that was created when you signed-up for your free Salesforce Developer account . The reason this is important is because CASB will not report on any actions performed by  the Salesforce user that is  dedicated to CASB ( used in Exercise 1 when you on-boarded Salesforce)  and if you perform these steps with that dedicated user the policy described in this exercise will not be triggered. 
 </div>
 
- #### STEP 2.1: In the Salesforce "*Setup*" section navigate to *Users -> Roles*
+
+ #### STEP 2.1: In the Salesforce "*Setup*" section navigate to *Users -> Roles* 
  
  ![](images/CASB/SFrole1.png)
 
