@@ -88,7 +88,8 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 
 #### STEP 2: Choose to add a new Salesforce instance by clicking on the Salesforce icon, and click *Next*.
 
-In a new CASB tenant , with no Applications integrated yet, you will start at the "*Applications"" page with a collection of badges that represent variosuse santioned applications that can be integrated with CASB .
+In a new CASB tenant , with no Applications integrated yet, you will start at the "*Applications*"" page with a collection of badges that represent variosuse santioned applications that can be integrated with CASB .
+
 <img src="images/CASB/salesforce_app_badge.png" width="200px">
 
 #### STEP 3: Provide the name of the Salesforce instance.
