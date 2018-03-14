@@ -446,6 +446,7 @@ In this exercise we will define a policy, for Salesforce, that will generate an 
 #### STEP 1.1: In the Oracle CASB Cloud Service console, select Configuration then select "*Policy Management*"
 
 <img src="images/CASB/policy_management.png" width="300px">
+<br>
 
 and then click New Policy
 
