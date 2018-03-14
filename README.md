@@ -297,7 +297,10 @@ On the resulting incident dialog ensure that the default "*Auto Remediation*" ra
 
 ![](images/CASB/resolve.png)
 
-><span style="color:grey">FYI, CASB Cloud Service will now invoke the Salesforce API to change the "*Clickjack Protection*" setting in Salesforce to bring it into compliance with the CASB Security Control baseline that is in effect.</span>  
+<div style="border:1px solid grey;padding:10px;margin-bottom:6px;color:grey">
+FYI, CASB Cloud Service will now invoke the Salesforce API to change the "Clickjack Protection" setting in Salesforce to bring it into compliance with the CASB Security Control baseline that is in effect.
+
+</div>  
 
 #### STEP 3.3: Verify that the "Clickjack" policy has been changed in Salesforce
 
@@ -475,8 +478,11 @@ Add two conditions: one condition for Device equal to "*Desktop*", and a second 
 
 ![](images/CASB/policy_condition.png)
 
-> FYI, You can specify a condition using either of these types of conditions multiple times, and you can specify either type of condition in any order, freely mixing the two types.
-> When you specify multiple conditions, the conditions operate independently. Each condition causes the alert to either be triggered (Equal To operator), or not be triggered (Not Equal to operator), for that specific condition. The conditions are neither ANDed nor ORed.
+<div style="border:1px solid ;padding:10px;margin-bottom:6px;color:grey">
+
+<p>FYI, You can specify a condition using either of these types of conditions multiple times, and you can specify either type of condition in any order, freely mixing the two types.</p>
+<p>When you specify multiple conditions, the conditions operate independently. Each condition causes the alert to either be triggered (Equal To operator), or not be triggered (Not Equal to operator), for that specific condition. The conditions are neither ANDed nor ORed.</p>
+</div>
 
 #### STEP 1.6: Complete the "*Actions*" panel
 
@@ -531,7 +537,7 @@ If you decide to sign-up for your own free Salesforce Developer account and you 
 
  Click the "*Save*" button 
 
-> ![](images/CASB/clock-icon.jpg) As noted before there is a delay between data collection cycles for the CASB service and the action you perform in Salesforce might not cause the policy alert in CASB to fire immediately but will appear on the next data collection that CASB does to the Salesforce tenant. If you are following these instructions as part of a workshop you do not have to wait for the next CASB data collection run to take place before you can continue with this exercise. You can use the shared CASB tenant and complete the remainder of the exercise in the shared tenant. Individual login instructions were provided for each participant if you did not receive your instructions please inform one of the workshop proctors.
+![](images/CASB/clock-icon.jpg) As noted before there is a delay between data collection cycles for the CASB service and the action you perform in Salesforce might not cause the policy alert in CASB to fire immediately but will appear on the next data collection that CASB does to the Salesforce tenant. If you are following these instructions as part of a workshop you do not have to wait for the next CASB data collection run to take place before you can continue with this exercise. You can use the shared CASB tenant and complete the remainder of the exercise in the shared tenant. Individual login instructions were provided for each participant if you did not receive your instructions please inform one of the workshop proctors.
 
 #### STEP 3: View the policy Alert
 
