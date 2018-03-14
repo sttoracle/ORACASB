@@ -37,7 +37,7 @@ In this session, you will be using the Oracle CASB Cloud Service UI to onboard a
 </div>
 
 <div style="border:1px solid grey;padding:10px;margin-bottom:6px">
-<b>Note:</b> 
+<b>LOGIN INSTRUCTIONS:</b> 
 <br>
 You may run into the following issues 
 <br><br>
@@ -76,7 +76,8 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
  </center>
  </div>  
  
- Start a **new private browsing window in your browser and log into your Oracle Cloud Trial Account** with the appropriate credentials. Refer to the [workshop re-requisites](https://csdoracle.github.io/Cloud-Security-Day/CSD-SETUP.html) for instruction how to sign in to your Oracle Cloud trial account and access the CASB service.
+ Start a **new private browsing window in your browser and log into your Oracle Cloud Trial Account** with the appropriate credentials. Refer to the [workshop re-requisites](https://csdoracle.github.io/Cloud-Security-Day/CSD-SETUP.html) for instruction how to sign in to your Oracle Cloud trial account then go to the cloud "*Dashboard*" access the CASB service.
+ ![](images/CASB/launch_trial_casb.png)
 
 #### STEP 2: Click on the "*Add an App*" menu item. 
 
@@ -178,6 +179,7 @@ This session will familiarize you with the Oracle CASB Cloud Service User Interf
 
 </center>
 </div>
+
 You should have received an extra handout that will contain CASB login credentials to a **shared** workshop CASB tenant that will be used in the course of the workshop. Within a new private browsing window, navigate to the shared Oracle CASB Service URL at  [https://trial.palerra.net/sessions](https://trial.palerra.net/sessions)  and **use the credentials of the shared tenant you received to perform this exercise.**
 
 ![](images/CASB/casb_login.png)  
