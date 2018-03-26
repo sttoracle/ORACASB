@@ -16,7 +16,6 @@ The exercises will cover the following CASB features and concepts:
  - Incident Management
  - CASB Discovery (Shadow IT)
 
-
 ## Exercise 1. Sanctioned Application Onboarding
 ___
 ### Overview:
@@ -37,16 +36,16 @@ In this session, you will be using the Oracle CASB Cloud Service UI to onboard a
 </div>
 
 **In a new Private Browsing Tab**, sign in to your Salesforce account at 
-[https://login.salesforce.com](https://login.salesforce.com ) 
+secureoracleXXX-dev-ed.lightning.force.com , where XXX is your assigned user number.
 
 <div style="border:1px solid grey;padding:10px;margin-bottom:6px">
 <b>LOGIN INSTRUCTIONS:</b> 
 <br>
 You may run into the following issues 
 <br><br>
-1. If you are unable to access the Salesforce login form due to an SSL warning in your browser,  refer to the printed handout that you recieved ,that contains your Salesforce account credentials and bypass the issue by replacing the hostname "login.saesforce.com" with the assigned host for your user in the format secureoracle__-dev-ed.lightning.force.com . Doing this will curcumvent the proxy issues that leads to the SSL issue. 
+1. If you are unable to access the Salesforce login form due to an SSL warning in your browser, refer to the printed handout that you received, that contains your Salesforce account credentials and bypass the issue by replacing the hostname "login.saesforce.com" with the assigned host for your user in the format secureoracle__-dev-ed.lightning.force.com . Doing this will circumvent the proxy issues that leads to the SSL issue. 
 <br><br>
-2. After you provide your credentials Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following <a href="https://cloudsecurityday.blogspot.com">https://cloudsecurityday.blogspot.com.</a>
+2. After you provide your credentials Salesforce may require you to provide a verification code at this point. Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following <a href="https://cloudsecurityday.blogspot.com">https://cloudsecurityday.blogspot.com.</a>
 You can browse the link and find the code for your assigned Salesforce User. 
 <br><br>
 3. You may also be prompted to register your phone number with Salesforce . Select the "I Don't Want to Register My Phone" link 
@@ -54,8 +53,7 @@ You can browse the link and find the code for your assigned Salesforce User.
 <img src="images/CASB/sf_register_phone.png" height="300px" width="300px">
 </div>
 
-
- Once you're in the Saleforce Setup UI Use the upper-left "*Quick Find*" box to search for *Password Policies*.
+ Once you're in the Salesforce Setup UI Use the upper-left "*Quick Find*" box to search for *Password Policies*.
 
 ![](images/CASB/01-quick-find-box.png)
 Under “*Password Policies*” set user passwords to "*Never Expire*".
@@ -88,7 +86,7 @@ At the bottom of the “*Password Policies*” page, click the "*Save*" button.
 
 #### STEP 2: Choose to add a new Salesforce instance by clicking on the Salesforce icon, and click *Next*.
 
-In a new CASB tenant , with no Applications integrated yet, you will start at the "*Applications*"" page with a collection of badges that represent variosuse santioned applications that can be integrated with CASB .
+In a new CASB tenant , with no Applications integrated yet, you will start at the "*Applications*"" page with a collection of badges that represent various sanctioned applications that can be integrated with CASB .
 
 <img src="images/CASB/salesforce_app_badge.png" width="200px">
 
@@ -172,7 +170,6 @@ Since we selected to have the CASB Cloud Service push the security control setti
 
 </div>
 
-
 ## Exercise 2. Analyze Security Controls
 ___
 ### Overview:
@@ -186,7 +183,6 @@ Oracle CASB Cloud Service looks at cloud service configurations and identifies w
 Monitor-only. Oracle CASB Cloud Service reports on these security control values, but doesn’t change them in the cloud application.
 
 Monitor and push preferred values to the cloud application. At registration time, Oracle CASB Cloud Service ensures that your cloud application has your preferred security configuration values. After registration, Oracle CASB Cloud Service reports on changes to these values.
-
 
 ### Exercise:
 
@@ -249,7 +245,6 @@ You will now see a message that indicates that the baseline has been updated. Cl
 Rather than wait for the scan to complete on your trial tenant <span style='color:red'> **you can switch back to the shared CASB tenant you used in Exercise 2 at [https://trial.palerra.net/sessions](https://trial.palerra.net/sessions)  and complete the remainder of the exercise in the shared tenant.**</span> As a reminder,
 login instructions to the shared tenant were provided to each workshop participant as a seperate handout. If you did not receive your instructions please inform one of the workshop proctors.
 #### STEP 2.1: Use the left navigation bar to go to the "*Applications*" view.
-
 
 There should be an exclamation point icon in your Salesforce Tenant’s Application List badge indicating there are some new Risk Events we can evaluate for the application. 
 
@@ -338,7 +333,7 @@ This session will familiarize you with the Oracle CASB Cloud Service User Interf
 </center>
 </div>
 
-Refer to the handout you recieved  that will contain CASB login credentials to a shared workshop CASB tenant. **Within a new private browsing tab**, navigate to the shared Oracle CASB Service URL at  [https://trial.palerra.net/sessions](https://trial.palerra.net/sessions)  and **use the credentials of the shared tenant you received to perform this exercise.**
+Refer to the handout you received  that will contain CASB login credentials to a shared workshop CASB tenant. **Within a new private browsing tab**, navigate to the shared Oracle CASB Service URL at  [https://trial.palerra.net/sessions](https://trial.palerra.net/sessions)  and **use the credentials of the shared tenant you received to perform this exercise.**
 
 ![](images/CASB/casb_login.png)  
 
@@ -381,7 +376,6 @@ There are 5 Health indicator tabs into which the various services being monitore
 
 The Access Map shows points of origin for both normal (green dot) and suspicious (red dot) events. Click on the map markers to see more detail about the events associated with a particular geographic location.
 
-
 Legend : 
 
 <img src="images/CASB/icon_accessmap_green.png" width="50px"> - Indicates a cluster of normal events. Click this symbol to see individual normal events.
@@ -391,7 +385,6 @@ Legend :
 <img src="images/CASB/icon_accessmap_red.png" width="50px"> -Indicates a cluster of suspicious events. Click this symbol to see individual suspicious events.
 
 ![](images/CASB/icon_accessmap_red_indiv.png) - Indicates an individual suspicious event.
-
 
 <div style="border:1px solid grey;padding:10px;margin-bottom:6px">
 <span style="color:grey">FYI, the other summary cards on the Dashboard Summary tab, such as Suspicious and normal IP addresses, display statistics for specific types of activity that may or may not be suspicious. For each summary card, you can:  View the summary statistics displayed, Hover over parts of the card to see additional information in pop-ups, and to identify links, click any link in the card to see more detailed information, click the Help icon Image of Help icon in the upper-right corner to see online help about the type of information displayed in any particular card.</span>
@@ -512,9 +505,8 @@ To test the policy log in to the Salesforce account and perform an action on the
 <div style="border:1px solid grey;padding:10px;margin-bottom:6px">
 <b>Note, if you are not following these instructions onsite in an Oracle instructor lead workshop:</b><br> 
 For the workshop you have one assigned Salesforce user which is the same user you used when you on-boarded Salesforce in Exercise 1. 
-If you decide to sign-up for your own free Salesforce Developer account and you follow these instructions you should ensure you followed the Salesforce preperation steps described in your workshop handout. These steps prepares a dedicated Salesforce user, for CASB to use to monitor Salesforce. This dedicated Salesforce user should be used in Exercise 1 when you onboard your Salesforce account into CASB outside the context of the instructor lead workshop.<br> <b>Take note</b>, all other Salesforce instructions in this workshop should be performed with the  Salesforce Admin user that was created when you signed-up for your free Salesforce Developer account . The reason this is important is because CASB will not report on any actions performed by  the Salesforce user that is  dedicated to CASB ( used in Exercise 1 when you on-boarded Salesforce)  and if you perform these steps with that dedicated user the policy described in this exercise will not be triggered. 
+If you decide to sign-up for your own free Salesforce Developer account and you follow these instructions you should ensure you followed the Salesforce preparation steps described in your workshop handout. These steps prepares a dedicated Salesforce user, for CASB to use to monitor Salesforce. This dedicated Salesforce user should be used in Exercise 1 when you onboard your Salesforce account into CASB outside the context of the instructor lead workshop.<br> <b>Take note</b>, all other Salesforce instructions in this workshop should be performed with the  Salesforce Admin user that was created when you signed-up for your free Salesforce Developer account . The reason this is important is because CASB will not report on any actions performed by  the Salesforce user that is  dedicated to CASB ( used in Exercise 1 when you on-boarded Salesforce)  and if you perform these steps with that dedicated user the policy described in this exercise will not be triggered. 
 </div>
-
 
  #### STEP 2.1: In the Salesforce "*Setup*" section navigate to *Users -> Roles*
  
@@ -666,7 +658,6 @@ On the selected *Users* drill down page, click a link in the Risk Factors sectio
 
 ![](images/CASB/user_risk.png)
 
-
 #### STEP 4.4: Click on the "*User Risk Score Trending*" Button 
 ![](images/CASB/trending.png)
 
@@ -806,6 +797,7 @@ Fill out the "*New Incident*" Dialog and click the "*Save*" button.
 ![](images/CASB/BFD830FC-EE87-42D3-A25D-39659D05098C.png)
 
 You'll notice there are 3 new actions available for the app you created an incident for in the CASB App Discovery "*Discovered App*" table view. Mouse over the icons to see a description. Go ahead and explore the new actions that are available.
+
 
 
 
