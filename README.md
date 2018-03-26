@@ -44,9 +44,9 @@ In this session, you will be using the Oracle CASB Cloud Service UI to onboard a
 <br>
 You may run into the following issues 
 <br><br>
-1. If you are unable to access the Salesforce login form due to an SSL warning in your browser,  refer to the printed handout that you recieved ,that contains your Salesforce account credentials, for instruction on how to bypass the issue that prevents you from connecting to Salesforce from the Oracle guest network. 
+1. If you are unable to access the Salesforce login form due to an SSL warning in your browser,  refer to the printed handout that you recieved ,that contains your Salesforce account credentials and bypass the issue by replacing the hostname "login.saesforce.com" with the assigned host for your user in the format secureoracle__-dev-ed.lightning.force.com . Doing this will curcumvent the proxy issues that leads to the SSL issue. 
 <br><br>
-2. After you provide your credentials Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following <a href="https://cloudsecurityday.blogspot.com">link.</a>
+2. After you provide your credentials Salesforce may require you to provide a verification code at this point . Verification codes will be sent to the workshop leader's e-mail account and will be posted on the following <a href="https://cloudsecurityday.blogspot.com">https://cloudsecurityday.blogspot.com.</a>
 You can browse the link and find the code for your assigned Salesforce User. 
 <br><br>
 3. You may also be prompted to register your phone number with Salesforce . Select the "I Don't Want to Register My Phone" link 
